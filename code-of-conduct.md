@@ -1,5 +1,5 @@
 ---
-source-git-commit: f09b2268dc4745a8c2e3c53bb20fa3d35f6a7c2b
+source-git-commit: c84f8d43494965874c2fba8c005d355237580401
 translation-type: tm+mt
 
 ---
@@ -45,4 +45,4 @@ Projectbeheerders die de gedragscode te goeder trouw niet naleven of handhaven, 
 
 ## Attributie
 
-Deze gedragscode is aangepast aan het [bijdrageverdrag](https://contributor-covenant.org), versie 1.4, beschikbaar op [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)
+Deze gedragscode is aangepast aan het [bijdrageverdrag](https://contributor-covenant.org), versie 1.4, beschikbaar op [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).

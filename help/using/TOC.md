@@ -1,16 +1,16 @@
 ---
-cloud: experience-cloud
-product: experience manager
-sub-product: experience manager htl
-archetype: admin
-user-guide-title: Experience Manager HTL Help
+sub-product: Adobe Experience Manager HTL
+user-guide-title: Adobe Experience Manager HTL
 translation-type: tm+mt
-source-git-commit: 60258140976a8d2182c4d75c18863c4b607bffbd
+source-git-commit: 7c37792729ca8caaf94ce6879ac02f241a571e44
+workflow-type: tm+mt
+source-wordcount: '54'
+ht-degree: 5%
 
 ---
 
 
-# Help bij Experience Manager HTML {#using}
+# Help bij Adobe Experience Manager HTML {#using}
 
 + [Overzicht](overview.md)
 + Aan de slag{#getting-started}
@@ -28,5 +28,3 @@ source-git-commit: 60258140976a8d2182c4d75c18863c4b607bffbd
    + [HTML-expressietaal](expression-language.md)
    + [Codevoorbeelden](code-samples.md)
    + [Normalisatie](standardization.md)
-+ Gerelateerde bronnen{#resources}
-   + [Verwante artikelen van de Gemeenschap](related-community-articles.md)

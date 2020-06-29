@@ -1,44 +1,60 @@
 ---
 title: HTML JavaScript Use-API
-seo-title: HTML JavaScript Use-API
-description: Met de HTML-sjabloontaal - HTML - JavaScript Use-API heeft een HTML-bestand toegang tot de hulplijncode die in JavaScript is geschreven.
-seo-description: Met de HTML-sjabloontaal - HTML - JavaScript Use-API heeft een HTML-bestand toegang tot de hulplijncode die in JavaScript is geschreven.
-uuid: 7ab34b10-30ac-44d6-926b-0234f52e5541
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/HTL
-topic-tags: html-template-language
-content-type: reference
-discoiquuid: 18871af8-e44b-4eec-a483-fcc765dae58f
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
+description: Met de HTML-sjabloontaal - HTML - JavaScript Use-API heeft een HTML-bestand toegang tot hulplijncode die in JavaScript is geschreven.
 translation-type: tm+mt
-source-git-commit: bd1962e25d152be4f1608d0a83d8d5b3e728b4aa
+source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+workflow-type: tm+mt
+source-wordcount: '324'
+ht-degree: 0%
 
 ---
 
 
 # HTML JavaScript Use-API {#htl-javascript-use-api}
 
-Met de HTML-sjabloontaal (HTML) JavaScript Use-API kan een HTML-bestand toegang krijgen tot hulplijncode die in JavaScript is geschreven. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code JavaScript, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
+Met de HTML Template Language (HTML) JavaScript Use-API kan een HTML-bestand toegang krijgen tot hulplijncode die in JavaScript is geschreven. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code JavaScript, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
+
+De volgende conventies worden gebruikt.
+
+```javascript
+/**
+ * In the following example '/libs/dep1.js' and 'dep2.js' are optional
+ * dependencies needed for this script's execution. Dependencies can
+ * be specified using an absolute path or a relative path to this
+ * script's own path.
+ *
+ * If no dependencies are needed the dependencies array can be omitted.
+ */
+use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
+    // implement processing
+  
+    // define this Use object's behavior
+    return {
+        propertyName: propertyValue
+        functionName: function () {}
+    }
+});
+```
 
 ## Een eenvoudig voorbeeld {#a-simple-example}
 
 We definiëren een component, `info`die zich bevindt op
 
-**`/apps/my-example/components/info`**
+`/apps/my-example/components/info`
 
 Het bevat twee bestanden:
 
 * **`info.js`**: een JavaScript-bestand dat de use-klasse definieert.
-* `info.html`: een HTML-bestand dat de component definieert `info`. Deze code gebruikt de functionaliteit van `info.js` via de use-API.
+* **`info.html`**: een HTML-bestand dat de component definieert `info`. Deze code gebruikt de functionaliteit van `info.js` via de use-API.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
 ```java
 "use strict";
 use(function () {
-    var info = {};    
+    var info = {};
     info.title = resource.properties["title"];
-    info.description = resource.properties["description"];    
+    info.description = resource.properties["description"];
     return info;
 });
 ```
@@ -52,9 +68,9 @@ use(function () {
 </div>
 ```
 
-Wij creëren ook een inhoudsknoop die de **`info`** component bij gebruikt
+Wij creëren ook een inhoudsknoop die de `info` component bij gebruikt
 
-**`/content/my-example`**, met eigenschappen:
+`/content/my-example`, met eigenschappen:
 
 * `sling:resourceType = "my-example/component/info"`
 * `title = "My Example"`
@@ -72,14 +88,14 @@ Hier volgt de resulterende structuur van de opslagplaats:
         "info": {
           "info.html": {
             ...
-          }, 
+          },
           "info.js": {
             ...
           }
         }
       }
     }
- },     
+ },
  "content": {
     "my-example": {
       "sling:resourceType": "my-example/component/info",
@@ -99,18 +115,18 @@ Overweeg de volgende componentsjabloon:
 </section>
 ```
 
-De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan de ***serverzijde*** , die zich in een `component.js` bestand rechts naast de sjabloon bevindt:
+De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan serverzijde, die zich in een `component.js` bestand rechts naast de sjabloon bevindt:
 
-```
+```javascript
 use(function () {
     var Constants = {
         DESCRIPTION_PROP: "jcr:description",
         DESCRIPTION_LENGTH: 50
     };
- 
+
     var title = currentPage.getNavigationTitle() || currentPage.getTitle() || currentPage.getName();
     var description = properties.get(Constants.DESCRIPTION_PROP, "").substr(0, Constants.DESCRIPTION_LENGTH);
- 
+
     return {
         title: title,
         description: description
@@ -124,16 +140,16 @@ Hiermee wordt geprobeerd de beschrijving van verschillende bronnen `title` te ne
 
 Stel je voor dat we een hulpprogrammaklasse hebben die al is uitgerust met slimme functies, zoals de standaardlogica voor de navigatitel of die een tekenreeks tot een bepaalde lengte knipt:
 
-```
+```javascript
 use(['../utils/MyUtils.js'], function (utils) {
     var Constants = {
         DESCRIPTION_PROP: "jcr:description",
         DESCRIPTION_LENGTH: 50
     };
- 
+
     var title = utils.getNavigationTitle(currentPage);
     var description = properties.get(Constants.DESCRIPTION_PROP, "").substr(0, Constants.DESCRIPTION_LENGTH);
- 
+
     return {
         title: title,
         description: description
@@ -145,24 +161,24 @@ use(['../utils/MyUtils.js'], function (utils) {
 
 Het afhankelijkheidspatroon kan ook worden gebruikt om de logica van een andere component uit te breiden (die doorgaans de `sling:resourceSuperType` van de huidige component is).
 
-Stel u voor dat de bovenliggende component al de component bevat `title`en dat we **`description`** ook een component willen toevoegen:
+Stel u voor dat de bovenliggende component al de component bevat `title`en dat we `description` ook een component willen toevoegen:
 
-```
+```javascript
 use(['../parent-component/parent-component.js'], function (component) {
     var Constants = {
         DESCRIPTION_PROP: "jcr:description",
         DESCRIPTION_LENGTH: 50
     };
- 
+
     component.description = utils.shortenString(properties.get(Constants.DESCRIPTION_PROP, ""), Constants.DESCRIPTION_LENGTH);
- 
+
     return component;
 });
 ```
 
 ## Parameters doorgeven aan een sjabloon {#passing-parameters-to-a-template}
 
-In het geval van **`data-sly-template`** verklaringen die van componenten onafhankelijk kunnen zijn, kan het nuttig zijn om parameters tot bijbehorende gebruik-API over te gaan.
+In het geval van `data-sly-template` verklaringen die van componenten onafhankelijk kunnen zijn, kan het nuttig zijn om parameters tot bijbehorende gebruik-API over te gaan.
 
 Zo in onze component roepen wij een malplaatje dat in een verschillend dossier wordt gevestigd:
 
@@ -179,17 +195,17 @@ Dit is de sjabloon in `template.html`:
 </template>
 ```
 
-De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan de ***serverzijde*** , die zich in een `template.js` bestand rechts naast het sjabloonbestand bevindt:
+De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan serverzijde, die zich in een `template.js` bestand rechts naast het sjabloonbestand bevindt:
 
-```
+```javascript
 use(function () {
     var Constants = {
         DESCRIPTION_PROP: "jcr:description"
     };
- 
+
     var title = this.page.getNavigationTitle() || this.page.getTitle() || this.page.getName();
     var description = this.page.getProperties().get(Constants.DESCRIPTION_PROP, "").substr(0, this.descriptionLength);
- 
+
     return {
         title: title,
         description: description

@@ -1,28 +1,22 @@
 ---
 title: Aan de slag met HTML
-seo-title: Aan de slag met HTML
 description: HTML die door AEM wordt ondersteund, vervangt JSP als voorkeurssjabloonsysteem en aanbevolen voor HTML op de server in AEM.
-seo-description: De HTML-sjabloontaal - HTL - die wordt ondersteund door Adobe Experience Manager, vervangt JSP als het voorkeurssjabloonsysteem voor HTML op de server in AEM.
-uuid: 4a7d6748-8cdf-4280-a85d-6c5319abf487
-content-type: reference
-topic-tags: introduction
-discoiquuid: 3bf2ca75-0d68-489d-bd1c-1d4fd730c61a
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
+source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+workflow-type: tm+mt
+source-wordcount: '2490'
+ht-degree: 0%
 
 ---
 
 
 # Aan de slag met HTML {#getting-started-with-htl}
 
-De HTML-sjabloontaal (HTML Template Language) die wordt ondersteund door Adobe Experience Manager (AEM) vervangt JSP (Java Server Pages) als het voorkeurssjabloonsysteem en het aanbevolen sjabloonsysteem voor HTML op de server in AEM.
+De HTML-sjabloontaal (HTML Template Language) die wordt ondersteund door Adobe Experience Manager (AEM) is het voorkeurssysteem en aanbevolen sjabloonsysteem voor de server voor HTML in AEM. Deze pagina komt in de plaats van JSP (JavaServer Pages), zoals in eerdere versies van AEM werd gebruikt.
 
 >[!NOTE]
 >
 >Voor de meeste voorbeelden op deze pagina kunt u een live uitvoeringsomgeving gebruiken met de naam [Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) lezen.
->
->De AEM-gemeenschap heeft een reeks [artikelen, video&#39;s en webinars](related-community-articles.md) over het gebruik van HTML gegenereerd.
 
 ## HTML boven JSP {#htl-over-jsp}
 
@@ -37,25 +31,19 @@ Zelfs binnen dezelfde component, kunnen de HTML- dossiers naast JSPs en ESPs wor
 <sly data-sly-include="template.jsp"/>
 ```
 
-### Veelgestelde vragen{#frequently-asked-questions}
+### Frequently Asked Questions{#frequently-asked-questions}
 
 Voordat u aan de slag gaat met de HTML-sjabloontaal, moeten we beginnen met het beantwoorden van vragen die betrekking hebben op het onderwerp JSP en HTL.
 
-**Heeft HTML beperkingen die JSP niet kent?**
-HTL heeft geen beperkingen ten opzichte van JSP in die zin dat wat met JSP kan worden gedaan ook haalbaar zou moeten zijn met HTL. HTML is echter in verschillende opzichten strenger dan JSP en wat in één JSP-bestand kan worden bereikt, moet mogelijk worden gescheiden in een Java-klasse of een JavaScript-bestand om haalbaar te zijn in HTML. Maar dit is over het algemeen gewenst om een goede scheiding tussen de logica en de opmaakcode te waarborgen.
+**Heeft HTML beperkingen die JSP niet kent?** - HTL heeft in vergelijking met JSP eigenlijk geen beperkingen in die zin dat wat met JSP kan worden gedaan ook haalbaar zou moeten zijn met HTL. HTML is echter in verschillende opzichten strenger dan JSP en wat in één JSP-bestand kan worden bereikt, moet mogelijk worden gescheiden in een Java-klasse of een JavaScript-bestand om haalbaar te zijn in HTML. Maar dit is over het algemeen gewenst om een goede scheiding tussen de logica en de opmaakcode te waarborgen.
 
-**Biedt HTML ondersteuning voor JSP-tagbibliotheken?**
-Nee, maar zoals wordt getoond in de sectie [Client-bibliotheken](getting-started.md#loading-client-libraries) laden, bieden de [sjabloon- en aanroepinstructies](block-statements.md#template-call) een vergelijkbaar patroon.
+**Biedt HTML ondersteuning voor JSP-tagbibliotheken?** - Nee, maar zoals wordt getoond in de sectie [Clientbibliotheken](getting-started.md#loading-client-libraries) laden, bieden de [sjabloon- en aanroepinstructies](block-statements.md#template-call) een vergelijkbaar patroon.
 
-**Kunnen de eigenschappen van HTML op een AEM project worden uitgebreid?**
-Nee, maar zoals wordt getoond in de sectie [Client-bibliotheken](getting-started.md#loading-client-libraries) laden, bieden de [sjabloon- en aanroepinstructies](block-statements.md#template-call) een vergelijkbaar patroon.
-Nee, dat kunnen ze niet. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica - [gebruik-API](getting-started.md#use-api-for-accessing-logic) - en van prijsverhoging (het [malplaatje &amp; vraagverklaringen](block-statements.md#template-call) ), die kunnen worden gebruikt om de code van projecten te modulariseren.
+**Kunnen de eigenschappen van HTML op een AEM project worden uitgebreid?** - Nee, dat kan niet. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica - [gebruik-API](getting-started.md#use-api-for-accessing-logic) - en van prijsverhoging (het [malplaatje &amp; vraagverklaringen](block-statements.md#template-call) ), die kunnen worden gebruikt om de code van projecten te modulariseren.
 
-**Wat zijn de belangrijkste voordelen van HTL ten opzichte van JSP?**
-Veiligheid en projectefficiency zijn de belangrijkste voordelen, die op het [Overzicht](overview.md)worden gedetailleerd.
+**Wat zijn de belangrijkste voordelen van HTL ten opzichte van JSP?** - Veiligheid en efficiëntie van projecten zijn de belangrijkste voordelen, die in het [overzicht](overview.md)worden beschreven.
 
-**Zal JSP uiteindelijk verdwijnen?**
-Op dit moment zijn er geen plannen in die richting.
+**Zal JSP uiteindelijk verdwijnen?** - Op dit moment zijn er geen plannen in die richting.
 
 ## Grondbeginselen van HTML {#fundamental-concepts-of-htl}
 
@@ -73,19 +61,13 @@ Hier is een eerste voorbeeld, dat zou kunnen worden bevat zoals in een **`templa
 
 Er kunnen twee verschillende soorten syntaxen worden onderscheiden:
 
-* **[Blokinstructies](block-statements.md)**Om het element **&lt;h1>**voorwaardelijk weer te geven, wordt een`[data-sly-test](block-statements.md#test)`HTML5-gegevenskenmerk gebruikt. HTML biedt meerdere van dergelijke kenmerken, waarmee gedrag aan elk HTML-element kan worden gekoppeld en die allemaal vooraf zijn ingesteld op`data-sly`.
+* **[Blokinstructies](block-statements.md)**- Voor voorwaardelijke weergave van het element **&lt;h1>**wordt een[`data-sly-test`](block-statements.md#test)HTML5-gegevenskenmerk gebruikt. HTML biedt meerdere van dergelijke kenmerken, waarmee gedrag aan elk HTML-element kan worden gekoppeld en die allemaal vooraf zijn ingesteld op`data-sly`.
 
-* **[Expression Language](expression-language.md)**HTL-expressies worden gescheiden door tekens`${`en`}`. Tijdens runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
+* **[Expressietaal](expression-language.md)**- HTML-expressies worden gescheiden door tekens`${`en`}`. Tijdens runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
 
 De twee bovenstaande pagina&#39;s bevatten een gedetailleerde lijst met functies die beschikbaar zijn voor syntaxis.
 
 ### Het SLY-element {#the-sly-element}
-
->[!NOTE]
->
->Het element SLY is geïntroduceerd met AEM 6.1, of HTML 1.1.
->
->Voorafgaand aan dat, moest het `[data-sly-unwrap](block-statements.md)` attribuut in plaats daarvan worden gebruikt.
 
 Een centraal concept van HTML is de mogelijkheid te bieden om bestaande HTML-elementen opnieuw te gebruiken voor het definiëren van blokinstructies, waardoor het niet nodig is extra scheidingstekens in te voegen om te definiëren waar de instructie begint en eindigt. Deze onopvallende annotatie van de markering om statische HTML in een functionerende dynamische malplaatje om te zetten biedt het voordeel om de geldigheid van de code van HTML niet te breken, en daarom nog behoorlijk te tonen, zelfs als statische dossiers.
 
@@ -100,14 +82,14 @@ In het volgende voorbeeld:
 </sly>
 ```
 
-zal iets uitvoeren zoals volgende HTML, maar slechts als er allebei zijn, wordt een **`jcr:title`** en een **`jcr:decription`** bezit bepaald, en als geen van hen leeg zijn:
+zal iets uitvoeren zoals volgende HTML, maar slechts als er allebei zijn, wordt een **`jcr:title`** en een **`jcr:description`** bezit bepaald, en als geen van beiden leeg zijn:
 
 ```xml
 <h1>MY TITLE</h1>
 <p>MY DESCRIPTION</p>
 ```
 
-Één ding om op te letten hoewel moet het SLY element slechts gebruiken wanneer geen bestaand element met de blokverklaring kon worden geannoteerd, omdat de elementen van de SLY de waarde ontmoedigen die door de taal wordt aangeboden om statische HTML niet te veranderen wanneer het dynamisch maakt.
+Één ding in mening te houden is het SLY element slechts te gebruiken wanneer geen bestaand element met de blokverklaring kon worden geannoteerd, omdat de elementen van de SLY de waarde ontmoedigen die door de taal wordt aangeboden om statische HTML niet te veranderen wanneer het dynamisch maakt.
 
 Als het vorige voorbeeld bijvoorbeeld al in een DIV-element zou zijn ondergebracht, zou het toegevoegde SLY-element misbruik maken:
 
@@ -128,6 +110,12 @@ en het element DIV had met de voorwaarde geannoteerd kunnen zijn:
     <p>${properties.jcr:description}</p>
 </div>
 ```
+
+>[!NOTE]
+>
+>Het SLY-element is geïntroduceerd met AEM 6.1 of HTML 1.1.
+>
+>Voorafgaand aan dat, moest het [`data-sly-unwrap`](block-statements.md) attribuut in plaats daarvan worden gebruikt.
 
 ### HTML-opmerkingen {#htl-comments}
 
@@ -225,7 +213,7 @@ Neem bijvoorbeeld het volgende voorbeeld:
 
 En volgende uitgevoerde JavaScript-bestanden op de `logic.js` server naast het bestand geplaatst:
 
-```
+```javascript
 use(function () {
     return {
         title: currentPage.getTitle().substring(0, 10) + "..."
@@ -239,7 +227,7 @@ In het bovenstaande voorbeeld wordt via de server uitgevoerde JavaScript-code ge
 
 Meer informatie hierover vindt u in de volgende secties:
 
-* In de sectie over de [instructie](block-statements.md#use) data-slim-use wordt alles uitgelegd wat met die instructie kan worden gedaan.
+* In de sectie over de [`data-sly-use` instructie](block-statements.md#use) wordt alles uitgelegd wat u met die instructie kunt doen.
 * De pagina [](use-api.md) Use-API bevat informatie waarmee u kunt kiezen tussen het schrijven van de logica in Java of in JavaScript.
 * En voor meer informatie over het schrijven van de logica moeten de [JavaScript Use-API](use-api-javascript.md) en de [Java Use-API](use-api-java.md) -pagina&#39;s u helpen.
 
@@ -261,7 +249,7 @@ Om dat te helpen, ontsnapt de Taal van het Malplaatje van HTML automatisch elke 
 
 Het volgende `logic.js` bestand wordt aangenomen:
 
-```
+```javascript
 use(function () {
     return {
         link:  "#my link's safe",
@@ -323,7 +311,7 @@ Deze sectie introduceert een paar gemeenschappelijke scenario&#39;s en hoe te om
 
 ### Client-bibliotheken laden {#loading-client-libraries}
 
-In HTML worden clientbibliotheken geladen via een hulpsjabloon die door AEM wordt geleverd en die toegankelijk is via [`data-sly-use`](block-statements.md#use). Er zijn drie sjablonen beschikbaar in dit bestand, dat u kunt aanroepen via [`data-sly-call`](block-statements.md#template-call):
+In HTML worden clientbibliotheken geladen via een hulpsjabloon die door AEM wordt geleverd en die toegankelijk is via [`data-sly-use`](block-statements.md#use). Er zijn drie sjablonen beschikbaar in dit bestand, dat kan worden aangeroepen via [`data-sly-call`](block-statements.md#template-call):
 
 * **`css`** - Laadt alleen de CSS-bestanden van de clientbibliotheken waarnaar wordt verwezen.
 * **`js`** - Hiermee worden alleen de JavaScript-bestanden geladen van de clientbibliotheken waarnaar wordt verwezen.
@@ -371,7 +359,7 @@ In het volgende voorbeeld wordt getoond hoe de logica (die ook in Java kan worde
 <div data-sly-use.logic="logic.js" data-json="${logic.json}">...</div>
 ```
 
-```
+```javascript
 /* logic.js file: */
 use(function () {
     var myData = {
@@ -387,7 +375,7 @@ use(function () {
 
 Vanaf dat punt is het eenvoudig in te beelden hoe een client-side JavaScript toegang heeft tot dat kenmerk en de JSON opnieuw parseert. Dit zou bijvoorbeeld het overeenkomstige JavaScript zijn dat in een clientbibliotheek wordt geplaatst:
 
-```
+```javascript
 var elements = document.querySelectorAll("[data-json]");
 for (var i = 0; i < elements.length; i++) {
     var obj = JSON.parse(elements[i].dataset.json);

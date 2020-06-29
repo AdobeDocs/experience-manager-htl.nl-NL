@@ -1,27 +1,20 @@
 ---
 title: AEM HTML-overzicht
-seo-title: Overzicht van de technische documentatie van AEM HTML.
 description: Het doel van HTML dat door AEM wordt gesteund, is een hoogst productief ondernemingsniveau Webkader aan te bieden dat veiligheid verhoogt, en HTML ontwikkelaars zonder kennis van Java toestaat om beter aan AEM projecten deel te nemen.
-seo-description: In dit document worden de beginselen en het doel uiteengezet van HTML Template Language - HTML - ondersteund door Adobe Experience Manager. HTML is een zeer productief web framework op bedrijfsniveau dat de beveiliging verhoogt en dat HTML-ontwikkelaars zonder Java-kennis in staat stelt beter deel te nemen aan AEM-projecten.
-uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/HTL
-topic-tags: introduction
-content-type: reference
-discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-skyline: testing replication
 translation-type: tm+mt
-source-git-commit: 0aa1e905fd6d24f7031dceb0a8a89b56da198719
+source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+workflow-type: tm+mt
+source-wordcount: '662'
+ht-degree: 0%
 
 ---
 
 
 # Overzicht {#overview}
 
-Het doel van HTML Template Language (HTL), gesteund door de Manager van de Ervaring van Adobe (AEM), is een hoogst productief web kader op bedrijfsniveau aan te bieden dat veiligheid verhoogt, en de ontwikkelaars van HTML zonder kennis van Java toestaat om beter aan projecten aan AEM deel te nemen.
+Het doel van HTML Template Language (HTL), gesteund door Adobe Experience Manager (AEM), is een hoogst productief web kader op bedrijfsniveau aan te bieden dat veiligheid verhoogt, en HTML-ontwikkelaars zonder kennis van Java toestaat om beter aan AEM-projecten deel te nemen.
 
-De taal van het Malplaatje van HTML is geïntroduceerd met AEM 6.0, en neemt JSP (de Pagina&#39;s van JavaServer) als aangewezen en geadviseerd server-zijmalplaatjesysteem voor HTML. Voor webontwikkelaars die robuuste bedrijfswebsites moeten maken, helpt de HTML-sjabloontaal om de efficiëntie van beveiliging en ontwikkeling te verhogen.
+De taal van het Malplaatje van HTML werd geïntroduceerd met AEM 6.0, en neemt de plaats van JSP (de Pagina&#39;s van JavaServer) als aangewezen en geadviseerd server-zijmalplaatjesysteem voor HTML. Voor webontwikkelaars die robuuste bedrijfswebsites moeten maken, helpt de HTML-sjabloontaal om de efficiëntie van beveiliging en ontwikkeling te verhogen.
 
 ## Meer beveiliging {#increased-security}
 
@@ -41,7 +34,7 @@ De verhoogde veiligheid, vereenvoudigde ontwikkeling en verbeterde teamsamenwerk
 
 Uit hetgeen is waargenomen bij het opnieuw implementeren van de Adobe.com-site met de HTML-sjabloontaal blijkt dat de kosten en de duur van het project met ongeveer 25% kunnen worden verminderd.
 
-![](assets/chlimage_1.png)
+![Effectieve toename en kostenverlaging](assets/chlimage_1.png)
 
 Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die mogelijk door HTL mogelijk worden gemaakt:
 
@@ -52,4 +45,3 @@ Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die m
 **Volgende lezen:**
 
 * [Aan de slag met de HTML-sjabloontaal](getting-started.md)
-

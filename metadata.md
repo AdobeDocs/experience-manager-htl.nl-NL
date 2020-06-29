@@ -1,30 +1,55 @@
 ---
-cloud: experience-cloud
-solution-title: Meer informatie en ondersteuning
-solution-hub-url: https://helpx.adobe.com/nl/support/experience-manager/6-4.html
-solution-image: null
-getting-started-title: Aan de slag
-getting-started-url: https://helpx.adobe.com/experience-manager/get-started.html
-tutorials-title: Zelfstudies
-tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html
-git-repo: https://github.com/AdobeDocs/experience-manager-htl.en
+product: Adobe Experience Manager
+git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.nl-NL
 index: y
+solution-title: Meer informatie en ondersteuning voor HTML
+solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html
+getting-started-title: Aan de slag met ontwikkelen voor AEM
+getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/core-concepts/home.html
+tutorials-title: AEM-zelfstudies
+tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html
 translation-type: tm+mt
-source-git-commit: febf84d3ae38626891574ba05958678a3b23aaf1
+source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 17%
 
 ---
 
 
 # Metagegevens voor intern gebruik
 
-Het bestand metadata.md bevat metagegevens op repo-niveau die worden doorgegeven aan de bestanden in de repo in de gebruikershandleiding TOC.md. Als u de inhoud metadata.md voor om het even welke gebruikersgids wilt veranderen, doe dit in om het even welk dossier van TOC.md.
+De meta-gegevens in het GitHub auteurssysteem zijn hiërarchisch en worden bepaald de volgende stijgende niveaus van precedent.
 
-| metadata | wat het doet |
-|--- |--- |
-| titel oplossing | Gebruikt in artikelkoptekst als koppeling |
-| oplossing-hub-url | Opent helpx-hubpagina |
-| oplossingspictogram | Hiermee wordt het oplossingspictogram weergegeven naast de titel van de oplossing. Nog niet geïmplementeerd |
-| aan de slag-url | Aan de slag met Help-pagina koppelen |
-| zelfstudies-url | Koppeling maken naar videozelfstudies: helpx-zelfstudies of KT-zelfstudies |
-| mini-toc-niveaus | Hiermee bepaalt u het aantal kopniveaus dat wordt weergegeven in de rechterrails. default is 2 |
-| git-repo | Hiermee geeft u de locatie op van het hoofdrepo voor intern gebruik |
+1. metadata.md
+1. ToC
+1. Artikel
+
+De metagegevens die zijn gedefinieerd in het bestand metadata.md, worden toegepast op de volledige repo, maar kunnen worden overschreven op de ToC- en artikelniveaus. Als de metagegevens worden genegeerd, moet dat op het laagst mogelijke niveau gebeuren.
+
+De meta-gegevens in ervaring-manager-core-components.en repo is het vereiste minimum.
+
+metadata.md
+
+* `product`
+* `git-repo`
+* `index: y`
+* `solution-title`
+* `solution-hub-url`
+* `getting-started-title`
+* `getting-started-url`
+* `tutorials-title`
+* `tutorials-url`
+
+ToCs
+
+* `sub-product`
+* `user-guide-title`
+
+Artikel
+
+* `title`
+* `description`
+* `index: n` (alleen voor vorige versies van componenten)
+
+Aanvullende informatie over de metagegevens vindt u in de [interne handleiding voor het schrijven van programmacode.](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)

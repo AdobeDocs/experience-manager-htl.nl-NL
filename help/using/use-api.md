@@ -1,30 +1,25 @@
 ---
 title: HTML Use-API
-seo-title: Adobe HTML-API voor gebruik
 description: Er zijn twee API's beschikbaar voor HTL, namelijk Java Use-API en Javascript Use-API
-seo-description: Er zijn twee API's beschikbaar voor Adobe HTL, namelijk Java Use-API en Javascript Use-API
-uuid: ab44aa5c-ce7e-40b9-97fb-e86c6a28405c
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/HTL
-topic-tags: html-template-language
-content-type: reference
-discoiquuid: 89004426-eb59-4b63-913f-51bf98662773
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 5cbaf9c747acf748d12559c2c8e3aba4600cf9a4
+source-git-commit: d7efae3d1b4d1bc22c63c21f544a99bf0ae4b3c9
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 6%
 
 ---
 
 
 # HTML Use-API {#htl-use-api}
 
+HTL moedigt de scheiding van zorgen aan door bedrijfslogica niet toe te staan om met prijsverhoging te mengen. De bedrijfslogica kan door gebruik-API worden uitgevoerd.
+
 In de volgende tabel vindt u een overzicht van de voor- en nadelen van elke API.
 
 |  | **Java Use-API** | **JavaScript Use-API** |
 |--- |--- |--- |
-| **Pros** | <ul><li>sneller</li><li>kan met debugger worden geïnspecteerd</li><li>eenvoudig te testen</li></ul> | <ul><li>kunnen worden gewijzigd door front-end ontwikkelaars</li><li>wordt gevestigd binnen de component, die de meningslogica van een component dichtbij het overeenkomstige malplaatje houden</li></ul> |
-| **Cons** | <ul><li>kan niet worden gewijzigd door front-end ontwikkelaars</li></ul> | <ul><li>langzamer</li><li>geen foutopsporing (nog)</li><li>moeilijker per eenheid te testen</li></ul> |
-
+| **Voordelen** | <ul><li>Sneller</li><li>Kan worden geïnspecteerd met een foutopsporingsprogramma</li><li>Eenvoudige test</li></ul> | <ul><li>Kan worden gewijzigd door front-end ontwikkelaars</li><li>Is gevestigd binnen de component, die de meningslogica van een component dicht bij zijn overeenkomstige malplaatje houdt</li></ul> |
+| **Nadelen** | <ul><li>Kan niet worden gewijzigd door front-end ontwikkelaars</li></ul> | <ul><li>Langzamer</li><li>Geen foutopsporing (nog)</li><li>Harder naar eenheid</li></ul> |
 
 Voor paginacomponenten, wordt het geadviseerd om een gemengd model te gebruiken, waar al modellogica in Java wordt gevestigd, die duidelijke APIs verstrekken die aan om het even wat onbekend zijn die in de mening (d.w.z. binnen de componenten) gebeuren. AEM wordt geleverd met geweldige standaardmodellen zoals de pagina of de bron-API die de meeste gevallen moeten kunnen behandelen.
 

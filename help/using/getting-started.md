@@ -1,10 +1,10 @@
 ---
 title: Aan de slag met HTML
-description: HTML die door AEM wordt ondersteund, vervangt JSP als voorkeurssjabloonsysteem en aanbevolen voor HTML op de server in AEM.
+description: HTML die door AEM wordt ondersteund, vervangt JSP als het voorkeurssjabloonsysteem en het aanbevolen sjabloonsysteem voor de server voor HTML in AEM.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '2490'
+source-wordcount: '2471'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Aan de slag met HTML {#getting-started-with-htl}
 
-De HTML-sjabloontaal (HTML Template Language) die wordt ondersteund door Adobe Experience Manager (AEM) is het voorkeurssysteem en aanbevolen sjabloonsysteem voor de server voor HTML in AEM. Deze pagina komt in de plaats van JSP (JavaServer Pages), zoals in eerdere versies van AEM werd gebruikt.
+De HTML Template Language (HTML) die door Adobe Experience Manager (AEM) wordt gesteund is het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM. Deze pagina komt in de plaats van JSP (JavaServer Pages), zoals in eerdere versies van AEM werd gebruikt.
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ De HTML-sjabloontaal (HTML Template Language) die wordt ondersteund door Adobe E
 
 ## HTML boven JSP {#htl-over-jsp}
 
-Het wordt aanbevolen dat nieuwe AEM-projecten de HTML-sjabloontaal gebruiken, aangezien deze meerdere voordelen biedt in vergelijking met JSP. Voor bestaande projecten heeft een migratie echter alleen zin als deze naar schatting minder moeite kost dan het handhaven van de bestaande JSP&#39;s voor de komende jaren.
+Het wordt aanbevolen dat nieuwe AEM projecten de HTML-sjabloontaal gebruiken, aangezien deze meerdere voordelen biedt in vergelijking met JSP. Voor bestaande projecten heeft een migratie echter alleen zin als deze naar schatting minder moeite kost dan het handhaven van de bestaande JSP&#39;s voor de komende jaren.
 
 Maar het bewegen naar HTML is niet noodzakelijk een alleszins keus, omdat de componenten die in HTML worden geschreven compatibel zijn met componenten die in JSP of ESP worden geschreven. Betekenis dat de bestaande projecten zonder een probleem HTML voor nieuwe componenten kunnen gebruiken, terwijl het houden van JSP voor bestaande componenten.
 
@@ -39,7 +39,7 @@ Voordat u aan de slag gaat met de HTML-sjabloontaal, moeten we beginnen met het 
 
 **Biedt HTML ondersteuning voor JSP-tagbibliotheken?** - Nee, maar zoals wordt getoond in de sectie [Clientbibliotheken](getting-started.md#loading-client-libraries) laden, bieden de [sjabloon- en aanroepinstructies](block-statements.md#template-call) een vergelijkbaar patroon.
 
-**Kunnen de eigenschappen van HTML op een AEM project worden uitgebreid?** - Nee, dat kan niet. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica - [gebruik-API](getting-started.md#use-api-for-accessing-logic) - en van prijsverhoging (het [malplaatje &amp; vraagverklaringen](block-statements.md#template-call) ), die kunnen worden gebruikt om de code van projecten te modulariseren.
+**Kunnen de HTML-functies worden uitgebreid voor een AEM project?** - Nee, dat kan niet. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica - [gebruik-API](getting-started.md#use-api-for-accessing-logic) - en van prijsverhoging (het [malplaatje &amp; vraagverklaringen](block-statements.md#template-call) ), die kunnen worden gebruikt om de code van projecten te modulariseren.
 
 **Wat zijn de belangrijkste voordelen van HTL ten opzichte van JSP?** - Veiligheid en efficiëntie van projecten zijn de belangrijkste voordelen, die in het [overzicht](overview.md)worden beschreven.
 
@@ -61,9 +61,9 @@ Hier is een eerste voorbeeld, dat zou kunnen worden bevat zoals in een **`templa
 
 Er kunnen twee verschillende soorten syntaxen worden onderscheiden:
 
-* **[Blokinstructies](block-statements.md)**- Voor voorwaardelijke weergave van het element **&lt;h1>**wordt een[`data-sly-test`](block-statements.md#test)HTML5-gegevenskenmerk gebruikt. HTML biedt meerdere van dergelijke kenmerken, waarmee gedrag aan elk HTML-element kan worden gekoppeld en die allemaal vooraf zijn ingesteld op`data-sly`.
+* **[Blokinstructies](block-statements.md)** - Voor voorwaardelijke weergave van het element **&lt;h1>** wordt een [`data-sly-test`](block-statements.md#test) HTML5-gegevenskenmerk gebruikt. HTML biedt meerdere van dergelijke kenmerken, waarmee gedrag aan elk HTML-element kan worden gekoppeld en die allemaal vooraf zijn ingesteld op `data-sly`.
 
-* **[Expressietaal](expression-language.md)**- HTML-expressies worden gescheiden door tekens`${`en`}`. Tijdens runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
+* **[Expressietaal](expression-language.md)** - HTML-expressies worden gescheiden door tekens `${` en `}`. Tijdens runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
 
 De twee bovenstaande pagina&#39;s bevatten een gedetailleerde lijst met functies die beschikbaar zijn voor syntaxis.
 
@@ -110,12 +110,6 @@ en het element DIV had met de voorwaarde geannoteerd kunnen zijn:
     <p>${properties.jcr:description}</p>
 </div>
 ```
-
->[!NOTE]
->
->Het SLY-element is geïntroduceerd met AEM 6.1 of HTML 1.1.
->
->Voorafgaand aan dat, moest het [`data-sly-unwrap`](block-statements.md) attribuut in plaats daarvan worden gebruikt.
 
 ### HTML-opmerkingen {#htl-comments}
 
@@ -311,7 +305,7 @@ Deze sectie introduceert een paar gemeenschappelijke scenario&#39;s en hoe te om
 
 ### Client-bibliotheken laden {#loading-client-libraries}
 
-In HTML worden clientbibliotheken geladen via een hulpsjabloon die door AEM wordt geleverd en die toegankelijk is via [`data-sly-use`](block-statements.md#use). Er zijn drie sjablonen beschikbaar in dit bestand, dat kan worden aangeroepen via [`data-sly-call`](block-statements.md#template-call):
+In HTML, worden de cliëntbibliotheken geladen door een helpermalplaatje dat door AEM wordt verstrekt, dat door kan worden betreden [`data-sly-use`](block-statements.md#use). Er zijn drie sjablonen beschikbaar in dit bestand, dat kan worden aangeroepen via [`data-sly-call`](block-statements.md#template-call):
 
 * **`css`** - Laadt alleen de CSS-bestanden van de clientbibliotheken waarnaar wordt verwezen.
 * **`js`** - Hiermee worden alleen de JavaScript-bestanden geladen van de clientbibliotheken waarnaar wordt verwezen.

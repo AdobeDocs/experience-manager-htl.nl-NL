@@ -2,9 +2,9 @@
 title: HTML-expressietaal
 description: De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van HTML verstrekken.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Deze operator kan worden gebruikt om te testen of een van de twee voorwaarden va
 
 Aangezien de logische exploitant OR de eerste variabele terugkeert die waarachtig is, kan het ook zeer geschikt worden gebruikt om reservewaarden te verstrekken.
 
-HTML-kenmerken voorwaardelijk weergeven, omdat HTML kenmerken verwijdert met waarden die zijn ingesteld door expressies die false of een lege tekenreeks opleveren. In het onderstaande voorbeeld wordt de **`properties.jcr:`** titel weergegeven als deze bestaat en niet leeg is. Als deze bestaat en niet leeg is, wordt de titel **`properties.jcr:description`** anders weergegeven als er geen titel of beschrijving is opgegeven:
+Het kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omdat HTML kenmerken verwijdert met waarden die zijn ingesteld door expressies die onwaar of leeg zijn. In het onderstaande voorbeeld wordt de **`properties.jcr:`** titel weergegeven als deze bestaat en niet leeg is. Als deze bestaat en niet leeg is, wordt de titel **`properties.jcr:description`** anders weergegeven als er geen titel of beschrijving is opgegeven:
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>

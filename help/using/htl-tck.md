@@ -14,10 +14,10 @@ ht-degree: 0%
 
 ## Wat is HTL TCK
 
-De [Taal](overview.md)van het Malplaatje van HTML, die vroeger als Juist werd bekend, werd geïntroduceerd met [Adobe Experience Manager](http://www.adobe.com/solutions/web-experience-management.html) 6.0 en neemt de plaats van JSP (de Pagina&#39;s van de Server van Java) als aangewezen en geadviseerd server-zijmalplaatjesysteem voor HTML.
+De [HTML-sjabloontaal](overview.md), voorheen bekend als Sightly, is geïntroduceerd met [Adobe Experience Manager](http://www.adobe.com/solutions/web-experience-management.html) 6.0 en vervangt JSP (Java Server Pages) als het voorkeurssjabloonsysteem en het aanbevolen sjabloonsysteem voor de server voor HTML.
 
 De HTML Template Language Technology Compatibility Kit - HTL TCK - biedt een reeks tests die bedoeld zijn om te certificeren dat een HTML-implementatie voldoet aan de officiële [taalspecificatie](https://github.com/adobe/htl-spec).
 
 ## Meer informatie
 
-[Klik hier voor volledige informatie over Adobe Experience Manager HTL TCK](https://github.com/adobe/htl-tck)
+[Klik hier voor volledige informatie over Adobe Experience Manager HTML TCK](https://github.com/adobe/htl-tck)

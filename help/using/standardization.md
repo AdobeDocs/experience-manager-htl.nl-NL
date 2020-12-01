@@ -14,5 +14,5 @@ ht-degree: 0%
 
 Hieronder volgen de HTML-standaarden:
 
-* [De HTML-specificatie](https://github.com/adobe/htl-spec) - Voor taaladvocaten: de formele syntaxis en beschrijving van de functie.
-* [HTML TCK](https://github.com/adobe/htl-tck) - een reeks tests om de verenigbaarheid van de taal te verklaren.
+* [De HTML-specificatie](https://github.com/adobe/htl-spec)  - Voor taaladvocaten: de formele syntaxis en beschrijving van de functie.
+* [HTML TCK](https://github.com/adobe/htl-tck)  - een reeks tests om de verenigbaarheid van de taal te verklaren.

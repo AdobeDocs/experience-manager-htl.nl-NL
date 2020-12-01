@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Globale HTL-objecten {#htl-global-objects}
 
-Zonder het moeten om het even wat specificeren, verleent HTML toegang tot alle voorwerpen die algemeen in JSP na het omvatten beschikbaar waren. `global.jsp` Deze objecten vormen een aanvulling op objecten die kunnen worden geïntroduceerd via de [Use-API](use-api.md).
+Zonder het moeten om het even wat specificeren, verleent HTML toegang tot alle voorwerpen die algemeen beschikbaar in JSP na het omvatten `global.jsp` waren. Deze voorwerpen zijn naast om het even welke die door [gebruik-API](use-api.md) kunnen worden geïntroduceerd.
 
 ## Opsommbare objecten {#enumerable-objects}
 
-Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan kan worden benaderd met de puntnotatie en kan worden doorlopen met behulp van `data-sly-list` of `data-sly-repeat`.
+Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan is toegankelijk met de puntnotatie en kan worden doorlopen met behulp van `data-sly-list` of `data-sly-repeat`.
 
 | Naam variabele | Beschrijving |
 |--- |--- |
@@ -58,7 +58,7 @@ De meest bruikbare variabelen in de onderstaande tabel zijn vetgedrukt gemarkeer
 
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
-HTML-logica kan met JavaScript worden ondersteund. De aanbevolen of aanbevolen methode is echter het gebruik van [Sling Models.](https://sling.apache.org/documentation/bundles/models.html)
+HTML-logica kan met JavaScript worden ondersteund. De voorkeursmethode of aanbevolen methode is echter [Sling Models.](https://sling.apache.org/documentation/bundles/models.html)
 
 <!-- 
 

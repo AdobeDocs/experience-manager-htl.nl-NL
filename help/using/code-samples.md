@@ -14,8 +14,8 @@ ht-degree: 0%
 
 Hier volgen codevoorbeelden voor HTML:
 
-* [WKND-zelfstudie](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) - Deze zelfstudie doorloopt de implementatie van een AEM-site voor een fictieve levensstijlmerk in de WKND en behandelt fundamentele onderwerpen zoals projectinstelling, Core Components, Editable Templates, Client-side bibliotheken en componentontwikkeling met Adobe Experience Manager Sites, allemaal geïmplementeerd in HTML.
-* [HTL TodoMVC-voorbeeld](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc) - Een AEM + HTML-implementatie van de beroemde oefening.
+* [WKND-zelfstudie](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)  - Deze zelfstudie doorloopt de implementatie van een AEM site voor een fictieve levensstijlmerk in de WKND en behandelt fundamentele onderwerpen zoals projectinstelling, Core Components, Editable Templates, Client-side bibliotheken en componentontwikkeling met Adobe Experience Manager Sites, allemaal geïmplementeerd in HTML.
+* [HTL TodoMVC-voorbeeld](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc) : een AEM + HTML-implementatie van de beroemde oefening.
 
 Vraag het de sessies van de Expert:
 

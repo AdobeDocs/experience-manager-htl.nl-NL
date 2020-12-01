@@ -18,7 +18,7 @@ De Taal van het Malplaatje van HTML is het aangewezen en geadviseerde server-zij
 
 ## Meer beveiliging {#increased-security}
 
-De Taal van het Malplaatje van HTML verhoogt de veiligheid van plaatsen die het in hun implementatie gebruiken, in vergelijking met JSP en aan de meeste andere malplaatjesystemen, omdat HTML geschikt is om de juiste context-bewuste ontsnaping automatisch toe te passen op alle variabelen die output aan de presentatielaag zijn. HTML maakt dit mogelijk omdat het de syntaxis van HTML begrijpt, en die kennis gebruikt om het vereiste ontsnapt voor uitdrukkingen aan te passen, die op hun positie in de prijsverhoging worden gebaseerd. Dit leidt er bijvoorbeeld toe dat expressies die in `href` `src` of kenmerken zijn geplaatst anders worden beschermd dan expressies die in andere kenmerken zijn geplaatst, of elders.
+De Taal van het Malplaatje van HTML verhoogt de veiligheid van plaatsen die het in hun implementatie gebruiken, in vergelijking met JSP en aan de meeste andere malplaatjesystemen, omdat HTML geschikt is om de juiste context-bewuste ontsnaping automatisch toe te passen op alle variabelen die output aan de presentatielaag zijn. HTML maakt dit mogelijk omdat het de syntaxis van HTML begrijpt, en die kennis gebruikt om het vereiste ontsnapt voor uitdrukkingen aan te passen, die op hun positie in de prijsverhoging worden gebaseerd. Dit leidt er bijvoorbeeld toe dat expressies die in `href`- of `src`-kenmerken zijn geplaatst, anders worden beschermd dan expressies die in andere kenmerken zijn geplaatst, of elders.
 
 Hoewel hetzelfde resultaat kan worden bereikt met sjabloontalen zoals JSP, moet de ontwikkelaar er handmatig voor zorgen dat de juiste escape wordt toegepast op elke variabele. Aangezien één enkele omissie of fout op toegepaste het ontsnapten potentieel voldoende is om een kwetsbaarheid van de dwars-plaats scripting (XSS) te veroorzaken, besloten wij om deze taak met HTML te automatiseren. Indien nodig kunnen ontwikkelaars nog steeds een andere escapering voor de expressies opgeven, maar bij HTML is het standaardgedrag veel waarschijnlijker dan bij het gewenste gedrag, waardoor de kans op fouten kleiner wordt.
 
@@ -38,9 +38,9 @@ Concreet, van wat is waargenomen toen het re-uitvoeren van de plaats Adobe.com m
 
 Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die mogelijk door HTL mogelijk worden gemaakt:
 
-* **HTML / CSS / JS:** Omdat de ontwikkelaars van HTML malplaatjes kunnen direct uitgeven HTML, moeten de front-end ontwerpen niet afzonderlijk van het AEM project meer worden uitgevoerd, maar kunnen direct op de daadwerkelijke AEM componenten worden uitgevoerd. Dit vermindert pijnlijke herhalingen met de full-stack Java-ontwikkelaars.
-* **JSP/HTL:** Aangezien HTML zelf geen kennis van Java vereist en door:sturen om te schrijven, is om het even welke ontwikkelaar met de deskundigheid van HTML gemachtigd om de malplaatjes uit te geven.
-* **Java:** Dankzij de duidelijke en eenvoudige manier om gebruik-API te gebruiken die door HTML wordt verstrekt, wordt de interface met de bedrijfslogica verduidelijkt, die ook de ontwikkeling van Java over het algemeen bevordert.
+* **HTML / CSS / JS:** Omdat de HTML-ontwikkelaars HTML-sjablonen rechtstreeks kunnen bewerken, hoeven de front-end ontwerpen niet meer afzonderlijk van het AEM project te worden geïmplementeerd, maar kunnen ze rechtstreeks op de daadwerkelijke AEM worden geïmplementeerd. Dit vermindert pijnlijke herhalingen met de full-stack Java-ontwikkelaars.
+* **JSP/HTL:** Aangezien HTML zelf geen kennis van Java vereist en door:sturen om te schrijven, wordt om het even welke ontwikkelaar met de deskundigheid van HTML gemachtigd om de malplaatjes uit te geven.
+* **Java:** Dankzij de duidelijke en eenvoudige manier om gebruik-API te gebruiken die door HTML wordt verstrekt, wordt de interface met de bedrijfslogica verduidelijkt, die ook de ontwikkeling van Java over het algemeen ten goede komt.
 
 **Volgende lezen:**
 

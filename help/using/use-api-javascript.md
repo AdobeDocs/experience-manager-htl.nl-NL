@@ -38,14 +38,14 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 
 ## Een eenvoudig voorbeeld {#a-simple-example}
 
-We definiëren een component, `info`die zich bevindt op
+We definiëren een component, `info`, die zich bevindt op
 
 `/apps/my-example/components/info`
 
 Het bevat twee bestanden:
 
 * **`info.js`**: een JavaScript-bestand dat de use-klasse definieert.
-* **`info.html`**: een HTML-bestand dat de component definieert `info`. Deze code gebruikt de functionaliteit van `info.js` via de use-API.
+* **`info.html`**: een HTML-bestand dat de component definieert  `info`. Deze code gebruikt de functionaliteit van `info.js` door gebruik-API.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
@@ -68,7 +68,7 @@ use(function () {
 </div>
 ```
 
-Wij creëren ook een inhoudsknoop die de `info` component bij gebruikt
+Wij creëren ook een inhoudsknoop die `info` component bij gebruikt
 
 `/content/my-example`, met eigenschappen:
 
@@ -115,7 +115,7 @@ Overweeg de volgende componentsjabloon:
 </section>
 ```
 
-De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan serverzijde, die zich in een `component.js` bestand rechts naast de sjabloon bevindt:
+De corresponderende logica kan worden geschreven met de volgende JavaScript-code aan de serverzijde, die zich bevindt in een `component.js`-bestand vlak naast de sjabloon:
 
 ```javascript
 use(function () {
@@ -134,7 +134,7 @@ use(function () {
 });
 ```
 
-Hiermee wordt geprobeerd de beschrijving van verschillende bronnen `title` te nemen en uit te snijden naar 50 tekens.
+Hiermee wordt geprobeerd de `title` uit verschillende bronnen te halen en de beschrijving uit te snijden naar 50 tekens.
 
 ## Afhankelijkheden {#dependencies}
 
@@ -157,11 +157,11 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## Uitbreiden {#extending}
+## {#extending} uitbreiden
 
-Het afhankelijkheidspatroon kan ook worden gebruikt om de logica van een andere component uit te breiden (die doorgaans de `sling:resourceSuperType` van de huidige component is).
+Het afhankelijkheidspatroon kan ook worden gebruikt om de logica van een andere component (die gewoonlijk `sling:resourceSuperType` van de huidige component is) uit te breiden.
 
-Stel u voor dat de bovenliggende component al de component bevat `title`en dat we `description` ook een component willen toevoegen:
+Stel dat de bovenliggende component al de `title` bevat en dat we ook een `description` willen toevoegen:
 
 ```javascript
 use(['../parent-component/parent-component.js'], function (component) {
@@ -178,7 +178,7 @@ use(['../parent-component/parent-component.js'], function (component) {
 
 ## Parameters doorgeven aan een sjabloon {#passing-parameters-to-a-template}
 
-In het geval van `data-sly-template` verklaringen die van componenten onafhankelijk kunnen zijn, kan het nuttig zijn om parameters tot bijbehorende gebruik-API over te gaan.
+In het geval van `data-sly-template` verklaringen die van componenten onafhankelijk kunnen zijn, kan het nuttig zijn om parameters tot het bijbehorende gebruik-API over te gaan.
 
 Zo in onze component roepen wij een malplaatje dat in een verschillend dossier wordt gevestigd:
 
@@ -186,7 +186,7 @@ Zo in onze component roepen wij een malplaatje dat in een verschillend dossier w
 <section class="component-name" data-sly-use.tmpl="template.html" data-sly-call="${tmpl.templateName @ page=currentPage}"></section>
 ```
 
-Dit is de sjabloon in `template.html`:
+Dan is dit het malplaatje dat in `template.html` wordt gevestigd:
 
 ```xml
 <template data-sly-template.templateName="${@ page}" data-sly-use.tmpl="${'template.js' @ page=page, descriptionLength=50}">
@@ -195,7 +195,7 @@ Dit is de sjabloon in `template.html`:
 </template>
 ```
 
-De bijbehorende logica kan worden geschreven met de volgende JavaScript-code aan serverzijde, die zich in een `template.js` bestand rechts naast het sjabloonbestand bevindt:
+De corresponderende logica kan worden geschreven met de volgende JavaScript-code aan de serverzijde, die zich in een `template.js`-bestand vlak naast het sjabloonbestand bevindt:
 
 ```javascript
 use(function () {
@@ -213,4 +213,4 @@ use(function () {
 });
 ```
 
-De doorgegeven parameters worden ingesteld op het `this` trefwoord.
+De doorgegeven parameters worden ingesteld op het trefwoord `this`.

@@ -2,7 +2,7 @@
 title: HTML-blokinstructies
 description: HTML Template Language (HTL)-blokinstructies zijn aangepaste gegevenskenmerken die rechtstreeks aan bestaande HTML worden toegevoegd.
 translation-type: tm+mt
-source-git-commit: 2336ce8860056f5bc6470b23ee4cda135f7107d8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 1%
@@ -588,7 +588,7 @@ De HTML-tag `<sly>` kan worden gebruikt om het huidige element te verwijderen, z
 <sly data-sly-resource="./header"></sly>
 ```
 
-Hoewel de tag `<sly>` geen geldige HTML 5-tag is, kan de tag &lt;a0/> in de uiteindelijke uitvoer worden weergegeven met `data-sly-unwrap`:
+Hoewel de tag `<sly>` geen geldige HTML 5-tag is, kan de tag  in de uiteindelijke uitvoer worden weergegeven met `data-sly-unwrap`:
 
 ```xml
 <sly data-sly-unwrap="${false}"></sly> <!--/* outputs: <sly></sly> */-->

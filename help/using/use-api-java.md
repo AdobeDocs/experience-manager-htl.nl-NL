@@ -2,7 +2,7 @@
 title: HTML Java Use-API
 description: 'De Java Use-API van HTL (de HTML-sjabloontaal) biedt een HTL-bestand toegang tot helpermethoden in een aangepaste Java-klasse. '
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%

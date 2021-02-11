@@ -2,7 +2,7 @@
 title: Adobe Experience Manager HTML-overzicht
 description: HTML wordt ondersteund door AEM en biedt een zeer productief webframework op bedrijfsniveau dat de beveiliging verhoogt. HTML-ontwikkelaars zonder Java-kennis kunnen dan beter deelnemen aan AEM projecten.
 translation-type: tm+mt
-source-git-commit: 88f6ad56a8d8f704b51aa84765de8da15e6c594e
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%

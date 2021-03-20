@@ -1,18 +1,14 @@
 ---
-product: Adobe Experience Manager
+solution: Experience Manager
+type: Documentatie
+product: adobe experience manager
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.nl-NL
 index: y
-solution-title: Meer informatie en ondersteuning voor HTML
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/home.html
-getting-started-title: Aan de slag met ontwikkelen voor AEM
-getting-started-url: https://docs.adobe.com/content/help/en/experience-manager-cloud-service/core-concepts/home.html
-tutorials-title: AEM-zelfstudies
-tutorials-url: https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/overview.html
 translation-type: tm+mt
-source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 17%
+source-wordcount: '108'
+ht-degree: 0%
 
 ---
 
@@ -34,6 +30,9 @@ metadata.md
 * `product`
 * `git-repo`
 * `index: y`
+
+Niet meer gebruikt:
+
 * `solution-title`
 * `solution-hub-url`
 * `getting-started-title`

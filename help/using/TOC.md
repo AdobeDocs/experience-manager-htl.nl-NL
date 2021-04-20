@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Manager HTML
 breadcrumb-title: HTML-handleiding
 user-guide-description: Gebruik de HTML-sjabloontaal (HTML Template Language) om een webframework op bedrijfsniveau te maken.
 feature-set: Experience Manager
-feature: Gereedschappen voor ontwikkelaars
+feature: Developer Tools
 role: Developer
 translation-type: tm+mt
 source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5

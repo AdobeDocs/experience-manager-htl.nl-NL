@@ -1,19 +1,17 @@
 ---
 title: Gereedschappen voor ontwikkelaars
 description: Een lijst met HTL-ontwikkelingsinstrumenten
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: c5683ee4-a052-4a6f-8ad1-e18a4201414e
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
-
 
 # Gereedschappen voor ontwikkelaars {#developer-tools}
 
 De volgende ontwikkelaarshulpmiddelen zijn beschikbaar voor HTML:
 
 * [HTL Read Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl)  - Een live uitvoeringsomgeving voor het spelen met de taal, ideaal voor leren.
-* [AEM Brackets-extensie](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-brackets.html)  - Een eenvoudig hulpmiddel voor ontwikkelaars aan de voorzijde om aan AEM onderdelen te werken.
-* [AEM Eclipse-extensie](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/aem-eclipse.html)  - Een hulpmiddel voor achterwaartse ontwikkelaars om AEM projecten te maken en deze eenvoudig te bewerken.
+* [AEM Eclipse-extensie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/eclipse.html)  - Een hulpmiddel voor achterwaartse ontwikkelaars om AEM projecten te maken en deze eenvoudig te bewerken.

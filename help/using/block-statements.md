@@ -1,14 +1,13 @@
 ---
 title: HTML-blokinstructies
 description: HTML Template Language (HTL)-blokinstructies zijn aangepaste gegevenskenmerken die rechtstreeks aan bestaande HTML worden toegevoegd.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: a517dcef-ab7a-4d4c-a1a9-2e57aad034f7
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 1%
 
 ---
-
 
 # HTML-blokinstructies {#htl-block-statements}
 
@@ -109,7 +108,7 @@ Initialiseer een andere malplaatje HTML dat dan kan worden geroepen gebruikend `
 >* [JavaScript Use-API](use-api-javascript.md)
 
 
-#### data-smart-use with resources {#data-sly-use-with-resources}
+#### gegevensbewust gebruik met bronnen {#data-sly-use-with-resources}
 
 Hierdoor kunnen bronnen direct in HTML worden opgehaald met `data-sly-use` en hoeft er geen code te worden geschreven om deze op te halen.
 
@@ -125,7 +124,7 @@ Bijvoorbeeld:
 >
 >Zie ook de sectie [Pad niet altijd vereist.](#path-not-required)
 
-### opheffen {#unwrap}
+### terugloop {#unwrap}
 
 `data-sly-unwrap` verwijdert het hostelement uit de gegenereerde markering en behoudt de inhoud ervan. Hierdoor kunnen elementen worden uitgesloten die vereist zijn als onderdeel van de HTML-presentatielogica, maar die niet gewenst zijn in de werkelijke uitvoer.
 
@@ -188,7 +187,7 @@ is gelijk aan
 
 Bij beide wordt de waarde `jcr:description` weergegeven als alineatekst. Het voordeel van de tweede methode is dat de onopvallende annotatie van HTML wordt toegestaan terwijl de statische plaatsaanduidingsinhoud van de oorspronkelijke ontwerper behouden blijft.
 
-### kenmerk {#attribute}
+### attribute {#attribute}
 
 `data-sly-attribute` voegt kenmerken toe aan het element host.
 
@@ -463,7 +462,7 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM biedt duidelijke en eenvoudige logica die de decoratietags regelt die elementen bevatten. Zie [Decoratiemarkering](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/decoration-tag.html) in de documentatie over ontwikkelende componenten voor meer informatie.
+>AEM biedt duidelijke en eenvoudige logica die de decoratietags regelt die elementen bevatten. Zie [Decoratiemarkering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html) in de documentatie over ontwikkelende componenten voor meer informatie.
 
 ### include {#include}
 
@@ -495,7 +494,7 @@ U kunt ook de WCM-modus wijzigen:
 <section data-sly-include="${'template.html' @ wcmmode='disabled'}"></section>
 ```
 
-### Request-attributes {#request-attributes}
+### Aanvraagkenmerken {#request-attributes}
 
 In `data-sly-include` en `data-sly-resource` kunt u `requestAttributes` overgaan om hen in het ontvangende HTML-manuscript te gebruiken.
 
@@ -521,7 +520,7 @@ public class Settings extends WCMUsePojo {
 }
 ```
 
-U kunt bijvoorbeeld via een Sling-Model de waarde van de opgegeven `requestAttributes` gebruiken.
+U kunt bijvoorbeeld via een Sling-Model de waarde van het opgegeven `requestAttributes` gebruiken.
 
 In dit voorbeeld wordt de lay-out via de Kaart geïnjecteerd vanuit de Use-class:
 
@@ -534,7 +533,7 @@ public class ProductSettings {
 }
 ```
 
-### sjabloon en aanroep {#template-call}
+### sjabloon en gesprek {#template-call}
 
 Sjabloonblokken kunnen worden gebruikt als functieaanroepen: in hun verklaring kunnen zij parameters krijgen, die dan kunnen worden overgegaan wanneer het roepen van hen. Ze staan ook recursie toe.
 

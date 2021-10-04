@@ -1,14 +1,13 @@
 ---
 title: HTML-expressietaal
 description: De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van HTML verstrekken.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
-source-wordcount: '1854'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
-
 
 # HTML-expressietaal {#htl-expression-language}
 
@@ -25,7 +24,7 @@ Expressies kunnen worden genegeerd door een `\`-teken voor te zetten. `\${test}`
 
 >[!NOTE]
 >
->Als u de voorbeelden op deze pagina wilt uitproberen, kunt u een live uitvoeringsomgeving gebruiken met de naam [Eval Print Loop](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) lezen.
+>Als u de voorbeelden op deze pagina wilt uitproberen, kunt u een live uitvoeringsomgeving gebruiken met de naam [Eval-afdruklay](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl).
 
 De expressiesyntaxis bevat [variabelen](#variables), [literals](#literals), [operators](#operators) en [opties](#options):
 
@@ -68,7 +67,7 @@ De haakjesnotatie kan worden gebruikt om toegang te krijgen tot eigenschappen di
 ${properties[myVar]}
 ```
 
-### Toelaatbare verwerking van null-waarden {#permissive-handling-of-null-values}
+### Toestemming voor verwerking van null-waarden {#permissive-handling-of-null-values}
 
 ```xml
 ${currentPage.lastModified.time.toString}
@@ -286,7 +285,7 @@ Optie die de opgesomde placeholders, {*n*}, met de overeenkomstige variabele ver
 ${'Page {0} of {1}' @ format=[current, total]}
 ```
 
-## URL-manipulatie {#url-manipulation}
+## Bewerking van URL {#url-manipulation}
 
 Er is een nieuwe set URL-manipulaties beschikbaar.
 
@@ -316,7 +315,7 @@ Hiermee voegt u de extensie html en een fragment (#value) toe aan een pad.
 ${ link @ extension = 'html' }
 ```
 
-### Number/Date-formatting {#number-date-formatting}
+### Getal/datum-opmaak {#number-date-formatting}
 
 HTML staat native opmaak van getallen en datums toe zonder aangepaste code te schrijven. Dit ondersteunt ook tijdzone en landinstelling.
 
@@ -337,7 +336,7 @@ In het volgende voorbeeld wordt getoond dat de indeling eerst wordt opgegeven en
 
 ### Internationalisatie {#internationalization}
 
-Zet de tekenreeks om in de taal van de huidige *bron* (zie hieronder), met behulp van het huidige [woordenboek](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/internationalization/i18n-translator.html). Als er geen vertaling wordt gevonden, wordt de oorspronkelijke tekenreeks gebruikt.
+Zet de tekenreeks om in de taal van de huidige *bron* (zie hieronder), met behulp van het huidige [woordenboek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-translator.html). Als er geen vertaling wordt gevonden, wordt de oorspronkelijke tekenreeks gebruikt.
 
 ```xml
 ${'Page' @ i18n}
@@ -377,7 +376,7 @@ Gebruik de verbindingsoptie om een ander scheidingsteken op te geven:
 ${['one', 'two'] @ join='; '}
 ```
 
-### Context {#display-context} weergeven
+### Weergavecontext {#display-context}
 
 De weergavecontext van een HTML-expressie verwijst naar de locatie ervan binnen de structuur van de HTML-pagina. Bijvoorbeeld, als de uitdrukking op zijn plaats verschijnt die een tekstknoop zou produceren zodra teruggegeven, dan wordt gezegd het in een `text` context te zijn. Als het binnen de waarde van een attribuut wordt gevonden, dan wordt gezegd dat het in een `attribute` context, etc. is.
 
@@ -419,7 +418,7 @@ De optie Escaping en XSS-beveiliging kunnen ook worden uitgeschakeld:
 <div>${myScript @ context='unsafe'}</div>
 ```
 
-### Contextinstellingen {#context-settings}
+### Context-instellingen {#context-settings}
 
 | Context | Wanneer gebruiken | Wat het doet |
 |--- |--- |--- |

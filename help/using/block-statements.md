@@ -1,21 +1,21 @@
 ---
-title: HTML-blokinstructies
-description: HTML Template Language (HTL)-blokinstructies zijn aangepaste gegevenskenmerken die rechtstreeks aan bestaande HTML worden toegevoegd.
+title: Wat zijn HTML-blokinstructies?
+description: Meer informatie over HTML-blokinstructies of HTML (HTML Template Language). Blokinstructies zijn aangepaste gegevenskenmerken die rechtstreeks aan bestaande HTML worden toegevoegd.
 exl-id: a517dcef-ab7a-4d4c-a1a9-2e57aad034f7
-source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
+source-git-commit: 79d299766da07dae001708b396b05c73cd70d4cc
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1563'
 ht-degree: 1%
 
 ---
 
 # HTML-blokinstructies {#htl-block-statements}
 
-HTML Template Language (HTL)-blokinstructies zijn aangepaste `data`-kenmerken die rechtstreeks aan bestaande HTML worden toegevoegd. Hierdoor is het mogelijk een prototype van een statische HTML-pagina eenvoudig en onopvallend te annoteren, zodat deze kan worden omgezet in een functionerende dynamische sjabloon zonder de geldigheid van de HTML-code te verbreken.
+HTML Template Language (HTL)-blokinstructies zijn aangepast `data` rechtstreeks aan bestaande HTML worden toegevoegd. Dit staat gemakkelijke en onopvallende annotatie van een prototype statische HTML pagina toe, die het in een functionerend dynamisch malplaatje omzet zonder de geldigheid van de code van de HTML te breken.
 
 ## Blokoverzicht {#overview}
 
-HTML-blokplug-ins worden gedefinieerd door `data-sly-*`-kenmerken die zijn ingesteld op HTML-elementen. Elementen kunnen een afsluitende tag hebben of zichzelf afsluiten. Kenmerken kunnen waarden hebben (statische tekenreeksen of expressies) of alleen Booleaanse kenmerken zijn (zonder waarde).
+HTML-blokplug-ins worden gedefinieerd door `data-sly-*` kenmerken die zijn ingesteld voor HTML-elementen. Elementen kunnen een afsluitende tag hebben of zichzelf afsluiten. Kenmerken kunnen waarden hebben (statische tekenreeksen of expressies) of alleen Booleaanse kenmerken zijn (zonder waarde).
 
 ```xml
 <tag data-sly-BLOCK></tag>                                 <!--/* A block is simply consists in a data-sly attribute set on an element. */-->
@@ -26,7 +26,7 @@ HTML-blokplug-ins worden gedefinieerd door `data-sly-*`-kenmerken die zijn inges
 <tag data-sly-BLOCKONE="value" data-sly-BLOCKTWO="value"/> <!--/* Several block statements can be set on a same element. */-->
 ```
 
-Alle geëvalueerde `data-sly-*` attributen worden verwijderd uit de geproduceerde prijsverhoging.
+Alles geëvalueerd `data-sly-*` worden verwijderd uit de gegenereerde markering.
 
 ### Id&#39;s {#identifiers}
 
@@ -49,7 +49,7 @@ De id kan op verschillende manieren door de blokinstructie worden gebruikt. Hier
 <div data-sly-attribute.title="${properties.jcr:title}"></div> <!--/* This will create a title attribute */-->
 ```
 
-De bovenste id&#39;s op hoofdniveau zijn hoofdlettergevoelig (omdat ze kunnen worden ingesteld via HTML-kenmerken die niet hoofdlettergevoelig zijn), maar alle eigenschappen ervan zijn hoofdlettergevoelig.
+De hoogste top-level herkenningstekens zijn case-insensitive (omdat zij door HTML attributen kunnen worden geplaatst die case-insensitive zijn), maar al hun eigenschappen zijn case-sensitive.
 
 ## Beschikbare blokinstructies {#available-block-statements}
 
@@ -59,7 +59,7 @@ Er is een aantal beschikbare blokinstructies. Wanneer gebruikt op hetzelfde elem
 1. `data-sly-set`, `data-sly-test`, `data-sly-use`
 1. `data-sly-call`
 1. `data-sly-text`
-1. `data-sly-element`,  `data-sly-include`,  `data-sly-resource`
+1. `data-sly-element`, `data-sly-include`, `data-sly-resource`
 1. `data-sly-unwrap`
 1. `data-sly-list`, `data-sly-repeat`
 1. `data-sly-attribute`
@@ -88,13 +88,13 @@ Initialiseer een klasse van Java, waar die klasse als deel van een bundel OSGi g
 <div data-sly-use.nav="org.example.Navigation">${nav.foo}</div>
 ```
 
-Parameters kunnen met behulp van opties worden doorgegeven aan de initialisatie. Over het algemeen mag deze functie alleen worden gebruikt door HTML-code die zich zelf binnen een `data-sly-template`-blok bevindt:
+Parameters kunnen met behulp van opties worden doorgegeven aan de initialisatie. Over het algemeen mag deze functie alleen worden gebruikt door HTML-code die zich zelf in een `data-sly-template` blok:
 
 ```xml
 <div data-sly-use.nav="${'navigation.js' @parentPage=currentPage}">${nav.foo}</div>
 ```
 
-Initialiseer een andere malplaatje HTML dat dan kan worden geroepen gebruikend `data-sly-call`:
+Initialiseer een ander malplaatje HTML dat dan kan worden geroepen gebruikend `data-sly-call`:
 
 ```xml
 <div data-sly-use.nav="navTemplate.html" data-sly-call="${nav.foo}"></div>
@@ -110,7 +110,7 @@ Initialiseer een andere malplaatje HTML dat dan kan worden geroepen gebruikend `
 
 #### gegevensbewust gebruik met bronnen {#data-sly-use-with-resources}
 
-Hierdoor kunnen bronnen direct in HTML worden opgehaald met `data-sly-use` en hoeft er geen code te worden geschreven om deze op te halen.
+Hierdoor kunnen bronnen direct in HTML worden opgehaald met `data-sly-use` en vereist geen code schrijven om het te krijgen.
 
 Bijvoorbeeld:
 
@@ -128,7 +128,7 @@ Bijvoorbeeld:
 
 `data-sly-unwrap` verwijdert het hostelement uit de gegenereerde markering en behoudt de inhoud ervan. Hierdoor kunnen elementen worden uitgesloten die vereist zijn als onderdeel van de HTML-presentatielogica, maar die niet gewenst zijn in de werkelijke uitvoer.
 
-Deze verklaring moet echter spaarzaam worden gebruikt. Over het algemeen is het beter om de HTML-markering zo dicht mogelijk bij de gewenste uitvoermarkering te houden. Met andere woorden, wanneer u HTML-blokinstructies toevoegt, probeert u zoveel mogelijk om de bestaande HTML eenvoudig te annoteren zonder nieuwe elementen in te voeren.
+Deze verklaring moet echter spaarzaam worden gebruikt. Over het algemeen is het beter om de HTML-markering zo dicht mogelijk bij de gewenste uitvoermarkering te houden. Met andere woorden, wanneer u HTML-blokinstructies toevoegt, probeert u zoveel mogelijk om de bestaande HTML simpelweg te annoteren zonder nieuwe elementen in te voeren.
 
 Dit
 
@@ -185,7 +185,7 @@ is gelijk aan
 <p data-sly-text="${properties.jcr:description}">Lorem ipsum</p>
 ```
 
-Bij beide wordt de waarde `jcr:description` weergegeven als alineatekst. Het voordeel van de tweede methode is dat de onopvallende annotatie van HTML wordt toegestaan terwijl de statische plaatsaanduidingsinhoud van de oorspronkelijke ontwerper behouden blijft.
+Beide zullen de waarde van tonen `jcr:description` als alineatekst. Het voordeel van de tweede methode is dat de onopvallende annotatie van HTML wordt toegestaan terwijl de statische plaatsaanduidingsinhoud van de oorspronkelijke ontwerper behouden blijft.
 
 ### attribute {#attribute}
 
@@ -203,11 +203,11 @@ is gelijk aan
 <div title="Lorem Ipsum" data-sly-attribute.title="${properties.jcr:title}"></div>
 ```
 
-Beide zullen het `title` attribuut aan de waarde van `jcr:title` plaatsen. Het voordeel van de tweede methode is dat de onopvallende annotatie van HTML wordt toegestaan terwijl de statische plaatsaanduidingsinhoud van de oorspronkelijke ontwerper behouden blijft.
+Beide zullen plaatsen `title` aan de waarde van `jcr:title`. Het voordeel van de tweede methode is dat de onopvallende annotatie van HTML wordt toegestaan terwijl de statische plaatsaanduidingsinhoud van de oorspronkelijke ontwerper behouden blijft.
 
-Attributen worden van links naar rechts opgelost, waarbij de meest rechtse instantie van een kenmerk (letterlijk of gedefinieerd via `data-sly-attribute`) voorrang krijgt op instanties van hetzelfde kenmerk (letterlijk gedefinieerd of via `data-sly-attribute`) links gedefinieerd.
+Attributen worden van links naar rechts opgelost, met de meest rechtse instantie van een kenmerk (letterlijk of via `data-sly-attribute`) voorrang hebben op elke instantie van hetzelfde kenmerk (letterlijk of via `data-sly-attribute`) links gedefinieerd.
 
-Een attribuut (ofwel `literal` of ingesteld via `data-sly-attribute`) waarvan de waarde naar de lege tekenreeks evalueert, wordt verwijderd uit de definitieve opmaak. De enige uitzondering op deze regel is dat een letterlijk kenmerk dat is ingesteld op een letterlijke lege tekenreeks, behouden blijft. Bijvoorbeeld,
+Merk op dat een attribuut (of `literal` of instellen via `data-sly-attribute`) waarvan de waarde naar de lege tekenreeks evalueert, wordt verwijderd in de laatste opmaak. De enige uitzondering op deze regel is dat een letterlijk kenmerk dat is ingesteld op een letterlijke lege tekenreeks, behouden blijft. Bijvoorbeeld,
 
 ```xml
 <div class="${''}" data-sly-attribute.id="${''}"></div>
@@ -263,9 +263,9 @@ Bijvoorbeeld,
 <h1 data-sly-element="${titleLevel}">text</h1>
 ```
 
-Vervangt `h1` met de waarde van `titleLevel`.
+Vervangt de `h1` met de waarde van `titleLevel`.
 
-Om veiligheidsredenen accepteert `data-sly-element` alleen de volgende elementnamen:
+Om veiligheidsredenen `data-sly-element` Accepteert alleen de volgende elementnamen:
 
 ```xml
 a abbr address article aside b bdi bdo blockquote br caption cite code col colgroup
@@ -278,9 +278,9 @@ Voor het instellen van andere elementen moet XSS-beveiliging zijn uitgeschakeld 
 
 ### test {#test}
 
-`data-sly-test` verwijdert voorwaardelijk het gastheerelement en het is inhoud. De waarde `false` verwijdert het element; Bij een waarde van `true` blijft het element behouden.
+`data-sly-test` verwijdert voorwaardelijk het gastheerelement en het is inhoud. Een waarde van `false` het element verwijdert; een waarde van `true` behoudt het element.
 
-Het element `p` en de inhoud ervan worden bijvoorbeeld alleen gerenderd als `isShown` `true` is:
+De `p` element en de inhoud ervan worden alleen gerenderd als `isShown` is `true`:
 
 ```xml
 <p data-sly-test="${isShown}">text</p>
@@ -311,15 +311,15 @@ Hier volgen enkele voorbeelden van het vergelijken van waarden:
 
 ### herhalen {#repeat}
 
-Met `data-sly-repeat` kunt u een element meerdere keren herhalen op basis van de opgegeven lijst.
+Met `data-sly-repeat` u kunt een element meerdere keren herhalen op basis van de opgegeven lijst.
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}">${item.name}</div>
 ```
 
-Dit werkt de zelfde manier zoals `data-sly-list`, behalve dat hebt u geen containerelement nodig.
+Dit werkt op dezelfde manier als `data-sly-list`, behalve dat u geen containerelement nodig hebt.
 
-In het volgende voorbeeld wordt getoond dat u ook naar het *item* voor kenmerken kunt verwijzen:
+In het volgende voorbeeld wordt getoond dat u ook kunt verwijzen naar de *item* voor kenmerken:
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}" data-sly-attribute.class="${item.name}">${item.name}</div>
@@ -342,15 +342,15 @@ De volgende standaardvariabelen zijn beschikbaar binnen het bereik van de lijst:
 
 * `item`: Het huidige item in de herhaling.
 * `itemList`: Object met de volgende eigenschappen:
-* `index`: op nul gebaseerde teller (  `0..length-1`).
-* `count`: op één gebaseerde teller (  `1..length`).
-* `first`:  `true` als het huidige item het eerste item is.
-* `middle`:  `true` als het huidige item noch het eerste noch het laatste item is.
-* `last`:  `true` als het huidige item het laatste item is.
-* `odd`:  `true` als  `index` het oneven is.
-* `even`:  `true` als  `index` dat even is.
+* `index`: op nul gebaseerde teller ( `0..length-1`).
+* `count`: op één gebaseerde teller ( `1..length`).
+* `first`: `true` als het huidige item het eerste item is.
+* `middle`: `true` als het huidige item noch het eerste noch het laatste item is.
+* `last`: `true` als het huidige item het laatste item is.
+* `odd`: `true` indien `index` is vreemd.
+* `even`: `true` indien `index` is gelijk.
 
-Door een id op de instructie `data-sly-list` te definiëren, kunt u de namen van de variabelen `itemList` en `item` wijzigen. `item` wordt  `<variable>` en  `itemList` wordt  `<variable>List`.
+Een id definiëren op het tabblad `data-sly-list` kunt u de naam van de `itemList` en `item` variabelen. `item` wordt `<variable>` en `itemList` wordt `<variable>List`.
 
 ```xml
 <dl data-sly-list.child="${currentPage.listChildren}">
@@ -380,7 +380,7 @@ Een eenvoudige bron is:
 
 #### Pad niet altijd vereist {#path-not-required}
 
-Merk op dat het gebruik van een weg met `data-sly-resource` niet wordt vereist als u reeds het middel hebt. Als u de bron al hebt, kunt u deze rechtstreeks gebruiken.
+Houd er rekening mee dat het gebruik van een pad met `data-sly-resource` is niet vereist als u al over de bron beschikt. Als u de bron al hebt, kunt u deze rechtstreeks gebruiken.
 
 Het volgende is bijvoorbeeld juist.
 
@@ -462,11 +462,11 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM biedt duidelijke en eenvoudige logica die de decoratietags regelt die elementen bevatten. Zie [Decoratiemarkering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html) in de documentatie over ontwikkelende componenten voor meer informatie.
+>AEM biedt duidelijke en eenvoudige logica die de decoratietags regelt die elementen bevatten. Zie voor meer informatie [Decoratietag](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/decoration-tag.html) in de documentatie over ontwikkelende componenten.
 
 ### include {#include}
 
-`data-sly-include` vervangt de inhoud van het hostelement door de opmaak die wordt gegenereerd door het opgegeven HTML-sjabloonbestand (HTL, JSP, ESP, enz.) wanneer het wordt verwerkt door de overeenkomstige sjabloonmotor. De renderingcontext van het opgenomen bestand bevat niet de huidige HTML-context (die van het include-bestand); Daarom moet voor het opnemen van HTML-bestanden de huidige `data-sly-use` in het opgenomen bestand worden herhaald (In een dergelijk geval is het doorgaans beter `data-sly-template` en `data-sly-call` te gebruiken)
+`data-sly-include` vervangt de inhoud van het hostelement door de opmaak die wordt gegenereerd door het opgegeven HTML-sjabloonbestand (HTL, JSP, ESP, enz.) wanneer het wordt verwerkt door de overeenkomstige sjabloonmotor. De renderingcontext van het opgenomen bestand bevat niet de huidige HTML-context (die van het include-bestand); Voor het opnemen van HTML-bestanden geldt derhalve het huidige `data-sly-use` moet worden herhaald in het ingesloten bestand (in dat geval is het doorgaans beter om `data-sly-template` en `data-sly-call`)
 
 Een eenvoudig voorbeeld:
 
@@ -496,7 +496,7 @@ U kunt ook de WCM-modus wijzigen:
 
 ### Aanvraagkenmerken {#request-attributes}
 
-In `data-sly-include` en `data-sly-resource` kunt u `requestAttributes` overgaan om hen in het ontvangende HTML-manuscript te gebruiken.
+In de `data-sly-include` en `data-sly-resource` u kunt doorgeven `requestAttributes` om deze in het ontvangende HTML-script te gebruiken.
 
 Hierdoor kunt u parameters correct in scripts of componenten doorgeven.
 
@@ -520,7 +520,7 @@ public class Settings extends WCMUsePojo {
 }
 ```
 
-U kunt bijvoorbeeld via een Sling-Model de waarde van het opgegeven `requestAttributes` gebruiken.
+U kunt bijvoorbeeld via een Sling-Model de waarde van de opgegeven `requestAttributes`.
 
 In dit voorbeeld wordt de lay-out via de Kaart geïnjecteerd vanuit de Use-class:
 
@@ -555,7 +555,7 @@ Definieer een dynamische sjabloon en roep deze vervolgens aan met parameters:
 <div data-sly-call="${two @ title=properties.jcr:title}"></div>
 ```
 
-Sjablonen in een ander bestand kunnen worden geïnitialiseerd met `data-sly-use`. In dit geval kunnen `data-sly-use` en `data-sly-call` ook op hetzelfde element worden geplaatst:
+Sjablonen in een ander bestand kunnen worden geïnitialiseerd met `data-sly-use`. Let in dit geval op: `data-sly-use` en `data-sly-call` kan ook op hetzelfde element worden geplaatst:
 
 ```xml
 <div data-sly-use.lib="templateLib.html">
@@ -580,19 +580,19 @@ Sjabloonherhaling wordt ondersteund:
 
 ## intelligent element {#sly-element}
 
-De HTML-tag `<sly>` kan worden gebruikt om het huidige element te verwijderen, zodat alleen de onderliggende elementen kunnen worden weergegeven. De functionaliteit is vergelijkbaar met het blokelement `data-sly-unwrap`:
+De `<sly>` U kunt de tag HTML gebruiken om het huidige element te verwijderen, zodat alleen de onderliggende elementen kunnen worden weergegeven. De functionaliteit is vergelijkbaar met de `data-sly-unwrap` blokelement:
 
 ```xml
 <!--/* This will display only the output of the 'header' resource, without the wrapping <sly> tag */-->
 <sly data-sly-resource="./header"></sly>
 ```
 
-Hoewel de tag `<sly>` geen geldige HTML 5-tag is, kan de tag  in de uiteindelijke uitvoer worden weergegeven met `data-sly-unwrap`:
+Hoewel het geen geldige HTML 5-tag is, `<sly>` -tag kan in de uiteindelijke uitvoer worden weergegeven met `data-sly-unwrap`:
 
 ```xml
 <sly data-sly-unwrap="${false}"></sly> <!--/* outputs: <sly></sly> */-->
 ```
 
-Het doel van het element `<sly>` is het duidelijker te maken dat het element geen output is. Als u wilt kunt u nog `data-sly-unwrap` gebruiken.
+Het doel van het `<sly>` het element moet duidelijker maken dat het element geen uitvoer is. Als u dat wilt, kunt u toch `data-sly-unwrap`.
 
-Net als met `data-sly-unwrap`, probeer het gebruik van dit te minimaliseren.
+Zoals met `data-sly-unwrap`, probeert u het gebruik hiervan te minimaliseren.

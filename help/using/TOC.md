@@ -1,16 +1,15 @@
 ---
-sub-product: Adobe Experience Manager HTML
+sub-product: Adobe Experience Manager HTL
 user-guide-title: Adobe Experience Manager HTML
 breadcrumb-title: HTML-handleiding
-user-guide-description: Gebruik de HTML-sjabloontaal (HTML Template Language) om een webframework op bedrijfsniveau te maken.
+user-guide-description: Gebruik de Taal van het Malplaatje van de HTML (HTML) om een onderneming-vlakke Webkader tot stand te brengen.
 feature-set: Experience Manager
 feature: Developer Tools
 role: Developer
-translation-type: tm+mt
 source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 5%
+source-wordcount: '64'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +21,7 @@ ht-degree: 5%
    + [Wat is HTML?](update.md)
    + [Aan de slag met HTML](getting-started.md)
    + [De HTML-specificatie](htl-specification.md)
-+ HTML-sjabloontaal{#htl}
++ HTML Sjabloontaal{#htl}
    + [Globale HTL-objecten](global-objects.md)
    + [HTML Java Use-API](use-api-java.md)
    + [HTML JavaScript Use-API](use-api-javascript.md)

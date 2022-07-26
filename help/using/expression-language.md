@@ -1,17 +1,17 @@
 ---
 title: HTML-expressietaal
-description: De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van HTML verstrekken.
+description: Leer over het gebruiken van de uitdrukkingstaal van HTML in AEM. De Taal van het Malplaatje van de HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van de HTML verstrekken.
 exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
-source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
 workflow-type: tm+mt
-source-wordcount: '1852'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
 
 # HTML-expressietaal {#htl-expression-language}
 
-De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van HTML verstrekken. Deze expressies worden gescheiden door tekens `${` en `}`. Om misvormde HTML te voorkomen, kunnen expressies alleen worden gebruikt in kenmerkwaarden, in elementinhoud of in opmerkingen.
+De Taal van het Malplaatje van de HTML gebruikt een uitdrukkingstaal om tot de gegevensstructuren toegang te hebben die de dynamische elementen van de output van de HTML verstrekken. Deze expressies worden gescheiden door tekens `${` en `}`. Om misvormde HTML te voorkomen, kunnen expressies alleen worden gebruikt in kenmerkwaarden, in elementinhoud of in opmerkingen.
 
 ```xml
 <!-- ${component.path} -->
@@ -20,19 +20,19 @@ De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om tot de gege
 </h1>
 ```
 
-Expressies kunnen worden genegeerd door een `\`-teken voor te zetten. `\${test}` wordt bijvoorbeeld `${test}` gerenderd.
+Expressies kunnen worden omzeild door een `\` teken, bijvoorbeeld `\${test}` renderen `${test}`.
 
 >[!NOTE]
 >
->Als u de voorbeelden op deze pagina wilt uitproberen, kunt u een live uitvoeringsomgeving gebruiken met de naam [Eval-afdruklay](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl).
+>Als u de voorbeelden op deze pagina wilt uitproberen, wordt een live uitvoeringsomgeving de [Eval-afdruklap lezen](https://github.com/Adobe-Marketing-Cloud/aem-sightly-repl) kan worden gebruikt.
 
-De expressiesyntaxis bevat [variabelen](#variables), [literals](#literals), [operators](#operators) en [opties](#options):
+De expressiesyntaxis bevat [variabelen](#variables), [literals](#literals), [operatoren](#operators) en [opties](#options):
 
 ## Variabelen {#variables}
 
 Variabelen zijn containers waarin gegevenswaarden of objecten worden opgeslagen. De namen van variabelen worden id&#39;s genoemd.
 
-Zonder het moeten om het even wat specificeren, verleent HTML toegang tot alle voorwerpen die algemeen beschikbaar in JSP na het omvatten `global.jsp` waren. De pagina [Algemene objecten](global-objects.md) bevat de lijst met alle objecten die toegang bieden tot HTML.
+Als u niets hoeft op te geven, biedt HTL toegang tot alle objecten die algemeen beschikbaar waren in JSP nadat `global.jsp`. De [Algemene objecten](global-objects.md) Deze pagina bevat een lijst met alle objecten waartoe HTML toegang heeft.
 
 ### Toegang tot eigenschap {#property-access}
 
@@ -45,15 +45,15 @@ ${currentPage['title']} or ${currentPage["title"]}
 
 In de meeste gevallen verdient de voorkeur de eenvoudige puntnotatie te gebruiken en moet de haakjesnotatie worden gebruikt om toegang te krijgen tot eigenschappen die ongeldige id-tekens bevatten, of om dynamisch toegang te krijgen tot eigenschappen. In de volgende twee hoofdstukken worden nadere bijzonderheden over deze twee gevallen gegeven.
 
-De betreden eigenschappen kunnen functies zijn, nochtans wordt het overgaan van argumenten niet gesteund, zodat slechts de functies die geen argumenten verwachten kunnen worden betreden, zoals getters. Dit is een gewenste beperking, die is bedoeld om de hoeveelheid logica te verminderen ingebed in uitdrukkingen. Indien nodig, kan de [`data-sly-use`](block-statements.md#use) verklaring worden gebruikt om parameters tot de logica over te gaan.
+De betreden eigenschappen kunnen functies zijn, nochtans wordt het overgaan van argumenten niet gesteund, zodat slechts de functies die geen argumenten verwachten kunnen worden betreden, zoals getters. Dit is een gewenste beperking, die is bedoeld om de hoeveelheid logica te verminderen ingebed in uitdrukkingen. Indien nodig, de [`data-sly-use`](block-statements.md#use) -instructie kan worden gebruikt om parameters aan de logica door te geven.
 
-In het bovenstaande voorbeeld wordt ook getoond dat Java getter-functies, zoals `getTitle()`, kunnen worden benaderd zonder de `get` vooraf in te stellen en door het hoofdlettergebruik van het volgende teken te verlagen.
+In het bovenstaande voorbeeld wordt ook getoond dat Java getter functies, zoals `getTitle()`, kan worden geopend zonder vooraf de `get`en door het hoofdlettergebruik van het volgende teken te verlagen.
 
 ### Geldige id-id-tekens {#valid-identifier-characters}
 
-De namen van variabelen, genoemd herkenningstekens, voldoen aan bepaalde regels. Ze moeten beginnen met een letter (`A`-`Z` en `a`-`z`), of een onderstrepingsteken (`_`), en volgende tekens kunnen ook cijfers (`0`-`9`) of dubbele punten (`:`) zijn. Unicode-letters zoals `å` en `ü` kunnen niet worden gebruikt in id&#39;s.
+De namen van variabelen, genoemd herkenningstekens, voldoen aan bepaalde regels. Ze moeten beginnen met een letter (`A`-`Z` en `a`-`z`), of een onderstrepingsteken (`_`) en volgende tekens kunnen ook cijfers zijn (`0`-`9`) of een dubbele punt (`:`). Unicode-letters zoals `å` en `ü` kan niet worden gebruikt in id&#39;s.
 
-Aangezien de dubbele punt (`:`) karakter in AEM bezitsnamen gemeenschappelijk is, zou moeten worden benadrukt dat het een geldig herkenningsteken gemakkelijk is:
+Aangezien de dubbele punt (`:`) wordt gebruikt in AEM eigenschapnamen, moet worden benadrukt dat het een handig geldig id-teken is:
 
 `${properties.jcr:title}`
 
@@ -79,7 +79,7 @@ Een letterlijke waarde is een notatie voor het weergeven van een vaste waarde.
 
 ### Boolean {#boolean}
 
-Boolean vertegenwoordigt een logische entiteit en kan twee waarden hebben: `true` en `false`.
+Boolean vertegenwoordigt een logische entiteit en kan twee waarden hebben: `true`, en `false`.
 
 `${true} ${false}`
 
@@ -109,7 +109,7 @@ Naast gewone tekens kunnen de volgende speciale tekens worden gebruikt:
    Enkele nuttige unicode-escapereeksen zijn:
 
    * `\u0022` for `"`
-   * `\u0027` for  `'`
+   * `\u0027` for `'`
 
 Voor tekens die hierboven niet worden vermeld, wordt een fout weergegeven vóór een backslash-teken.
 
@@ -150,11 +150,11 @@ Arrays zijn handig voor het weergeven van een lijst met waarden uit de sjabloon.
 
 Deze operatoren worden doorgaans gebruikt met Booleaanse waarden, maar in JavaScript retourneren ze in feite de waarde van een van de opgegeven operanden. Wanneer ze dus worden gebruikt met niet-Booleaanse waarden, kunnen ze een niet-Booleaanse waarde retourneren.
 
-Als een waarde in `true` kan worden omgezet, is de waarde zogenaamd waarheidsgetrouw. Als een waarde in `false` kan worden omgezet, is de waarde zogenaamd vals. Waarden die kunnen worden omgezet in `false` zijn ongedefinieerde variabelen, null-waarden, het getal nul en lege tekenreeksen.
+Als een waarde kan worden omgezet in `true`De waarde is de zogenaamde waarheidsgetrouwheid. Als een waarde kan worden omgezet in `false`De waarde wordt &#39;false&#39; genoemd. Waarden die kunnen worden omgezet in `false` zijn ongedefinieerde variabelen, null-waarden, getal nul en lege tekenreeksen.
 
 #### Logische NOT {#logical-not}
 
-`${!myVar}` retourneert  `false` als de enkele operand kan worden omgezet in  `true`; anders komt het erop neer  `true`.
+`${!myVar}` retourneert `false` als de enkele operand kan worden omgezet in `true`; anders wordt het geretourneerd `true`.
 
 Dit kan bijvoorbeeld worden gebruikt om een testvoorwaarde om te keren, zoals het tonen van een element slechts als er geen kindpagina&#39;s zijn:
 
@@ -164,7 +164,7 @@ Dit kan bijvoorbeeld worden gebruikt om een testvoorwaarde om te keren, zoals he
 
 #### Logisch AND {#logical-and}
 
-`${varOne && varTwo}` retourneert  `varOne` indien deze fout is; anders komt het erop neer  `varTwo`.
+`${varOne && varTwo}` retourneert `varOne` indien het vals is; anders wordt het geretourneerd `varTwo`.
 
 Deze operator kan worden gebruikt om twee voorwaarden tegelijk te testen, zoals het controleren van het bestaan van twee eigenschappen:
 
@@ -175,7 +175,7 @@ Deze operator kan worden gebruikt om twee voorwaarden tegelijk te testen, zoals 
 </div>
 ```
 
-De logische operator AND kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omdat HTML kenmerken verwijdert met waarden die dynamisch zijn ingesteld op false of op een lege tekenreeks. In het onderstaande voorbeeld wordt het kenmerk `class` alleen weergegeven als `logic.showClass` true is en als `logic.className` bestaat en niet leeg is:
+De logische operator AND kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omdat HTML kenmerken verwijdert met waarden die dynamisch zijn ingesteld op false of op een lege tekenreeks. In het onderstaande voorbeeld wordt de `class` kenmerk wordt alleen weergegeven als `logic.showClass` is waarheidsgetrouw en als `logic.className` bestaat en is niet leeg:
 
 ```xml
 <div class="${logic.showClass && logic.className}">...</div>
@@ -183,7 +183,7 @@ De logische operator AND kan ook worden gebruikt om HTML-kenmerken voorwaardelij
 
 #### Logisch OR {#logical-or}
 
-`${varOne || varTwo}` retourneert  `varOne` indien deze waarheidsgetrouw is; anders komt het erop neer  `varTwo`.
+`${varOne || varTwo}` retourneert `varOne` indien het waarheidsgetrouw is; anders wordt het geretourneerd `varTwo`.
 
 Deze operator kan worden gebruikt om te testen of een van de twee voorwaarden van toepassing is, zoals het controleren van het bestaan van ten minste één eigenschap:
 
@@ -193,7 +193,7 @@ Deze operator kan worden gebruikt om te testen of een van de twee voorwaarden va
 
 Aangezien de logische exploitant OR de eerste variabele terugkeert die waarachtig is, kan het ook zeer geschikt worden gebruikt om reservewaarden te verstrekken.
 
-Het kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omdat HTML kenmerken verwijdert met waarden die zijn ingesteld door expressies die onwaar of leeg zijn. In het onderstaande voorbeeld wordt **`properties.jcr:`**-titel weergegeven als deze bestaat en niet leeg is. Als deze bestaat en niet leeg is, wordt **`properties.jcr:description`** anders weergegeven als deze bestaat en niet leeg is, anders wordt het bericht &quot;Geen titel of beschrijving opgegeven&quot; weergegeven:
+Deze kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omdat HTML kenmerken verwijdert met waarden die zijn ingesteld door expressies die false of een lege tekenreeks opleveren. Het onderstaande voorbeeld wordt dus weergegeven **`properties.jcr:`** titel als deze bestaat en niet leeg is, anders wordt de titel opnieuw weergegeven **`properties.jcr:description`** als deze bestaat en niet leeg is, wordt het bericht &quot;geen titel of beschrijving verstrekt&quot; weergegeven:
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
@@ -201,7 +201,7 @@ Het kan ook worden gebruikt om HTML-kenmerken voorwaardelijk weer te geven, omda
 
 ### Voorwaardelijke (ternaire) operator {#conditional-ternary-operator}
 
-`${varCondition ? varOne : varTwo}` retourneert  `varOne` indien  `varCondition` dit waarheidsgetrouw is; anders wordt het geretourneerd  `varTwo`.
+`${varCondition ? varOne : varTwo}` retourneert `varOne` indien `varCondition` waarheidsgetrouw is; anders retourneert het `varTwo`.
 
 Deze operator kan doorgaans worden gebruikt om voorwaarden binnen expressies te definiëren, zoals een ander bericht weergeven op basis van de status van de pagina:
 
@@ -223,26 +223,26 @@ De gelijkheids- en ongelijkheidsoperatoren ondersteunen alleen operands van iden
 
 * Tekenreeksen zijn gelijk wanneer ze dezelfde reeks tekens hebben.
 * Getallen zijn gelijk wanneer ze dezelfde waarde hebben
-* Booleaanse waarden zijn gelijk als beide `true` zijn of als beide `false` zijn.
+* Booleaanse waarden zijn gelijk als beide `true` of beide `false`.
 * Null- of ongedefinieerde variabelen zijn gelijk aan zichzelf en aan elkaar.
 
-`${varOne == varTwo}` retourneert  `true` als  `varOne` en  `varTwo` gelijk zijn.
+`${varOne == varTwo}` retourneert `true` indien `varOne` en `varTwo` zijn gelijk.
 
-`${varOne != varTwo}` retourneert  `true` als  `varOne` en  `varTwo` niet gelijk zijn.
+`${varOne != varTwo}` retourneert `true` indien `varOne` en `varTwo` zijn niet gelijk.
 
 Relationele operatoren ondersteunen alleen operanden die getallen zijn. Voor alle andere typen wordt een fout weergegeven.
 
-`${varOne > varTwo}` retourneert  `true` als  `varOne` dit groter is dan  `varTwo`.
+`${varOne > varTwo}` retourneert `true` indien `varOne` is groter dan `varTwo`.
 
-`${varOne < varTwo}` retourneert  `true` als de waarde kleiner  `varOne` is dan  `varTwo`.
+`${varOne < varTwo}` retourneert `true` indien `varOne` is kleiner dan `varTwo`.
 
-`${varOne >= varTwo}` retourneert  `true` als deze groter of gelijk  `varOne` is aan  `varTwo`.
+`${varOne >= varTwo}` retourneert `true` indien `varOne` is groter of gelijk aan `varTwo`.
 
-`${varOne <= varTwo}` retourneert  `true` als de waarde kleiner of gelijk  `varOne` is aan  `varTwo`.
+`${varOne <= varTwo}` retourneert `true` indien `varOne` is kleiner of gelijk aan `varTwo`.
 
 ### Haakjes groeperen {#grouping-parentheses}
 
-De groeperingsexploitant `()` controleert de belangrijkheid van evaluatie in uitdrukkingen.
+De operator voor groeperen `()` bepaalt de prioriteit van evaluatie in uitdrukkingen.
 
 `${varOne && (varTwo || varThree)}`
 
@@ -279,7 +279,7 @@ ${@ optOne, optTwo=bar}
 
 ### Tekenreeksindeling {#string-formatting}
 
-Optie die de opgesomde placeholders, {*n*}, met de overeenkomstige variabele vervangt:
+Optie die de opgesomde plaatsaanduidingen vervangt, {*n*}, met de overeenkomstige variabele:
 
 ```xml
 ${'Page {0} of {1}' @ format=[current, total]}
@@ -309,7 +309,7 @@ Hiermee voegt u de extensie html en een fragment (#value) toe aan een pad.
 <a href="${item.path @ extension = 'html', fragment=item.name}">${item.name}</a>
 ```
 
-`@extension` werkt in alle scenario&#39;s, die of controleren om de uitbreiding toe te voegen of niet.
+De `@extension` werkt in alle scenario&#39;s, die of controleren om de uitbreiding toe te voegen of niet.
 
 ```xml
 ${ link @ extension = 'html' }
@@ -332,23 +332,23 @@ In het volgende voorbeeld wordt getoond dat de indeling eerst wordt opgegeven en
 
 >[!NOTE]
 >
->Raadpleeg [HTL-specification](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md) voor volledige informatie over de indeling die u kunt gebruiken.
+>Voor volledige informatie over de indeling die u kunt gebruiken, raadpleegt u [HTL-specificatie](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
 
 ### Internationalisatie {#internationalization}
 
-Zet de tekenreeks om in de taal van de huidige *bron* (zie hieronder), met behulp van het huidige [woordenboek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-translator.html). Als er geen vertaling wordt gevonden, wordt de oorspronkelijke tekenreeks gebruikt.
+Zet de tekenreeks om in de taal van de huidige *bron* (zie hieronder), de huidige [woordenboek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-translator.html). Als er geen vertaling wordt gevonden, wordt de oorspronkelijke tekenreeks gebruikt.
 
 ```xml
 ${'Page' @ i18n}
 ```
 
-U kunt de optie Tip gebruiken om een opmerking te maken voor vertalers en de context te bepalen waarin de tekst wordt gebruikt:
+Met de optie Tip kunt u een opmerking voor vertalers maken en de context opgeven waarin de tekst wordt gebruikt:
 
 ```xml
 ${'Page' @ i18n, hint='Translation Hint'}
 ```
 
-De standaardbron voor de taal is `resource`, wat betekent dat de tekst wordt vertaald naar dezelfde taal als de inhoud. Dit kan in `user` worden veranderd, betekenend dat de taal van browser scène of van de scène van de het programma geopende gebruiker wordt genomen:
+De standaardbron voor de taal is `resource`, wat betekent dat de tekst wordt vertaald naar dezelfde taal als de inhoud. Dit kan worden gewijzigd in `user`, wat betekent dat de taal wordt overgenomen van de landinstelling van de browser of van de landinstelling van de aangemelde gebruiker:
 
 ```xml
 ${'Page' @ i18n, source='user'}
@@ -378,7 +378,7 @@ ${['one', 'two'] @ join='; '}
 
 ### Weergavecontext {#display-context}
 
-De weergavecontext van een HTML-expressie verwijst naar de locatie ervan binnen de structuur van de HTML-pagina. Bijvoorbeeld, als de uitdrukking op zijn plaats verschijnt die een tekstknoop zou produceren zodra teruggegeven, dan wordt gezegd het in een `text` context te zijn. Als het binnen de waarde van een attribuut wordt gevonden, dan wordt gezegd dat het in een `attribute` context, etc. is.
+De weergavecontext van een HTML-expressie verwijst naar de locatie ervan binnen de structuur van de HTML-pagina. Als de expressie bijvoorbeeld op zijn plaats wordt weergegeven die een tekstknooppunt zou produceren wanneer het zou zijn gerenderd, dan zou het zich in een `text` context. Als het binnen de waarde van een attribuut wordt gevonden, dan wordt gezegd dat het in een `attribute` context enzovoort.
 
 Met uitzondering van script- (JS) en stijl- (CSS) contexten, detecteert HTL automatisch de context van expressies en ontspant deze op de juiste wijze om XSS-beveiligingsproblemen te voorkomen. In het geval van scripts en CSS moet het gewenste contextgedrag expliciet worden ingesteld. Bovendien kan het contextgedrag ook expliciet worden ingesteld in elk ander geval waarin een overschrijving van het automatische gedrag gewenst is.
 
@@ -394,7 +394,7 @@ HTL zal elk van hen verschillend ontkomen in overeenstemming met de veiligheidsv
 <a href="${properties.link}" title="${properties.title}">${properties.text}</a>
 ```
 
-Om uitvoerprijsverhoging veilig (namelijk waar de uitdrukking zelf aan HTML evalueert), wordt de `html` context gebruikt:
+Om uitvoeropmaak veilig te maken (dat wil zeggen, waarbij de expressie zelf de waarde HTML oplevert), moet de `html` context wordt gebruikt:
 
 ```xml
 <div>${properties.richText @ context='html'}</div>
@@ -423,7 +423,7 @@ De optie Escaping en XSS-beveiliging kunnen ook worden uitgeschakeld:
 | Context | Wanneer gebruiken | Wat het doet |
 |--- |--- |--- |
 | `text` | Standaard voor inhoud binnen elementen | Codeert alle speciale HTML-tekens. |
-| `html` | Uitvoer veilig markeren | Filtert HTML om aan de antiSamy beleidsregels te voldoen, verwijderend wat niet de regels aanpast. |
+| `html` | Uitvoer veilig markeren | Filters HTML om aan de AntiSamy beleidsregels te voldoen, verwijderend wat niet de regels aanpast. |
 | `attribute` | Standaard voor kenmerkwaarden | Codeert alle speciale HTML-tekens. |
 | `uri` | Koppelingen en paden weergeven Standaard voor href- en src-kenmerkwaarden | Valideert URI voor schrijven als href- of src-kenmerkwaarde en voert niets uit als validatie mislukt. |
 | `number` | Getallen weergeven | Valideert URI voor het bevatten van een geheel getal, geeft nul als de validatie mislukt. |

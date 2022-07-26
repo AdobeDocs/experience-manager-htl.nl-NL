@@ -1,28 +1,27 @@
 ---
-title: Globale HTL-objecten
-description: Zonder het moeten om het even wat specificeren, verleent HTML toegang tot alle voorwerpen die algemeen in JSP na het omvatten van global.jsp beschikbaar waren.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+title: Globale HTML-objecten
+description: Leer meer over opsombare objecten, door Java ondersteunde objecten en door JavaScript ondersteunde objecten. Zoek de variabelenamen en -beschrijvingen voor deze algemene HTML-objecten die in AEM worden gebruikt.
+exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-
 # Globale HTL-objecten {#htl-global-objects}
 
-Zonder het moeten om het even wat specificeren, verleent HTML toegang tot alle voorwerpen die algemeen beschikbaar in JSP na het omvatten `global.jsp` waren. Deze voorwerpen zijn naast om het even welke die door [gebruik-API](use-api.md) kunnen worden geïntroduceerd.
+Als u niets hoeft op te geven, biedt HTL toegang tot alle objecten die algemeen beschikbaar waren in JSP nadat `global.jsp`. Deze objecten vormen een aanvulling op de objecten die via het [Use-API](use-api.md).
 
 ## Opsommbare objecten {#enumerable-objects}
 
-Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan is toegankelijk met de puntnotatie en kan worden doorlopen met behulp van `data-sly-list` of `data-sly-repeat`.
+Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan kan worden geopend met de puntnotatie en kan worden herhaald met `data-sly-list` of `data-sly-repeat`.
 
 | Naam variabele | Beschrijving |
 |--- |--- |
-| `properties` | Lijst met eigenschappen van de huidige bron. Ondersteund door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Lijst met pagina-eigenschappen van de huidige pagina. Ondersteund door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `inheritedPageProperties` | Lijst met overgenomen pagina-eigenschappen van de huidige pagina. Ondersteund door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Lijst met eigenschappen van de huidige bron. Achterhaald door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Lijst met pagina-eigenschappen van de huidige pagina. Achterhaald door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `inheritedPageProperties` | Lijst met overgenomen pagina-eigenschappen van de huidige pagina. Achterhaald door [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Door Java ondersteunde objecten {#java-backed-objects}
 
@@ -58,7 +57,7 @@ De meest bruikbare variabelen in de onderstaande tabel zijn vetgedrukt gemarkeer
 
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
-HTML-logica kan met JavaScript worden ondersteund. De voorkeursmethode of aanbevolen methode is echter [Sling Models.](https://sling.apache.org/documentation/bundles/models.html)
+HTML-logica kan met JavaScript worden ondersteund. De aanbevolen of aanbevolen methode is echter: [Sling Models.](https://sling.apache.org/documentation/bundles/models.html)
 
 <!-- 
 

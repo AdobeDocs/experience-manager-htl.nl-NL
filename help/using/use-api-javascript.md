@@ -1,18 +1,17 @@
 ---
 title: HTML JavaScript Use-API
-description: Met de HTML-sjabloontaal - HTML - JavaScript Use-API heeft een HTML-bestand toegang tot hulplijncode die in JavaScript is geschreven.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
+description: Leer hoe een HTML-bestand met de HTML-sjabloontaal (HTL) van JavaScript toegang heeft tot hulplijncode die in JavaScript is geschreven.
+exl-id: e98bfbd5-fa64-48c7-bd14-477d4c5e1788
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
-
 # HTML JavaScript Use-API {#htl-javascript-use-api}
 
-Met de HTML Template Language (HTML) JavaScript Use-API kan een HTML-bestand toegang krijgen tot hulplijncode die in JavaScript is geschreven. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code JavaScript, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
+Met de JavaScript Use-API (HTML-sjabloontaal) van JavaScript kan een HTML-bestand toegang krijgen tot hulplijncode die in JavaScript is geschreven. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code JavaScript, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
 
 De volgende conventies worden gebruikt.
 
@@ -38,14 +37,14 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 
 ## Een eenvoudig voorbeeld {#a-simple-example}
 
-We definiëren een component, `info`, die zich bevindt op
+We definiëren een component, `info`, gevestigd te
 
 `/apps/my-example/components/info`
 
 Het bevat twee bestanden:
 
 * **`info.js`**: een JavaScript-bestand dat de use-klasse definieert.
-* **`info.html`**: een HTML-bestand dat de component definieert  `info`. Deze code gebruikt de functionaliteit van `info.js` door gebruik-API.
+* **`info.html`**: een HTML-bestand dat de component definieert `info`. Deze code gebruikt de functionaliteit van `info.js` via de use-API.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
@@ -68,7 +67,7 @@ use(function () {
 </div>
 ```
 
-Wij creëren ook een inhoudsknoop die `info` component bij gebruikt
+We maken ook een inhoudsknooppunt dat gebruikmaakt van de `info` component bij
 
 `/content/my-example`, met eigenschappen:
 
@@ -115,7 +114,7 @@ Overweeg de volgende componentsjabloon:
 </section>
 ```
 
-De corresponderende logica kan worden geschreven met de volgende JavaScript-code aan de serverzijde, die zich bevindt in een `component.js`-bestand vlak naast de sjabloon:
+De corresponderende logica kan worden geschreven met de volgende JavaScript-code op de server in een `component.js` bestand rechts naast de sjabloon:
 
 ```javascript
 use(function () {
@@ -134,7 +133,7 @@ use(function () {
 });
 ```
 
-Hiermee wordt geprobeerd de `title` uit verschillende bronnen te halen en de beschrijving uit te snijden naar 50 tekens.
+Dit probeert de `title` uit verschillende bronnen en snijdt de beschrijving uit tot 50 tekens.
 
 ## Afhankelijkheden {#dependencies}
 
@@ -157,11 +156,11 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## {#extending} uitbreiden
+## Uitbreiden {#extending}
 
-Het afhankelijkheidspatroon kan ook worden gebruikt om de logica van een andere component (die gewoonlijk `sling:resourceSuperType` van de huidige component is) uit te breiden.
+Het afhankelijkheidspatroon kan ook worden gebruikt om de logica van een andere component uit te breiden (dit is doorgaans het `sling:resourceSuperType` van de huidige component).
 
-Stel dat de bovenliggende component al de `title` bevat en dat we ook een `description` willen toevoegen:
+Stel dat de bovenliggende component al de `title`en wij willen een `description` ook:
 
 ```javascript
 use(['../parent-component/parent-component.js'], function (component) {
@@ -178,7 +177,7 @@ use(['../parent-component/parent-component.js'], function (component) {
 
 ## Parameters doorgeven aan een sjabloon {#passing-parameters-to-a-template}
 
-In het geval van `data-sly-template` verklaringen die van componenten onafhankelijk kunnen zijn, kan het nuttig zijn om parameters tot het bijbehorende gebruik-API over te gaan.
+In het geval van `data-sly-template` instructies die onafhankelijk kunnen zijn van componenten, kan het handig zijn om parameters door te geven aan de gekoppelde use-API.
 
 Zo in onze component roepen wij een malplaatje dat in een verschillend dossier wordt gevestigd:
 
@@ -186,7 +185,7 @@ Zo in onze component roepen wij een malplaatje dat in een verschillend dossier w
 <section class="component-name" data-sly-use.tmpl="template.html" data-sly-call="${tmpl.templateName @ page=currentPage}"></section>
 ```
 
-Dan is dit het malplaatje dat in `template.html` wordt gevestigd:
+Dit is de sjabloon in `template.html`:
 
 ```xml
 <template data-sly-template.templateName="${@ page}" data-sly-use.tmpl="${'template.js' @ page=page, descriptionLength=50}">
@@ -195,7 +194,7 @@ Dan is dit het malplaatje dat in `template.html` wordt gevestigd:
 </template>
 ```
 
-De corresponderende logica kan worden geschreven met de volgende JavaScript-code aan de serverzijde, die zich in een `template.js`-bestand vlak naast het sjabloonbestand bevindt:
+De corresponderende logica kan worden geschreven met de volgende JavaScript-code op de server in een `template.js` bestand rechts naast het sjabloonbestand:
 
 ```javascript
 use(function () {
@@ -213,4 +212,4 @@ use(function () {
 });
 ```
 
-De doorgegeven parameters worden ingesteld op het trefwoord `this`.
+De doorgegeven parameters worden ingesteld op de `this` trefwoord.

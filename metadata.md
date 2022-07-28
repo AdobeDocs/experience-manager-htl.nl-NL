@@ -2,7 +2,7 @@
 solution: Experience Manager
 type: Documentation
 product: adobe experience manager
-git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.nl-NL
+git-repo: https://github.com/AdobeDocs/experience-manager-htl.nl-NL
 index: y
 source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
 workflow-type: tm+mt
@@ -50,4 +50,4 @@ Artikel
 * `description`
 * `index: n` (alleen voor vorige versies van componenten)
 
-Aanvullende informatie over de metagegevens vindt u in de [interne handleiding voor het schrijven van programmacode.](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/features/metadata.html#solution)
+Aanvullende informatie over de metagegevens vindt u in het gedeelte [interne ontwerphandleiding.](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/features/metadata.html#solution)

@@ -1,20 +1,20 @@
 ---
 sub-product: Adobe Experience Manager HTL
-user-guide-title: Adobe Experience Manager HTML
-breadcrumb-title: HTML-handleiding
-user-guide-description: Gebruik de Taal van het Malplaatje van de HTML (HTML) om een onderneming-vlakke Webkader tot stand te brengen.
+user-guide-title: Adobe Experience Manager HTL
+breadcrumb-title: Handleiding voor HTL
+user-guide-description: Gebruik de HTML Template Language (HTL) om een kader op het niveau van ondernemingen te maken.
 feature-set: Experience Manager
 feature: Developer Tools
 role: Developer
 source-git-commit: f9b59d5fcc380413f2727b06f41ecacca6518227
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 2%
+ht-degree: 52%
 
 ---
 
 
-# Adobe Experience Manager HTML Help {#content}
+# Adobe Experience Manager HTL Help {#content}
 
 + [Overzicht](overview.md)
 + [Aan de slag met HTML](getting-started.md)

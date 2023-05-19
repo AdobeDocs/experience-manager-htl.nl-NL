@@ -1,13 +1,13 @@
 ---
 title: Extensies AEM
 description: AEM biedt uitbreidingen van de HTML-specificatie aan AEM voor uw gemak als ontwikkelaar.
-source-git-commit: 6d97bc5d0ab89dffaf56a54c73c94d069bb31ca6
+exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
+source-git-commit: 151b40ee204f1afa7a772afd64cbac4790c02cc2
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
-
 
 # Extensies AEM {#aem-extensions}
 

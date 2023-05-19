@@ -245,7 +245,7 @@ Bovendien is het type van de variabele die in de expressie wordt geplaatst van b
 
 * **Aantal:** Hiermee wordt de waarde ingesteld als kenmerkwaarde.
 
-* **Boolean:**
+* **Booleaans:**
    * **true:** Hiermee geeft u het kenmerk zonder waarde weer (als een Booleaans HTML-kenmerk)
    * **false:** Hiermee verwijdert u het kenmerk helemaal.
 

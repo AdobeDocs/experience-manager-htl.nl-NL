@@ -4,7 +4,7 @@ description: Leer meer over opsombare objecten, door Java ondersteunde objecten 
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 # Globale HTL-objecten {#htl-global-objects}
 
-Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze objecten vormen een aanvulling op de objecten die via het [Use-API.](java-use-api.md)
+Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze voorwerpen zijn naast om het even welk die door [ gebruik-API kunnen worden geïntroduceerd.](java-use-api.md)
 
 >[!NOTE]
 >
->Voor ontwikkelaars die bekend zijn met JSP-ontwikkeling in AEM, biedt HTL toegang tot alle objecten die algemeen beschikbaar waren in JSP nadat `global.jsp`.
+>Voor ontwikkelaars die bekend zijn met JSP-ontwikkeling in AEM, biedt HTL toegang tot alle objecten die algemeen beschikbaar waren in JSP nadat `global.jsp` is opgenomen.
 
 ## Opsommbare objecten {#enumerable-objects}
 
-Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan kan worden geopend met puntnotatie en kan worden doorlopen met behulp van `data-sly-list` of `data-sly-repeat`.
+Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud ervan kan worden benaderd met puntnotatie en kan worden doorlopen met `data-sly-list` of `data-sly-repeat` .
 
 | Naam variabele | Beschrijving | Backed door |
 |--- |--- |--- |
@@ -62,4 +62,4 @@ Elk van de volgende objecten wordt ondersteund door het bijbehorende Java-object
 
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
-HTML-logica kan met JavaScript worden ondersteund. De aanbevolen of aanbevolen methode is echter: [Sling Models.](https://sling.apache.org/documentation/bundles/models.html)
+Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans de aangewezen of geadviseerde methode is door [ het Verdelen Modellen te gebruiken.](https://sling.apache.org/documentation/bundles/models.html)

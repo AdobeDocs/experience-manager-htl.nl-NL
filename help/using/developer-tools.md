@@ -4,7 +4,7 @@ description: Bekijk deze gereedschappen om u te helpen bij het ontwikkelen in HT
 exl-id: c5683ee4-a052-4a6f-8ad1-e18a4201414e
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 De volgende ontwikkelaarshulpmiddelen zijn beschikbaar voor HTML:
 
-* [HTL-afdruklap voor ovaal lezen](https://github.com/adobe/aem-htl-repl) - Een live uitvoeringsomgeving voor het spelen met de taal, ideaal voor leren
-* [HTML-plug-in](https://sling.apache.org/components/htl-maven-plugin/) - De Apache Sling HTL Maven-insteekmodule ondersteunt het valideren van HTML Template Language-scripts van projecten tijdens de ontwikkeltijd.
-* [AEM Eclipse-extensie](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/eclipse.html) - Een hulpmiddel voor achterwaartse ontwikkelaars om projecten voor AEM te creëren en uit te geven
+* [ HTML Lees Eval Lus van de Druk ](https://github.com/adobe/aem-htl-repl) - een levend uitvoeringsmilieu voor het spelen met de taal, groot voor het leren
+* [ HTML Gemaakte Insteekmodule ](https://sling.apache.org/components/htl-maven-plugin/) - de Apache Sling HTL Geweven Insteekmodule steunt het bevestigen van de manuscripten van de Taal van het Malplaatje van HTML van projecten tijdens bouwstijltijd.
+* [ AEM de uitbreiding van de Verduistering ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/eclipse.html) - een hulpmiddel voor achterste-eindontwikkelaars om projecten voor AEM tot stand te brengen en uit te geven

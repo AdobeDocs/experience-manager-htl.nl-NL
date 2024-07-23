@@ -2,7 +2,7 @@
 title: HTML Java Use-API
 description: Met de HTML Java Use-API kan een HTML-bestand toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%
@@ -194,7 +194,7 @@ public class Info extends WCMUsePojo {
 
 Typisch, activeert [ ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) methode wordt gebruikt om (in lidvariabelen) de waarden vooraf samen te stellen en op te slaan nodig in uw code HTML, die op de huidige context (het huidige verzoek en het middel, bijvoorbeeld) wordt gebaseerd.
 
-De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen.](global-objects.md))
+De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen ](global-objects.md).)
 
 In een klasse die `WCMUsePojo` uitbreidt, kunt u tot contextvoorwerpen toegang hebben gebruikend hun namen:
 
@@ -312,7 +312,7 @@ In deze sectie worden enkele andere functies geïntroduceerd die verder gaan dan
 
 Parameters kunnen bij initialisatie worden doorgegeven aan een use-klasse.
 
-Voor details, gelieve te verwijzen naar de het Verdelen [ documentatie van de Motor van Scripting HTML.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
+Voor details, gelieve te verwijzen naar de het Verdelen [ documentatie van de Motor van HTML Scripting ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
 
 ### Gebundelde Java-klasse {#bundled-java-class}
 

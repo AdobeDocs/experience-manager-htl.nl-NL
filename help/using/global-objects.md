@@ -2,9 +2,9 @@
 title: Globale HTL-objecten
 description: Leer meer over opsombare objecten, door Java ondersteunde objecten en door JavaScript ondersteunde objecten in HTML.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '164'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Globale HTL-objecten {#htl-global-objects}
 
-Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze voorwerpen zijn naast om het even welk die door [ gebruik-API kunnen worden geïntroduceerd.](java-use-api.md)
+Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze voorwerpen zijn naast om het even welk die door [ gebruik-API ](java-use-api.md) kunnen worden geïntroduceerd.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Deze objecten bieden handige toegang tot veelgebruikte informatie. De inhoud erv
 
 ## Door Java ondersteunde objecten {#java-backed-objects}
 
-Elk van de volgende objecten wordt ondersteund door het bijbehorende Java-object.
+Het corresponderende Java-object ondersteunt elk van de volgende objecten.
 
 | Naam variabele | Beschrijving |
 |---|---|
@@ -62,4 +62,4 @@ Elk van de volgende objecten wordt ondersteund door het bijbehorende Java-object
 
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
-Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans de aangewezen of geadviseerde methode is door [ het Verdelen Modellen te gebruiken.](https://sling.apache.org/documentation/bundles/models.html)
+Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de aangewezen of geadviseerde methode door [ het Schuiven Modellen ](https://sling.apache.org/documentation/bundles/models.html) te gebruiken.

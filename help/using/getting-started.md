@@ -2,7 +2,7 @@
 title: Aan de slag met HTML
 description: Leer over HTML, het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM, en begrijp de belangrijkste concepten van de taal en zijn fundamentele bouwstenen.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Dit document geeft een overzicht van het doel van HTML en een inleiding tot fund
 
 >[!TIP]
 >
->In dit document wordt het doel van HTL uiteengezet en wordt een overzicht gegeven van de fundamentele structuur en concepten ervan. Als u vragen over specifieke syntaxis hebt, gelieve te verwijzen naar de [ specificatie van HTML.](specification.md)
+>In dit document wordt het doel van HTL uiteengezet en wordt een overzicht gegeven van de fundamentele structuur en concepten ervan. Als u vragen over specifieke syntaxis hebt, gelieve te verwijzen naar de [ specificatie van HTML ](specification.md).
 
 ## HTML-lagen {#layers}
 

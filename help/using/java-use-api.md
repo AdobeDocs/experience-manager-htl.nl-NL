@@ -2,9 +2,9 @@
 title: HTML Java Use-API
 description: Met de HTML Java Use-API kan een HTML-bestand toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Met de HTML Java Use-API kan een HTML-bestand toegang krijgen tot hulplijnmethod
 
 ## Hoofdletters gebruiken {#use-case}
 
-Met de HTML Java Use-API kan een HTML-bestand via `data-sly-use` toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code van Java, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
+Met de HTML Java Use-API kan een HTML-bestand via `data-sly-use` toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse. Met deze methode kunnen alle complexe bedrijfslogica worden ingekapseld in de Java-code, terwijl de HTML-code alleen betrekking heeft op directe opmaakproductie.
 
 Een Java Use-API-object kan een eenvoudige POJO zijn, geïnstantieerd door een bepaalde implementatie via de standaardconstructor van de POJO.
 
@@ -31,7 +31,7 @@ Met de API-API-POJO&#39;s kunt u ook een openbare methode, init genoemd, met de 
     public void init(javax.script.Bindings bindings);
 ```
 
-De `bindings` -kaart kan objecten bevatten die context bieden aan het momenteel uitgevoerde HTML-script dat het Use-API-object kan gebruiken voor de verwerking ervan.
+De `bindings` -kaart kan objecten bevatten die context bieden voor het momenteel uitgevoerde HTML-script dat het Use-API-object kan gebruiken voor de verwerking ervan.
 
 ## Een eenvoudig voorbeeld {#a-simple-example}
 
@@ -39,9 +39,9 @@ In dit voorbeeld wordt het gebruik van de Use-API geïllustreerd.
 
 >[!NOTE]
 >
->Dit voorbeeld is vereenvoudigd om het gebruik ervan eenvoudig te illustreren. In een productiemilieu, wordt het geadviseerd om [ het Schuiven modellen te gebruiken.](https://sling.apache.org/documentation/bundles/models.html)
+>Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert de Adobe dat u [ het Verdelen modellen ](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
 
-We beginnen met een HTML-component, `info` genaamd, die geen use-klasse heeft. Het bestaat uit één bestand, `/apps/my-example/components/info.html`
+Begin met een HTML-component, `info,` genoemd, die geen use-klasse heeft. Het bestaat uit één bestand, `/apps/my-example/components/info.html`
 
 ```xml
 <div>
@@ -50,7 +50,7 @@ We beginnen met een HTML-component, `info` genaamd, die geen use-klasse heeft. H
 </div>
 ```
 
-Er wordt ook inhoud voor deze component toegevoegd die moet worden gerenderd bij `/content/my-example/` :
+Voeg inhoud voor deze component toe die moet worden gerenderd bij `/content/my-example/` :
 
 ```xml
 {
@@ -60,7 +60,7 @@ Er wordt ook inhoud voor deze component toegevoegd die moet worden gerenderd bij
 }
 ```
 
-Wanneer deze inhoud wordt benaderd, wordt het HTML-bestand uitgevoerd. Binnen de HTML-code gebruiken we het contextobject `properties` om de `title` en `description` van de huidige bron te openen en weer te geven. Het uitvoerbestand `/content/my-example.html` is:
+Wanneer deze inhoud wordt benaderd, wordt het HTML-bestand uitgevoerd. Binnen de HTML-code wordt het contextobject `properties` gebruikt om de `title` en `description` van de huidige bron te openen en weer te geven. Het uitvoerbestand `/content/my-example.html` is als volgt:
 
 ```html
 <div>
@@ -77,7 +77,7 @@ De `info` -component in zijn huidige vorm heeft geen use-klasse nodig om zijn ee
 >
 >Een gebruiksklasse mag alleen worden gebruikt wanneer er iets niet alleen in HTML kan worden gedaan.
 
-Stel dat u de component `info` de eigenschappen `title` en `description` van de bron wilt laten weergeven, maar allemaal in kleine letters. Aangezien HTML geen methode voor het verlagen van tekenreeksen heeft, hebt u een use-klasse nodig. U kunt dit doen door een Java-gebruiksklasse toe te voegen en `/apps/my-example/component/info/info.html` als volgt te wijzigen:
+Stel dat u de component `info` de eigenschappen `title` en `description` van de bron wilt laten weergeven, maar allemaal in kleine letters. Omdat HTML geen methode heeft voor het verlagen van tekenreeksen, kunt u een Java-gebruiksklasse toevoegen en `/apps/my-example/component/info/info.html` als volgt wijzigen:
 
 ```xml
 <div data-sly-use.info="Info">
@@ -86,7 +86,7 @@ Stel dat u de component `info` de eigenschappen `title` en `description` van de 
 </div>
 ```
 
-Daarnaast maken we `/apps/my-example/component/info/Info.java` .
+Daarnaast wordt `/apps/my-example/component/info/Info.java` gemaakt.
 
 ```java
 package apps.my_example.components.info;
@@ -113,9 +113,9 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-Gelieve te zien [ JavaDocs voor `com.adobe.cq.sightly.WCMUsePojo` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) voor meer details.
+Gelieve te zien de [ documenten van Java voor `com.adobe.cq.sightly.WCMUsePojo` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) voor meer details.
 
-Laten we nu door de verschillende delen van de code lopen.
+Laten we nu eens kijken naar de verschillende delen van de code.
 
 ### Lokale vs. Bundle Java Class {#local-vs-bundle-java-class}
 
@@ -133,7 +133,7 @@ In dit voorbeeld wordt een lokale installatie gebruikt.
 
 ### Java Package is Repository Path {#java-package-is-repository-path}
 
-Wanneer een lokale installatie wordt gebruikt, moet de pakketnaam van de use-klasse overeenkomen met die van de opslagplaats, waarbij eventuele koppeltekens in het pad worden vervangen door onderstrepingstekens in de pakketnaam.
+Wanneer u een lokale installatie gebruikt, moet de pakketnaam van de use-klasse overeenkomen met de locatie van de opslagplaats. Onderstrepingstekens in de pakketnaam vervangen eventuele koppeltekens in het pad.
 
 In dit geval bevindt `Info.java` zich bij `/apps/my-example/components/info` zodat het pakket `apps.my_example.components.info` is:
 
@@ -155,7 +155,7 @@ public class Info extends WCMUsePojo {
 
 ### Uitbreiden `WCMUsePojo` {#extending-wcmusepojo}
 
-Hoewel er een aantal manieren zijn om een klasse van Java met HTML (zie de sectie [ Alternatieven aan `WCMUsePojo`](#alternatives-to-wcmusepojo)) op te nemen, is het eenvoudigst om de `WCMUsePojo` klasse uit te breiden. Voor ons voorbeeld `/apps/my-example/component/info/Info.java` :
+Hoewel er een aantal manieren zijn om een klasse van Java met HTML (zie de sectie [ Alternatieven aan `WCMUsePojo`](#alternatives-to-wcmusepojo)) op te nemen, is het eenvoudigst om de `WCMUsePojo` klasse uit te breiden. In dit voorbeeld `/apps/my-example/component/info/Info.java` :
 
 ```java
 package apps.my_example.components.info;
@@ -194,13 +194,13 @@ public class Info extends WCMUsePojo {
 
 Typisch, activeert [ ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) methode wordt gebruikt om (in lidvariabelen) de waarden vooraf samen te stellen en op te slaan nodig in uw code HTML, die op de huidige context (het huidige verzoek en het middel, bijvoorbeeld) wordt gebaseerd.
 
-De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen.](global-objects.md))
+De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen ](global-objects.md).)
 
-In een klasse die `WCMUsePojo` uitbreidt, kunnen contextobjecten met de naam worden benaderd
+In een klasse die `WCMUsePojo` uitbreidt, kunt u tot contextvoorwerpen toegang hebben gebruikend hun namen:
 
 [`<T> T get(String name, Class<T> type)`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html)
 
-U kunt ook veelgebruikte contextobjecten rechtstreeks benaderen met de toepasselijke gebruiksmethode die in deze tabel wordt vermeld.
+U kunt ook rechtstreeks toegang krijgen tot veelgebruikte contextobjecten met de in deze tabel vermelde handige methode.
 
 | Object | Handigheidmethode |
 |---|---|
@@ -222,11 +222,11 @@ U kunt ook veelgebruikte contextobjecten rechtstreeks benaderen met de toepassel
 
 ### Getter-methoden {#getter-methods}
 
-Nadat de use-class is geïnitialiseerd, wordt het HTML-bestand uitgevoerd. Tijdens dit stadium zal HTML typisch in de staat van diverse lidvariabelen van de use-klasse trekken en hen voor presentatie teruggeven.
+Nadat de use-class is geïnitialiseerd, wordt het HTML-bestand uitgevoerd. Tijdens dit stadium, trekt HTML typisch in de staat van diverse lidvariabelen van de use-klasse en geeft hen voor presentatie terug.
 
 Als u vanuit het HTML-bestand toegang tot deze waarden wilt bieden, moet u aangepaste gettermethoden definiëren in de use-klasse volgens de volgende naamgevingsconventie:
 
-* Een methode van het formulier `getXyz` maakt in het HTML-bestand een objecteigenschap met de naam `xyz` zichtbaar.
+* Een methode van het formulier `getXyz` maakt in het HTML-bestand bekend dat een objecteigenschap `xyz` wordt genoemd.
 
 In het volgende voorbeeldbestand `/apps/my-example/component/info/Info.java` leiden de methoden `getTitle` en `getDescription` ertoe dat de objecteigenschappen `title` en `description` toegankelijk worden binnen de context van het HTML-bestand.
 
@@ -247,9 +247,9 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-### data-smart-use Attribute {#data-sly-use-attribute}
+### `data-sly-use` Kenmerk {#data-sly-use-attribute}
 
-Het kenmerk `data-sly-use` wordt gebruikt om de use-class in uw HTML-code te initialiseren. In ons voorbeeld declareert het kenmerk `data-sly-use` dat we de klasse `Info` willen gebruiken. We kunnen alleen de lokale naam van de klasse gebruiken, omdat we een lokale installatie gebruiken (als u het Java-bronbestand in dezelfde map als het HTML-bestand hebt geplaatst). Als we een bundel zouden installeren, zouden we de volledig gekwalificeerde klassenaam moeten opgeven.
+Het kenmerk `data-sly-use` wordt gebruikt om de use-class in uw HTML-code te initialiseren. In het voorbeeld declareert het kenmerk `data-sly-use` dat de klasse `Info` wordt gebruikt. U kunt alleen de lokale naam van de klasse gebruiken omdat u een lokale installatie gebruikt (nadat u het Java-bronbestand in dezelfde map als het HTML-bestand hebt geplaatst). Als u een bundelinstallatie gebruikte, moet u de volledig gekwalificeerde klassenaam opgeven.
 
 Let op het gebruik in dit `/apps/my-example/component/info/info.html` voorbeeld.
 
@@ -288,7 +288,7 @@ Let op het gebruik in dit `/apps/my-example/component/info/info.html` voorbeeld.
 
 ### Uitvoer {#output}
 
-Wanneer we nu toegang krijgen tot `/content/my-example.html` , wordt het volgende `/content/my-example.html` -bestand geretourneerd.
+Wanneer `/content/my-example.html` nu wordt benaderd, wordt het volgende `/content/my-example.html` -bestand geretourneerd.
 
 ```xml
 <div>
@@ -299,11 +299,11 @@ Wanneer we nu toegang krijgen tot `/content/my-example.html` , wordt het volgend
 
 >[!NOTE]
 >
->Dit voorbeeld is vereenvoudigd om het gebruik ervan eenvoudig te illustreren. In een productiemilieu, wordt het geadviseerd om [ het Schuiven modellen te gebruiken.](https://sling.apache.org/documentation/bundles/models.html)
+>Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert de Adobe dat u [ het Verdelen modellen ](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
 
 ## Buiten de basisbeginselen {#beyond-the-basics}
 
-In deze sectie worden enkele andere functies geïntroduceerd die verder gaan dan het eenvoudige voorbeeld dat eerder is beschreven.
+Deze sectie introduceert enkele extra functies die verder gaan dan het eerder beschreven voorbeeld.
 
 * Parameters doorgeven aan een use-klasse
 * Java-gebruiksklasse gebundeld
@@ -312,7 +312,7 @@ In deze sectie worden enkele andere functies geïntroduceerd die verder gaan dan
 
 Parameters kunnen bij initialisatie worden doorgegeven aan een use-klasse.
 
-Voor details, gelieve te verwijzen naar de het Verdelen [ documentatie van de Motor van Scripting HTML.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
+Voor details, gelieve te verwijzen naar de het Verdelen [ documentatie van de Motor van HTML Scripting ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
 
 ### Gebundelde Java-klasse {#bundled-java-class}
 

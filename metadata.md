@@ -5,9 +5,9 @@ product: adobe experience manager
 git-repo: https://github.com/AdobeDocs/experience-manager-htl.nl-NL
 index: y
 recommendations: noDisplay
-source-git-commit: f891460cc7f247723c3e78031aba385faca6acd7
+source-git-commit: 22f62868df0fcfc558e5d62434dde843a9f3ca83
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Metagegevens voor intern gebruik
 
-De meta-gegevens in het GitHub auteurssysteem zijn hiërarchisch en worden bepaald de volgende stijgende niveaus van precedent.
+Het GitHub auteurssysteem bepaalt hiërarchisch meta-gegevens, met stijgende niveaus van precedent zoals die in het volgende worden gezien:
 
 1. metadata.md
 1. ToC
 1. Artikel
 
-De metagegevens die zijn gedefinieerd in het bestand metadata.md, worden toegepast op de volledige repo, maar kunnen worden overschreven op de ToC- en artikelniveaus. Als de metagegevens worden genegeerd, moet dat op het laagst mogelijke niveau gebeuren.
+De metagegevens die in het bestand metadata.md zijn gedefinieerd, zijn van toepassing op de volledige repo, maar kunnen worden overschreven op de ToC- en artikelniveaus. Als de metagegevens worden genegeerd, moet dat op het laagst mogelijke niveau gebeuren.
 
-De meta-gegevens in ervaring-manager-core-components.en repo is het vereiste minimum.
+De metagegevens in de repo van `experience-manager-core-components.en` zijn het minimaal vereiste.
 
 metadata.md
 
@@ -51,4 +51,3 @@ Artikel
 * `description`
 * `index: n` (alleen voor vorige versies van componenten)
 
-Aanvullende informatie over de metagegevens vindt u in het gedeelte [interne ontwerphandleiding.](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/features/metadata.html#solution)

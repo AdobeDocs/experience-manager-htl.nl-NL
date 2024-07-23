@@ -2,9 +2,9 @@
 title: Extensies AEM
 description: AEM biedt uitbreidingen van de HTML-specificatie aan AEM voor uw gemak als ontwikkelaar.
 exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ Het zelfde [ drie extra opties ](https://sling.apache.org/documentation/bundles/
 * `hint`
 * `basename`
 
-Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-dev.html) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
+Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/components/internationalization/i18n-dev) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
 
-## data-smart-include {#data-sly-include}
+## `data-sly-include` {#data-sly-include}
 
 In AEM, `data-sly-include` kan een extra `wcmmode` optie nemen die de [ Wijze WCM ](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/WCMMode.html) voor het inbegrepen manuscript controleert. De toegestane waarden zijn de namen van de beschikbare opsommingsconstanten.
 
-## data-smart-resource {#data-sly-resource}
+## `data-sly-resource` {#data-sly-resource}
 
-Naast paden en `Resources` kan het element `data-sly-resource` block ook werken met [`Maps` ](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html) of [`Records` .](https://github.com/apache/sling-org-apache-sling-scripting-sightly-runtime/blob/master/src/main/java/org/apache/sling/scripting/sightly/Record.java) Bij beide methoden moet de eigenschap `resourceName` String worden opgegeven. Zijn waarde wordt gebruikt om a [ Synthetisch Middel ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/org/apache/sling/api/resource/SyntheticResource.html) tot stand te brengen dat in de het teruggeven context zal worden omvat. De overige eigenschappen van de eigenschap `Record` of de eigenschap `Map` die is doorgegeven aan `data-sly-resource` , worden gebruikt als normale `Resource` -eigenschappen. Als het `sling:resourceType` bezit van deze kaart mist, zal het middeltype worden verondersteld om of de waarde van de `resourceType` [ uitdrukkingsoptie ](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#229-resource) of het middeltype van het huidige middel te zijn dat het teruggeven drijft.
+Naast paden en `Resources` kan het element `data-sly-resource` block ook werken met [`Maps` ](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html) of [`Records` .](https://github.com/apache/sling-org-apache-sling-scripting-sightly-runtime/blob/master/src/main/java/org/apache/sling/scripting/sightly/Record.java) Bij beide methoden moet de eigenschap `resourceName` String worden opgegeven. Zijn waarde wordt gebruikt om a [ Synthetisch Middel ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/org/apache/sling/api/resource/SyntheticResource.html) tot stand te brengen dat in de het teruggeven context inbegrepen is. De rest van de eigenschappen van de eigenschap `Record` of `Map` die aan `data-sly-resource` is doorgegeven, worden als normale `Resource` -eigenschappen gebruikt. Als het `sling:resourceType` bezit van deze kaart mist, wordt het middeltype verondersteld om of de waarde van de `resourceType` [ uitdrukkingsoptie ](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#229-resource) of het middeltype van het huidige middel te zijn dat het teruggeven drijft.
 
 Op basis van de volgende eigenschappen voor map/record beschikbaar in het scriptbereik als `map` :
 

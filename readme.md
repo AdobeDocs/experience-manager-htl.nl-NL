@@ -1,17 +1,16 @@
 ---
-source-git-commit: 14c95467b32e522b90b7dba66df359c7da86dfca
+source-git-commit: 22f62868df0fcfc558e5d62434dde843a9f3ca83
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
 # Adobe Experience Manager HTML-documentatie
 
-Dit is de opslagplaats voor HTML Templating Language (HTL)-documentatie van Adobe Experience Manager.
+De opslagplaats voor Adobe Experience Manager HTML Templating Language (HTL)-documentatie.
 
 Uw bijdragen aan de documentatie zijn welkom. Zie de volgende bronnen:
 
-* [contribute.](contributing.md) mdVoor een overzicht van hoe te om aan de documentatie bij te dragen.
-* [Guidelines.](guidelines.md) mdVoor een overzicht van wat in bijdragen wordt verwacht en hoe te om uw documentatiebijdragen samen te stellen.
-* [gedragscode.](code-of-conduct.md) mdVoor een overzicht van de normen van gedrag wij verwachten aangezien u aan dit documentatieproject bijdraagt.
+* [ contribute.md ](contributing.md) voor een overzicht van hoe te om aan de documentatie bij te dragen.
+* [ guidelines.md ](guidelines.md) voor een overzicht van wat in bijdragen en hoe te om uw documentatiebijdragen samen te stellen wordt verwacht.
+* [ code-van-behavior.md ](code-of-conduct.md) voor een overzicht van de normen van Adobe verwacht gedrag aangezien u aan dit documentatieproject bijdraagt.

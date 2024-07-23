@@ -2,9 +2,9 @@
 title: Aan de slag met HTML
 description: Leer over HTML, het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM, en begrijp de belangrijkste concepten van de taal en zijn fundamentele bouwstenen.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
 workflow-type: tm+mt
-source-wordcount: '2147'
+source-wordcount: '2050'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Dit document geeft een overzicht van het doel van HTML en een inleiding tot fund
 
 ## HTML-lagen {#layers}
 
-HTML zoals gebruikt in AEM kan door een aantal lagen worden bepaald.
+In AEM definieert een aantal lagen HTML.
 
 1. **[de Specificatie van HTML](specification.md)** - HTML is een open-bron, platform-agnostieke specificatie, die iedereen vrij is uit te voeren.
 1. **[het Verzamelen HTML Scripting Engine](specification.md)** - het het Verdelen project heeft tot de verwijzingsimplementatie van HTML geleid, die door AEM wordt gebruikt.
@@ -50,18 +50,18 @@ Hier volgt een eerste voorbeeld, dat kan worden opgenomen zoals in een `template
 
 Er kunnen twee verschillende soorten syntaxen worden onderscheiden:
 
-* **Verklaringen van het Blok** - om het `<h1>` element voorwaardelijk te tonen, wordt een `data-sly-test` HTML5 gegevensattribuut gebruikt. HTL biedt meerdere van dergelijke kenmerken, die het koppelen van gedrag aan elk HTML-element toestaan en die allemaal worden voorafgegaan door `data-sly` .
-* **Taal van de Uitdrukking** - de uitdrukkingen van HTML worden afgebakend door `${` en `}` karakters. Tijdens de runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
+* **Verklaringen van het Blok** - als u het `<h1>` element voorwaardelijk wilt tonen, gebruik a `data-sly-test` HTML5 gegevensattribuut. HTL biedt meerdere van dergelijke kenmerken, die het koppelen van gedrag aan elk HTML-element toestaan en die allemaal worden voorafgegaan door `data-sly` .
+* **Taal van de Uitdrukking** - de `${` en `}` karakters scheiden de uitdrukkingen van HTML. Tijdens de runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
 
 Zie de [ specificatie van HTML ](specification.md) voor details op beide syntaxis.
 
 ### Het SLY-element {#the-sly-element}
 
-Een centraal concept van HTML is de mogelijkheid te bieden om bestaande HTML-elementen opnieuw te gebruiken voor het definiëren van blokinstructies, waardoor het niet nodig is extra scheidingstekens in te voegen om te bepalen waar de instructie begint en eindigt. Deze onopvallende aantekening van de prijsverhoging om een statische HTML in een functionerend dynamisch malplaatje om te zetten biedt het voordeel om de geldigheid van de code van de HTML niet te breken, en daarom nog behoorlijk te tonen, zelfs als statische dossiers.
+Een centraal concept van HTML is de mogelijkheid te bieden bestaande HTML-elementen opnieuw te gebruiken om blokinstructies te definiëren. Als u deze instructie opnieuw gebruikt, hoeft u geen extra scheidingstekens in te voegen om te definiëren waar de instructie begint en eindigt. Door de markering op onopvallende wijze te annoteren, wordt statische HTML omgezet in een dynamische sjabloon zonder de geldigheid van de HTML te onderbreken, zodat de markering ook correct wordt weergegeven als statische bestanden.
 
-Soms is er echter geen bestaand element op de exacte locatie waar een blokinstructie moet worden ingevoegd. In dergelijke gevallen is het mogelijk een speciaal `sly` -element in te voegen dat automatisch uit de uitvoer wordt verwijderd, terwijl de gekoppelde blokinstructies worden uitgevoerd en de inhoud dienovereenkomstig wordt weergegeven.
+Soms is er echter geen bestaand element op de exacte locatie waar een blokinstructie moet worden ingevoegd. In dergelijke gevallen kunt u een speciaal `sly` -element invoegen. Dit element wordt automatisch verwijderd uit de uitvoer terwijl de instructies voor het gekoppelde blok worden uitgevoerd en de inhoud overeenkomstig wordt weergegeven.
 
-In het volgende voorbeeld...
+In het volgende voorbeeld:
 
 ```xml
 <sly data-sly-test="${properties.jcr:title && properties.jcr:description}">
@@ -70,14 +70,14 @@ In het volgende voorbeeld...
 </sly>
 ```
 
-...zal iets als volgende HTML uitvoeren, maar slechts als er allebei zijn, wordt een `jcr:title` en een `jcr:description` eigenschap bepaald, en als geen van beiden leeg zijn:
+Hiermee wordt ongeveer het volgende HTML uitgevoerd, maar alleen als de eigenschap `jcr:title` en `jcr:description` zijn gedefinieerd en geen van beide leeg zijn:
 
 ```xml
 <h1>MY TITLE</h1>
 <p>MY DESCRIPTION</p>
 ```
 
-Een ding om in mening te houden is slechts het `sly` element te gebruiken wanneer geen bestaand element met de blokverklaring kon geannoteerd zijn. De reden hiervoor is dat `sly` -elementen de door de taal geboden waarde afleiden om de statische HTML niet te wijzigen wanneer deze dynamisch wordt gemaakt.
+Een ding om in mening te houden is slechts het `sly` element te gebruiken wanneer geen bestaand element met de blokverklaring kon geannoteerd zijn. De reden hiervoor is dat `sly` -elementen de waarde afleiden die de taal aanbiedt om de statische HTML niet te wijzigen wanneer deze dynamisch wordt gemaakt.
 
 Als het vorige voorbeeld bijvoorbeeld zou zijn ondergebracht in een `div` -element, zou het toegevoegde `sly` -element misbruik maken:
 
@@ -90,7 +90,7 @@ Als het vorige voorbeeld bijvoorbeeld zou zijn ondergebracht in een `div` -eleme
 </div>
 ```
 
-en het element `div` had met de voorwaarde geannoteerd kunnen zijn:
+En het element `div` had met de voorwaarde geannoteerd kunnen zijn:
 
 ```xml
 <div data-sly-test="${properties.jcr:title && properties.jcr:description}">
@@ -108,21 +108,21 @@ In het volgende voorbeeld ziet u een HTML-opmerking op de eerste regel en een HT
 <!-- An HTML Comment -->
 ```
 
-HTML-opmerkingen zijn HTML-opmerkingen met een extra JavaScript-achtige syntaxis. De hele HTML-opmerking en alles wat erin staat, wordt volledig genegeerd door de processor en uit de uitvoer verwijderd.
+HTML-opmerkingen zijn HTML-opmerkingen met een extra JavaScript-achtige syntaxis. De processor negeert volledig de hele HTML-opmerking en alles daarbinnen, waardoor deze uit de uitvoer wordt verwijderd.
 
-De inhoud van de standaardopmerkingen voor HTML wordt echter doorgegeven en de expressies in de opmerking worden geëvalueerd.
+De inhoud van standaardopmerkingen van HTML wordt echter doorgegeven en expressies in de opmerking worden geëvalueerd.
 
 HTML-opmerkingen kunnen geen HTML-opmerkingen bevatten en andersom.
 
 ### Speciale contexten {#special-contexts}
 
-Om optimaal gebruik te kunnen maken van HTL is het belangrijk dat u goed begrijpt wat de gevolgen zijn van het feit dat deze gebaseerd is op de syntaxis van de HTML.
+Om HTML optimaal te kunnen gebruiken, is het belangrijk om goed te begrijpen wat de gevolgen zijn van het gebaseerd zijn op de syntaxis van de HTML.
 
 Gelieve te verwijzen naar de [ sectie van de Context van de Vertoning ](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) van de specificatie HTML voor meer details.
 
 ### Element- en kenmerknamen {#element-and-attribute-names}
 
-Expressies kunnen alleen in HTML-tekst of -kenmerkwaarden worden geplaatst, maar niet binnen elementnamen of kenmerknamen, of het zou geen geldige HTML meer zijn. Om elementnamen dynamisch in te stellen, kan de instructie `data-sly-element` worden gebruikt voor de gewenste elementen en om kenmerknamen dynamisch in te stellen, zelfs wanneer meerdere kenmerken tegelijk worden ingesteld, kan de instructie `data-sly-attribute` worden gebruikt.
+Expressies kunnen alleen in HTML-tekst of -kenmerkwaarden worden geplaatst, maar niet binnen elementnamen of kenmerknamen, of het zou geen geldige HTML meer zijn. Als u elementnamen dynamisch wilt instellen, kunt u de instructie `data-sly-element` gebruiken voor de gewenste elementen en om kenmerknamen dynamisch in te stellen, zelfs als u meerdere kenmerken tegelijk instelt, kunt u de instructie `data-sly-attribute` gebruiken.
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
@@ -130,7 +130,7 @@ Expressies kunnen alleen in HTML-tekst of -kenmerkwaarden worden geplaatst, maar
 
 ### Context zonder instructies van het blok {#contexts-without-block-statements}
 
-Aangezien HTML gegevenskenmerken gebruikt om blokinstructies te bepalen, is het niet mogelijk om dergelijke blokinstructies binnen van volgende contexten te bepalen, en slechts uitdrukkingen kunnen daar worden gebruikt:
+Aangezien HTML gegevenskenmerken gebruikt voor het definiëren van blokinstructies, is het niet mogelijk om dergelijke blokinstructies te definiëren binnen de volgende context, en kunnen daar alleen expressies worden gebruikt:
 
 * Opmerkingen HTML
 * Scriptelementen
@@ -138,7 +138,7 @@ Aangezien HTML gegevenskenmerken gebruikt om blokinstructies te bepalen, is het 
 
 De reden hiervoor is dat de inhoud van deze contexten tekst is en niet HTML, en dat ingesloten HTML-elementen worden beschouwd als eenvoudige tekengegevens. Zonder echte HTML-elementen kunnen er dus ook geen `data-sly` -kenmerken worden uitgevoerd.
 
-Dit kan als een significante beperking klinken, nochtans is het gewenst, omdat de Taal van het Malplaatje van HTML niet zou moeten worden misbruikt om output te produceren die niet HTML is. [ gebruik-API voor de Toegang tot van Logische ](#use-api-for-accessing-logic) sectie introduceert hieronder hoe de extra logica van het malplaatje kan worden geroepen, dat kan worden gebruikt als het nodig is om complexe output voor deze contexten voor te bereiden. Bijvoorbeeld, een gemakkelijke manier om gegevens van het achterste eind naar een front-end manuscript te verzenden, is de logica van de component te hebben om een koord te produceren JSON, dat dan in een gegevensattribuut met een eenvoudige uitdrukking van HTML kan worden geplaatst.
+Deze benadering kan als een significante beperking klinken. Nochtans, wordt het geprefereerd omdat de Taal van het Malplaatje van HTML slechts geldige HTML output zou moeten produceren. [ gebruik-API voor de Toegang tot van Logische ](#use-api-for-accessing-logic) sectie introduceert hieronder hoe de extra logica van het malplaatje kan worden geroepen, dat kan worden gebruikt als het nodig is om complexe output voor deze contexten voor te bereiden. Om gegevens van het achterste eind naar een front-end manuscript te verzenden, produceer een koord JSON met de logica van de component en plaats het in een gegevensattribuut gebruikend een eenvoudige uitdrukking van HTML.
 
 In het volgende voorbeeld wordt het gedrag voor HTML-opmerkingen getoond, maar in script- of stijlelementen wordt hetzelfde gedrag waargenomen:
 
@@ -149,7 +149,7 @@ In het volgende voorbeeld wordt het gedrag voor HTML-opmerkingen getoond, maar i
 -->
 ```
 
-zal iets als volgende HTML uitvoeren:
+Voert iets als de volgende HTML uit:
 
 ```xml
 <!--
@@ -160,7 +160,7 @@ zal iets als volgende HTML uitvoeren:
 
 ### Expliciete vereiste contexten {#explicit-contexts-required}
 
-Zoals verklaard in de [ Automatische Context-bewust Escaping ](#automatic-context-aware-escaping) hieronder sectie, één doel van HTML is de risico&#39;s te verminderen om dwars-plaats scripting (XSS) kwetsbaarheid in te voeren door context-bewuste het ontsnapen aan alle uitdrukkingen automatisch toe te passen. Hoewel HTML automatisch de context kan detecteren van expressies die in een HTML-opmaak zijn geplaatst, wordt de syntaxis van inline JavaScript of CSS niet geanalyseerd en is daarom afhankelijk van de ontwikkelaar om expliciet aan te geven welke exacte context op dergelijke expressies moet worden toegepast.
+Zoals verklaard in de [ Automatische Context-bewust Escaping ](#automatic-context-aware-escaping) hieronder sectie, één doel van HTML is de risico&#39;s te verminderen om dwars-plaats scripting (XSS) kwetsbaarheid in te voeren door context-bewuste het ontsnapen aan alle uitdrukkingen automatisch toe te passen. HTML detecteert de context van expressies in HTML-opmaak maar analyseert inline JavaScript of CSS niet. Ontwikkelaars moeten daarom de exacte context voor deze expressies opgeven.
 
 Aangezien het niet toepassen van de correcte escaping in XSS kwetsbaarheid resulteert, verwijdert HTL daarom de output van alle uitdrukkingen die in manuscript en stijlcontexten zijn wanneer de context niet is verklaard.
 
@@ -179,13 +179,13 @@ Deze sectie doorloopt snel de algemene eigenschappen van de Taal van het Malplaa
 
 ### Use-API for Access Logic {#use-api-for-accessing-logic}
 
-Met de Java Use-API (HTML-sjabloontaal) van HTML (HTML) kan een HTML-bestand via `data-sly-use` toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse. Hierdoor kunnen alle complexe bedrijfslogica worden ingekapseld in de code van Java, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
+Met de Java Use-API (HTML-sjabloontaal) van HTML (HTML) kan een HTML-bestand via `data-sly-use` toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse. Dit proces laat alle complexe bedrijfslogica toe om in de code van Java worden ingekapseld, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
 
 Zie het document [ HTML Java gebruiken-API ](java-use-api.md) voor meer details.
 
 ### Automatisch contextgevoelig Escaping {#automatic-context-aware-escaping}
 
-Neem bijvoorbeeld het volgende voorbeeld:
+Bekijk het volgende voorbeeld:
 
 ```xml
 <p data-sly-use.logic="logic.js">
@@ -197,7 +197,7 @@ Neem bijvoorbeeld het volgende voorbeeld:
 
 In de meeste sjabloontalen zou in dit voorbeeld mogelijk een XSS-kwetsbaarheid (cross-site scripting) worden gemaakt, omdat zelfs wanneer alle variabelen automatisch met HTML worden beschermd, het kenmerk `href` nog steeds specifiek met URL moet worden beschermd. Dit verzuim is een van de meest voorkomende fouten, omdat het gemakkelijk kan worden vergeten en het moeilijk is om op een geautomatiseerde manier te merken.
 
-Om daarmee te helpen, ontsnapt de Taal van het Malplaatje van HTML automatisch aan elke variabele aan de context waarin het wordt geplaatst. Dit is mogelijk dankzij het feit dat HTL de syntaxis van HTML begrijpt.
+Om te helpen, ontsnapt de Taal van het Malplaatje van HTML automatisch aan elke variabele aan de context waarin het wordt geplaatst. Deze benadering is mogelijk dankzij het feit dat HTL de syntaxis van HTML begrijpt.
 
 Ervan uitgaande dat het volgende `logic.js` -bestand:
 
@@ -211,7 +211,7 @@ use(function () {
 });
 ```
 
-Het eerste voorbeeld resulteert vervolgens in de volgende uitvoer:
+Het eerste voorbeeld resulteert in de volgende uitvoer:
 
 ```xml
 <p>
@@ -227,15 +227,15 @@ Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de 
 
 ### Automatische verwijdering van lege kenmerken {#automatic-removal-of-empty-attributes}
 
-Neem bijvoorbeeld het volgende voorbeeld:
+Bekijk het volgende voorbeeld:
 
 ```xml
 <p class="${properties.class}">some text</p>
 ```
 
-Als de waarde van de eigenschap `class` leeg blijkt te zijn, verwijdert de Sjabloontaal van HTML automatisch het volledige `class` -kenmerk uit de uitvoer.
+Als de waarde van de eigenschap `class` leeg blijkt te zijn, verwijdert de Sjabloontaal HTML automatisch het volledige `class` -kenmerk uit de uitvoer.
 
-Nogmaals, dit is mogelijk, omdat HTML de syntaxis van de HTML begrijpt en daarom voorwaardelijk attributen met dynamische waarden kan tonen slechts als hun waarde niet leeg is. Dit is erg handig omdat u geen voorwaardeblok rond kenmerken hoeft toe te voegen, waardoor de markering ongeldig en onleesbaar zou zijn geworden.
+Dit proces is ook hier mogelijk omdat HTML de syntaxis van de HTML begrijpt en daarom alleen attributen met dynamische waarden voorwaardelijk kan weergeven als hun waarde niet leeg is. De reden is erg handig omdat er geen voorwaardeblok wordt toegevoegd rondom kenmerken, waardoor de markering ongeldig en onleesbaar zou zijn geworden.
 
 Bovendien is het type van de variabele die in de expressie wordt geplaatst van belang:
 
@@ -259,7 +259,7 @@ Voor het instellen van kenmerken kan de instructie `data-sly-attribute` ook nutt
 
 ## Algemene patronen met HTML {#common-patterns-with-htl}
 
-Deze sectie introduceert een paar gemeenschappelijke scenario&#39;s en hoe te om hen met de Taal van het Malplaatje van de HTML het best op te lossen.
+In deze sectie worden enkele algemene scenario&#39;s geïntroduceerd. Het verklaart hoe best om deze scenario&#39;s met de Taal van het Malplaatje van HTML op te lossen.
 
 ### Client-bibliotheken laden {#loading-client-libraries}
 
@@ -296,7 +296,7 @@ Hieronder volgen twee korte voorbeelden.
 </html>
 ```
 
-In dit voorbeeld geldt dat als de HTML `head` - en `body` -elementen in verschillende bestanden worden geplaatst, de `clientlib.html` -sjabloon vervolgens in elk bestand moet worden geladen dat deze nodig heeft.
+In dit voorbeeld geldt dat als de HTML `head` - en `body` -elementen zich in aparte bestanden bevinden, de `clientlib.html` -sjabloon moet worden geladen in elk bestand dat deze vereist.
 
 De sectie over het malplaatje &amp; vraagverklaringen in de [ specificatie HTML ](specification.md) verstrekt meer details over hoe het verklaren van en het roepen van dergelijke malplaatjes werken.
 
@@ -304,7 +304,7 @@ De sectie over het malplaatje &amp; vraagverklaringen in de [ specificatie HTML 
 
 De beste en meest elegante manier om gegevens door te geven aan de client in het algemeen, maar nog meer met HTML, is door `data` -kenmerken te gebruiken.
 
-In het volgende voorbeeld wordt getoond hoe de logica (die ook in Java kan worden geschreven) kan worden gebruikt om op een handige manier aan JSON het object te serialiseren dat aan de client moet worden doorgegeven. Dit object kan vervolgens gemakkelijk in een `data` -kenmerk worden geplaatst:
+In het volgende voorbeeld ziet u hoe u een object serialiseert naar JSON (ook mogelijk in Java) om het door te geven aan de client. Vervolgens kan het eenvoudig in een `data` -kenmerk worden geplaatst:
 
 ```xml
 <!--/* template.html file: */-->
@@ -325,7 +325,7 @@ use(function () {
 });
 ```
 
-Vanaf dat punt is het gemakkelijk om zich voor te stellen hoe een cliënt-kant JavaScript tot dat attribuut kan toegang hebben en opnieuw JSON parseren. Dit zou bijvoorbeeld de overeenkomstige JavaScript zijn die in een clientbibliotheek wordt geplaatst:
+Vanaf dat punt is het gemakkelijk om zich voor te stellen hoe een cliënt-kant JavaScript tot dat attribuut kan toegang hebben en opnieuw JSON parseren. Deze benadering zou de overeenkomstige JavaScript zijn om in een cliëntbibliotheek te plaatsen, bijvoorbeeld:
 
 ```javascript
 var elements = document.querySelectorAll("[data-json]");
@@ -353,16 +353,16 @@ for (var i = 0; i < elements.length; i++) {
 </div>
 ```
 
-Zoals hierboven wordt getoond, kan de prijsverhoging die in het `script` element zal worden omvat het blokverklaringen van HTML en de uitdrukkingen te hoeven niet om expliciete contexten te verstrekken, omdat de inhoud van het malplaatje Handlebars in zijn eigen dossier geïsoleerd is. In dit voorbeeld wordt ook getoond hoe serverzijde uitgevoerde HTML (zoals in het `h2` -element) kan worden gemengd met een client-side uitgevoerde sjabloontaal, zoals Handlebars (weergegeven op het `h3` -element).
+De opmaak van het element `script` kan HTML-blokinstructies zonder expliciete contexten bevatten, aangezien de inhoud van de sjabloon Handlebars geïsoleerd is in het eigen bestand. In dit voorbeeld wordt ook getoond hoe HTML aan de serverzijde (zoals in het `h2` -element) kan worden gemengd met een Sjabloontaal aan de clientzijde, zoals Handlebars (weergegeven op het `h3` -element).
 
 Een modernere techniek zou echter het HTML `template` -element gebruiken, omdat het dan beter is dat de inhoud van de sjablonen niet in aparte bestanden hoeft te worden geïsoleerd.
 
 ### Beperkingen van bijzondere contexten opheffen {#lifting-limitations-of-special-contexts}
 
-In de speciale gevallen waarin de beperkingen van het script, de stijl en de commentaarcontext moeten worden omzeild, is het mogelijk de inhoud ervan te isoleren in een afzonderlijk HTML-bestand. Alles wat zich in een eigen bestand bevindt, wordt door HTML geïnterpreteerd als een normaal HTML-fragment, waarbij de beperkende context wordt vergeten waarvan het mogelijk is opgenomen.
+In de speciale gevallen waarin de beperkingen van het script, de stijl en de commentaarcontext moeten worden omzeild, is het mogelijk de inhoud ervan te isoleren in een afzonderlijk HTML-bestand. HTML interpreteert alles in zijn eigen bestand als een standaard HTML-fragment en negeert elke beperkende context vanwaar het werd opgenomen.
 
 Zie [ het Werken met cliënt-KantMalplaatjes ](#working-with-client-side-templates) sectie verder neer voor een voorbeeld.
 
 >[!CAUTION]
 >
->Deze techniek kan XSS-kwetsbaarheden (cross-site scripting) introduceren en de beveiligingsaspecten moeten zorgvuldig worden bestudeerd als dit moet worden gebruikt. Meestal zijn er betere manieren om hetzelfde te doen dan op deze praktijk te vertrouwen.
+>Deze techniek kan XSS-kwetsbaarheden (cross-site scripting) introduceren. De veiligheidsaspecten moeten zorgvuldig worden bestudeerd als deze aanpak wordt gebruikt. Meestal zijn er betere manieren om hetzelfde te doen dan op deze praktijk te vertrouwen.

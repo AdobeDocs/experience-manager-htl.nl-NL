@@ -2,9 +2,9 @@
 title: HTML Java Use-API
 description: Met de HTML Java Use-API kan een HTML-bestand toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
+source-git-commit: 5e1dce693dc61300530837c996f45d793c0b07e6
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ public class Info extends WCMUsePojo {
 
 ### Uitbreiden `WCMUsePojo` {#extending-wcmusepojo}
 
-Hoewel er een aantal manieren zijn om een klasse van Java met HTML (zie de sectie [ Alternatieven aan `WCMUsePojo`](#alternatives-to-wcmusepojo)) op te nemen, is het eenvoudigst om de `WCMUsePojo` klasse uit te breiden. In dit voorbeeld `/apps/my-example/component/info/Info.java` :
+Hoewel er verschillende manieren zijn om een Java-klasse op te nemen in HTML, is het eenvoudigst om de `WCMUsePojo` -klasse uit te breiden. In dit voorbeeld `/apps/my-example/component/info/Info.java` :
 
 ```java
 package apps.my_example.components.info;

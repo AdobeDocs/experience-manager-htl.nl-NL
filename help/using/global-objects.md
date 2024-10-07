@@ -1,11 +1,11 @@
 ---
 title: Globale HTL-objecten
-description: Leer meer over opsombare objecten, door Java ondersteunde objecten en door JavaScript ondersteunde objecten in HTML.
+description: Meer informatie over opsombare objecten en objecten die door Java worden ondersteund, vindt u in HTML.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
+source-git-commit: b585f03d600319414b92a95f98cf9293d91538b6
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 1%
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -63,3 +63,9 @@ Het corresponderende Java-object ondersteunt elk van de volgende objecten.
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
 Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de aangewezen of geadviseerde methode door [ het Schuiven Modellen ](https://sling.apache.org/documentation/bundles/models.html) te gebruiken.
+
+>[!NOTE]
+>
+>[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is afgekeurd voor gebruik met AEM as a Cloud Service. Gelieve te gebruiken [ het Gebruik API van Java in plaats daarvan.](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-ap)
+>
+>[ gelieve te zien de de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features) voor meer informatie over verouderde en verwijderde eigenschappen.

@@ -171,7 +171,7 @@ Hier volgt een voorbeeld van hoe u de context instelt voor expressies die in scr
 <style> a { font-family: "${myFont @ context='styleString'}"; } </style>
 ```
 
-Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de [ Uitdrukking van de Specificaties HTML.
+Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [&#128279;](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de  Uitdrukking van de Specificaties HTML.
 
 ## Algemene mogelijkheden van HTL {#general-capabilities-of-htl}
 
@@ -223,7 +223,7 @@ Het eerste voorbeeld resulteert in de volgende uitvoer:
 
 U ziet dat de twee kenmerken anders zijn beschermd, omdat HTML weet dat de kenmerken `href` en `src` moeten worden beschermd voor de URI-context. Ook, als URI met `javascript:` begon, zou het attribuut volledig verwijderd zijn, tenzij de context uitdrukkelijk in iets anders werd veranderd.
 
-Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de [ Uitdrukking van de Specificaties HTML.
+Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [&#128279;](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de  Uitdrukking van de Specificaties HTML.
 
 ### Automatische verwijdering van lege kenmerken {#automatic-removal-of-empty-attributes}
 

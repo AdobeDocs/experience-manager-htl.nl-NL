@@ -21,7 +21,7 @@ Het zelfde [ drie extra opties ](https://sling.apache.org/documentation/bundles/
 * `hint`
 * `basename`
 
-Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/components/internationalization/i18n-dev) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
+Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/nl/docs/experience-manager-65/content/implementing/developing/components/internationalization/i18n-dev) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
 
 ## `data-sly-include` {#data-sly-include}
 

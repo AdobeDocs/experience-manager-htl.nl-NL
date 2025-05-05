@@ -44,7 +44,7 @@ Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die m
 
 ## Video-introductie {#video}
 
-De volgende video van een [ AEM Gems zitting ](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
+De volgende video van een [ AEM Gems zitting ](https://experienceleague.adobe.com/nl/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 

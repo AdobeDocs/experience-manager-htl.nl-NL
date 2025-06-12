@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >**hebt u Edge Delivery Services voor AEM overwogen?**
 >
->U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans voor nieuwe projecten, adviseert Adobe leveraging [ Edge Delivery Services.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview)
+>U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans voor nieuwe projecten, adviseert Adobe leveraging [ Edge Delivery Services.](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 HTML Template Language (HTL), ondersteund door Adobe Experience Manager (AEM), is bedoeld om een zeer productief webframework op bedrijfsniveau te bieden dat de beveiliging verbetert. Ook kunnen HTML-ontwikkelaars zonder Java-kennis beter deelnemen aan AEM-projecten.
 
@@ -50,7 +50,7 @@ Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die m
 
 ## Video-introductie {#video}
 
-De volgende video van een [ zitting van AEM Gems ](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
+De volgende video van een [ zitting van AEM Gems ](https://experienceleague.adobe.com/nl/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 

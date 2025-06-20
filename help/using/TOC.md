@@ -2,14 +2,14 @@
 sub-product: Adobe Experience Manager HTL
 user-guide-title: Adobe Experience Manager HTL
 breadcrumb-title: Handleiding voor HTL
-user-guide-description: Voor traditionele AEM-projecten gebruikt u de HTML Template Language (HTL) om een webframework op bedrijfsniveau te maken.
+user-guide-description: Gebruik de HTML Template Language (HTL) om een webkader op het niveau van ondernemingen te maken voor traditionele AEM-projecten.
 feature-set: Experience Manager
 feature: Developer Tools
 role: Developer
 source-git-commit: e9148a152c5b9298233346d93809c80e35f980d0
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 12%
+ht-degree: 44%
 
 ---
 

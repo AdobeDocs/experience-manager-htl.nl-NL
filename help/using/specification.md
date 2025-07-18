@@ -1,10 +1,10 @@
 ---
 title: De HTML-specificatie
-description: Raadpleeg de HTML-specificatie voor gedetailleerde syntaxisinformatie.
+description: Zie de HTML-specificatie voor gedetailleerde syntaxisinformatie.
 exl-id: c0657476-4db6-4fad-ad87-9252b5003237
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
+source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
@@ -12,14 +12,14 @@ ht-degree: 0%
 
 # De HTML-specificatie {#htl-specification}
 
-De Taal van het Malplaatje van HTML (HTML) is het aangewezen en geadviseerde server-plaats malplaatjesysteem voor HTML.
+De HTML Template Language (HTL) is het voorkeurssysteem en aanbevolen sjabloonsysteem voor de server-site voor HTML.
 
 ## HTML-lagen {#layers}
 
-U kunt HTML in AEM door een aantal lagen bepalen.
+U kunt HTML in AEM definiëren op basis van een aantal lagen.
 
 1. **[de Specificatie van HTML ](https://github.com/adobe/htl-spec)** - HTML is een open-bron, platform-agnostische specificatie, die iedereen vrij is uit te voeren. Zijn specificaties worden gehandhaafd in zijn repo GitHub.
-1. **[het Verzamelen HTML Scripting Engine ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** - het Verschuivende project heeft tot de verwijzingsimplementatie van HTML geleid, die door AEM wordt gebruikt. Het Sling-project onderhoudt zijn documentatie.
-1. **[AEM Uitbreidingen](aem-extensions.md)** - AEM bouwt op de Motor van het SlingHTML Scripting voort om ontwikkelaars geschikte eigenschappen specifiek voor AEM aan te bieden. Deze extensies worden beschreven als onderdeel van deze documentatieset.
+1. **[het Verzamelen HTML Scripting Engine ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** - het `Sling` project heeft tot de verwijzingsimplementatie van HTML geleid, die door AEM wordt gebruikt. Het `Sling` -project bewaart de documentatie.
+1. **[de Uitbreidingen van AEM](aem-extensions.md)** - AEM bouwt bovenop de `Sling` HTML Scripting Motor voort om ontwikkelaars geschikte eigenschappen specifiek voor AEM aan te bieden. Deze extensies worden beschreven als onderdeel van deze documentatieset.
 
 Volg bovenstaande koppelingen naar de speciale documentatie voor alle lagen HTML die door AEM worden gebruikt.

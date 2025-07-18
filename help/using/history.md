@@ -1,10 +1,10 @@
 ---
 title: Historie van HTL
-description: Voor gebruikers van AEM geeft dit document lange tijd de achtergrond op HTML, hoe het JSP vervangt en de naamswijziging van Rechts.
+description: Voor gebruikers van AEM geeft dit document lange tijd de achtergrond op HTML, hoe JSP wordt vervangen en de naamswijziging van Sightly.
 exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
+source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Historie van HTL {#history-of-htl}
 
-Voor gebruikers van AEM geeft dit document lange tijd de achtergrond op HTML, hoe het JSP vervangt en de naamswijziging van Rechts.
+Voor gebruikers van AEM geeft dit document lange tijd de achtergrond op HTML, hoe JSP wordt vervangen en de naamswijziging van Sightly.
 
 ## Vroeger goed bekend als rechts {#sightly}
 
-HTML Sjabloontaal (HTL) is het voorkeurssjabloonsysteem en aanbevolen sjabloonsysteem voor HTML in Adobe Experience Manager. Deze pagina komt in de plaats van JSP (JavaServer Pages), zoals in eerdere versies van AEM werd gebruikt.
+HTML Template Language (HTL) is het voorkeurssjabloonsysteem voor servers in HTML in Adobe Experience Manager. Deze pagina komt in de plaats van JSP (JavaServer Pages), zoals in eerdere versies van AEM werd gebruikt.
 
 ## HTML boven JSP {#htl-over-jsp}
 
-De Adobe adviseert dat voor nieuwe AEM Projecten, u de Taal van het Malplaatje van HTML gebruikt. De reden is dat het meerdere voordelen biedt in vergelijking met JSP. Voor bestaande projecten heeft een migratie echter alleen zin als deze naar schatting minder moeite kost dan het handhaven van de bestaande JSP&#39;s voor de komende jaren.
+Adobe raadt u aan om voor nieuwe AEM-projecten de HTML Template Language te gebruiken. De reden is dat het meerdere voordelen biedt in vergelijking met JSP. Voor bestaande projecten heeft een migratie echter alleen zin als deze naar schatting minder moeite kost dan het handhaven van de bestaande JSP&#39;s voor de komende jaren.
 
 Verplaatsen naar HTML is niet noodzakelijkerwijs een all-or-none-keuze, omdat componenten die in HTML zijn geschreven compatibel zijn met componenten die in JSP of ESP zijn geschreven. Deze benadering betekent dat bestaande projecten HTML zonder probleem voor nieuwe componenten kunnen gebruiken, terwijl het handhaven van JSP voor bestaande componenten.
 
@@ -33,7 +33,7 @@ Zelfs binnen dezelfde component, kunnen de HTML- dossiers naast JSPs en ESPs wor
 
 ## Veelgestelde vragen {#frequently-asked-questions}
 
-Ervaren AEM ontwikkelaars die nieuw zijn voor HTML stellen vaak de volgende vragen:
+Ervaren AEM-ontwikkelaars die nieuw zijn voor HTML stellen vaak de volgende vragen:
 
 ### Heeft HTML beperkingen die JSP niet kent? {#limitations}
 
@@ -43,7 +43,7 @@ HTL heeft geen beperkingen ten opzichte van JSP in die zin dat wat met JSP kan w
 
 Nee. Nochtans, zoals aangetoond in de [ Ladende sectie van de Bibliotheken van de Cliënt ](getting-started.md#loading-client-libraries) van het Begonnen krijgen document, bieden het malplaatje &amp; de vraagverklaringen een gelijkaardig patroon aan.
 
-### Kunnen de HTML-functies worden uitgebreid voor een AEM project? {#extended}
+### Kunnen de HTML-functies worden uitgebreid op een AEM-project? {#extended}
 
 Nee. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica ([ gebruik-API ](#use-api-for-accessing-logic)) en van prijsverhoging (het malplaatje &amp; vraagverklaringen), die kunnen worden gebruikt om de code van projecten te modulariseren.
 
@@ -57,10 +57,13 @@ Nee. Er zijn geen plannen om het JSP te beëindigen.
 
 ## Wat staat er in een naam? {#what-is-in-a-name}
 
-In AEM 6.0 en 6.1, werd HTML geroepen **recht**. De Adobe hernoemde het aan **Taal van het Malplaatje van de HTML** of **HTML** om te verduidelijken wat de specificatie is en met de noemende richtlijnen van de Adobe in het algemeen te richten. Deze naamswijziging was van kracht vanaf augustus 2016 en is van toepassing op AEM versie 6.0 en volgende.
+In AEM 6.0 en 6.1, werd HTML geroepen **recht**. Adobe hernoemde het aan **Taal van het Malplaatje van HTML** of **HTML** om te verduidelijken wat de specificatie voor is en met Adobe te richten noemend richtlijnen in het algemeen. Deze naamgevingswijziging was van kracht vanaf augustus 2016 en is van toepassing op AEM versie 6.0 en forward.
 
 >[!NOTE]
 >
->Deze naamgevingswijziging heeft geen invloed op de code of de API. De compatibiliteit wordt daarom niet beïnvloed. Voor meer informatie, gelieve [ naar deze aankondigingsvideo ](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html) te verwijzen.
+>Deze naamgevingswijziging heeft geen invloed op de code of de API. De compatibiliteit wordt daarom niet beïnvloed.
 
-Om meer over HTML te weten te komen, zie [ Begonnen het Worden met de Gids van de Templating van de Templating van de HTML (HTML) ](overview.md).
+<!-- LINK IS 404
+For more information, watch [this announcement video](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html). -->
+
+Om meer over HTML te weten te komen, zie [ Begonnen het Worden met de Gids van de Templating van HTML Templating van de Taal (HTML) ](overview.md).

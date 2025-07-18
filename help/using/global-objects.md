@@ -2,9 +2,9 @@
 title: Globale HTL-objecten
 description: Meer informatie over opsombare objecten en objecten die door Java worden ondersteund, vindt u in HTML.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: b585f03d600319414b92a95f98cf9293d91538b6
+source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,6 @@ Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de a
 
 >[!NOTE]
 >
->[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is afgekeurd voor gebruik met AEM as a Cloud Service. Gelieve te gebruiken [ het Gebruik API van Java in plaats daarvan.](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-ap)
+>[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is nu afgekeurd voor gebruik met AEM as a Cloud Service. In plaats daarvan, gebruik [ het Gebruik API van Java ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api).
 >
->[ gelieve te zien de de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features) voor meer informatie over verouderde en verwijderde eigenschappen.
+>Voor meer informatie over afgekeurde en verwijderde eigenschappen, zie de [ de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).

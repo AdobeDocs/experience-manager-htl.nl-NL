@@ -17,4 +17,4 @@ De volgende ontwikkelaarshulpmiddelen zijn beschikbaar voor HTML:
 
 * [ HTML Lees de Lijn van de Druk van de Eval ](https://github.com/adobe/aem-htl-repl) - een levende looppas milieu voor het spelen met de taal, groot voor het leren.
 * [ HTML Geweven Insteekmodule ](https://sling.apache.org/components/htl-maven-plugin/) - Apache Sling HTML Geweven Insteekmodule steunt het bevestigen van de manuscripten van de Taal van het Malplaatje van HTML van projecten tijdens bouwstijltijd.
-* [ Eclipse van AEM uitbreiding ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/eclipse) - een hulpmiddel voor achterste deelontwikkelaars om projecten voor AEM tot stand te brengen en uit te geven.
+* [ Eclipse van AEM uitbreiding ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/implementing/developer-tools/eclipse) - een hulpmiddel voor achterste deelontwikkelaars om projecten voor AEM tot stand te brengen en uit te geven.

@@ -67,6 +67,6 @@ Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de a
 
 >[!NOTE]
 >
->[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is nu afgekeurd voor gebruik met AEM as a Cloud Service. In plaats daarvan, gebruik [ het Gebruik API van Java ](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api).
+>[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is nu afgekeurd voor gebruik met AEM as a Cloud Service. In plaats daarvan, gebruik [ het Gebruik API van Java ](https://experienceleague.adobe.com/nl/docs/experience-manager-htl/content/java-use-api).
 >
->Voor meer informatie over afgekeurde en verwijderde eigenschappen, zie de [ de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).
+>Voor meer informatie over afgekeurde en verwijderde eigenschappen, zie de [ de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).

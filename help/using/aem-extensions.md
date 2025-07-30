@@ -1,17 +1,19 @@
 ---
-title: Extensies AEM
-description: AEM biedt uitbreidingen van de HTML-specificatie aan AEM voor uw gemak als ontwikkelaar.
+title: AEM-extensies
+description: AEM biedt AEM uitbreidingen van de HTML-specificatie voor uw gemak als ontwikkelaar.
 exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
+index: false
+source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-# Extensies AEM {#aem-extensions}
 
-Gelijkaardig aan [ Apache die uitbreidingen van de specificatie van HTML ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#extensions-of-the-htl-specification-1) schikt, biedt AEM sommige extra uitdrukkingsopties aan die het werken met AEM concepten een beetje gemakkelijker direct in de manuscripten van HTML maken.
+# AEM-extensies {#aem-extensions}
+
+Gelijkaardig aan [ Apache die uitbreidingen van de specificatie van HTML ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#extensions-of-the-htl-specification-1) schikt, biedt AEM sommige extra uitdrukkingsopties aan die het werken met de concepten van AEM een beetje gemakkelijker direct in de manuscripten van HTML maken.
 
 ## i18n {#i18n}
 
@@ -21,11 +23,11 @@ Het zelfde [ drie extra opties ](https://sling.apache.org/documentation/bundles/
 * `hint`
 * `basename`
 
-Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/nl/docs/experience-manager-65/content/implementing/developing/components/internationalization/i18n-dev) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
+Nochtans in AEM, wordt de [ internationaliseringssteun ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/components/internationalization/i18n-dev) voor HTML uitgevoerd met de hulp van API van het `com.day.cq.i18n` pakket.
 
 ## `data-sly-include` {#data-sly-include}
 
-In AEM, `data-sly-include` kan een extra `wcmmode` optie nemen die de [ Wijze WCM ](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/WCMMode.html) voor het inbegrepen manuscript controleert. De toegestane waarden zijn de namen van de beschikbare opsommingsconstanten.
+In AEM, `data-sly-include` kan een extra `wcmmode` optie nemen die de [ Wijze WCM ](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/WCMMode.html) voor het inbegrepen manuscript controleren. De toegestane waarden zijn de namen van de beschikbare opsommingsconstanten.
 
 ## `data-sly-resource` {#data-sly-resource}
 

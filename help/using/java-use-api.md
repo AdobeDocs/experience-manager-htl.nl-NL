@@ -2,7 +2,8 @@
 title: HTML Java Use-API
 description: Met de HTML Java Use-API kan een HTML-bestand toegang krijgen tot hulplijnmethoden in een aangepaste Java-klasse.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
+index: false
+source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -192,7 +193,7 @@ public class Info extends WCMUsePojo {
 
 ### Context {#context}
 
-Typisch, activeert [&#128279;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) methode wordt gebruikt om (in lidvariabelen) de waarden vooraf samen te stellen en op te slaan nodig in uw code HTML, die op de huidige context (het huidige verzoek en het middel, bijvoorbeeld) wordt gebaseerd.
+Typisch, activeert [ ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) methode wordt gebruikt om (in lidvariabelen) de waarden vooraf samen te stellen en op te slaan nodig in uw code HTML, die op de huidige context (het huidige verzoek en het middel, bijvoorbeeld) wordt gebaseerd.
 
 De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen ](global-objects.md).)
 

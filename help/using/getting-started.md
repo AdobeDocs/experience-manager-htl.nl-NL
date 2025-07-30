@@ -2,9 +2,9 @@
 title: Aan de slag met HTML
 description: Leer over HTML, het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM, en begrijp de belangrijkste concepten van de taal en zijn fundamentele bouwstenen.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
+source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2077'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 HTML Template Language (HTL) is het voorkeurssjabloonsysteem voor servers in HTML in Adobe Experience Manager. Net als in alle HTML-serversjabloonsystemen definieert een HTML-bestand de uitvoer die naar de browser wordt verzonden door de HTML zelf, een aantal basispresentatielogica en variabelen die tijdens de runtime moeten worden geëvalueerd, op te geven.
 
 Dit document geeft een overzicht van het doel van HTML en een inleiding tot fundamentele concepten en constructies van de taal.
+
+>[!TIP]
+>
+>**hebt u Edge Delivery Services voor AEM overwogen?**
+>
+>U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans, voor nieuwe projecten, adviseert Adobe leveraging [ Edge Delivery Services.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 >[!TIP]
 >

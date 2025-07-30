@@ -2,7 +2,8 @@
 title: Historie van HTL
 description: Voor gebruikers van AEM geeft dit document lange tijd de achtergrond op HTML, hoe JSP wordt vervangen en de naamswijziging van Sightly.
 exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
+index: false
+source-git-commit: 3a416e337337d31f7a7fdb2c78efac46ecf64096
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -62,8 +63,5 @@ In AEM 6.0 en 6.1, werd HTML geroepen **recht**. Adobe hernoemde het aan **Taal 
 >[!NOTE]
 >
 >Deze naamgevingswijziging heeft geen invloed op de code of de API. De compatibiliteit wordt daarom niet beïnvloed.
-
-<!-- LINK IS 404
-For more information, watch [this announcement video](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html). -->
 
 Om meer over HTML te weten te komen, zie [ Begonnen het Worden met de Gids van de Templating van HTML Templating van de Taal (HTML) ](overview.md).

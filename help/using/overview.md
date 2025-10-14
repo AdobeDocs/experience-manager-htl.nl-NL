@@ -16,11 +16,11 @@ ht-degree: 0%
 >
 >**hebt u Edge Delivery Services voor AEM overwogen?**
 >
->U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans, voor nieuwe projecten, adviseert Adobe leveraging [ Edge Delivery Services.](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/edge-delivery/overview)
+>U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans, voor nieuwe projecten, adviseert Adobe leveraging [&#x200B; Edge Delivery Services.](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 HTML Template Language (HTL), ondersteund door Adobe Experience Manager (AEM), is bedoeld om een zeer productief webframework op bedrijfsniveau te bieden dat de beveiliging verbetert. Ook kunnen HTML-ontwikkelaars zonder Java-kennis beter deelnemen aan AEM-projecten.
 
-[ geïntroduceerd in AEM 6.0 ](history.md), is de Taal van het Malplaatje van HTML het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM. Voor webontwikkelaars die robuuste bedrijfswebsites moeten maken, helpt de HTML Template Language om de efficiëntie van beveiliging en ontwikkeling te verhogen.
+[&#x200B; geïntroduceerd in AEM 6.0 &#x200B;](history.md), is de Taal van het Malplaatje van HTML het aangewezen en geadviseerde server-zijmalplaatjesysteem voor HTML in AEM. Voor webontwikkelaars die robuuste bedrijfswebsites moeten maken, helpt de HTML Template Language om de efficiëntie van beveiliging en ontwikkeling te verhogen.
 
 ## Meer beveiliging {#increased-security}
 
@@ -40,7 +40,7 @@ De verhoogde veiligheid, vereenvoudigde ontwikkeling, en betere teamsamenwerking
 
 Uit de herimplementatie van de Adobe.com-site met HTML Template Language is gebleken dat de projectkosten en -duur tot ongeveer 25% zijn teruggebracht.
 
-![ efficiënt verhoging en kostendaling ](assets/chlimage_1.png)
+![&#x200B; efficiënt verhoging en kostendaling &#x200B;](assets/chlimage_1.png)
 
 Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die mogelijk door HTL mogelijk worden gemaakt:
 
@@ -50,12 +50,12 @@ Bovenstaand diagram laat de volgende verbeteringen zien in de efficiëntie die m
 
 ## Video-introductie {#video}
 
-De volgende video van een [ zitting van AEM Gems ](https://experienceleague.adobe.com/nl/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
+De volgende video van een [&#x200B; zitting van AEM Gems &#x200B;](https://experienceleague.adobe.com/nl/docs/events/experience-manager-gems-recordings/gems2014/aem-introduction-to-htl), geeft een overzicht van het doel van HTML evenals implementatievoorbeelden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 
-Gelieve te merken op dat de video naar HTML door [ zijn vroegere naam, recht ](history.md) verwijst.
+Gelieve te merken op dat de video naar HTML door [&#x200B; zijn vroegere naam, recht &#x200B;](history.md) verwijst.
 
 ## Volgende stappen {#next-steps}
 
-Nu je de doelstellingen en voordelen van HTML kent, kun je aan de slag met de taal. Zie [ Begonnen het Worden met de Taal van het Malplaatje van HTML ](getting-started.md).
+Nu je de doelstellingen en voordelen van HTML kent, kun je aan de slag met de taal. Zie [&#x200B; Begonnen het Worden met de Taal van het Malplaatje van HTML &#x200B;](getting-started.md).

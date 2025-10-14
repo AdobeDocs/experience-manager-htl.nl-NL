@@ -40,7 +40,7 @@ In dit voorbeeld wordt het gebruik van de Use-API geïllustreerd.
 
 >[!NOTE]
 >
->Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert Adobe dat u [ het Verdelen modellen ](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
+>Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert Adobe dat u [&#x200B; het Verdelen modellen &#x200B;](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
 
 Begin met een HTML-component, `info,` genoemd, die geen use-klasse heeft. Het bestaat uit één bestand, `/apps/my-example/components/info.html`
 
@@ -114,7 +114,7 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-Gelieve te zien de [ documenten van Java voor `com.adobe.cq.sightly.WCMUsePojo` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) voor meer details.
+Gelieve te zien de [&#x200B; documenten van Java voor `com.adobe.cq.sightly.WCMUsePojo` &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) voor meer details.
 
 Laten we nu eens kijken naar de verschillende delen van de code.
 
@@ -123,7 +123,7 @@ Laten we nu eens kijken naar de verschillende delen van de code.
 De Java-gebruiksklasse kan op twee manieren worden geïnstalleerd:
 
 * **Lokaal** - in lokale installatie, wordt het brondossier van Java geplaatst naast het HTML- dossier, in de zelfde bewaarplaatsomslag. De bron wordt automatisch gecompileerd op bestelling. Er is geen afzonderlijke compilatie of verpakkingsstap vereist.
-* **Bundel** - in een bundel installeert, moet de klasse van Java binnen een bundel worden gecompileerd en worden opgesteld OSGi gebruikend het standaardmechanisme van de de bundelplaatsing van AEM (zie de sectie [ Gebundelde Klasse van Java ](#bundled-java-class)).
+* **Bundel** - in een bundel installeert, moet de klasse van Java binnen een bundel worden gecompileerd en worden opgesteld OSGi gebruikend het standaardmechanisme van de de bundelplaatsing van AEM (zie de sectie [&#x200B; Gebundelde Klasse van Java &#x200B;](#bundled-java-class)).
 
 Houd rekening met de volgende twee punten om te weten welke methode u moet gebruiken wanneer:
 
@@ -195,7 +195,7 @@ public class Info extends WCMUsePojo {
 
 Typisch, activeert [&#128279;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) methode wordt gebruikt om (in lidvariabelen) de waarden vooraf samen te stellen en op te slaan nodig in uw code HTML, die op de huidige context (het huidige verzoek en het middel, bijvoorbeeld) wordt gebaseerd.
 
-De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [ Globale Voorwerpen ](global-objects.md).)
+De `WCMUsePojo` klasse verleent toegang tot de zelfde reeks contextvoorwerpen zoals beschikbaar binnen een HTML- dossier (zie het document [&#x200B; Globale Voorwerpen &#x200B;](global-objects.md).)
 
 In een klasse die `WCMUsePojo` uitbreidt, kunt u tot contextvoorwerpen toegang hebben gebruikend hun namen:
 
@@ -300,7 +300,7 @@ Wanneer `/content/my-example.html` nu wordt benaderd, wordt het volgende `/conte
 
 >[!NOTE]
 >
->Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert Adobe dat u [ het Verdelen modellen ](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
+>Dit voorbeeld is vereenvoudigd om het gebruik ervan te illustreren. In een productiemilieu, adviseert Adobe dat u [&#x200B; het Verdelen modellen &#x200B;](https://sling.apache.org/documentation/bundles/models.html) gebruikt.
 
 ## Buiten de basisbeginselen {#beyond-the-basics}
 
@@ -313,7 +313,7 @@ Deze sectie introduceert enkele extra functies die verder gaan dan het eerder be
 
 Parameters kunnen bij initialisatie worden doorgegeven aan een use-klasse.
 
-Voor details, zie de `Sling` [ documentatie van de Motor van Scripting HTML ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
+Voor details, zie de `Sling` [&#x200B; documentatie van de Motor van Scripting HTML &#x200B;](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
 
 ### Gebundelde Java-klasse {#bundled-java-class}
 

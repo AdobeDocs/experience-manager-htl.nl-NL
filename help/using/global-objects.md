@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Globale HTL-objecten {#htl-global-objects}
 
-Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze voorwerpen zijn naast om het even welk die door [ gebruik-API ](java-use-api.md) kunnen worden geïntroduceerd.
+Als u niets hoeft op te geven, biedt HTML toegang tot veel objecten die nuttig zijn voor de ontwikkelaar. Deze voorwerpen zijn naast om het even welk die door [&#x200B; gebruik-API &#x200B;](java-use-api.md) kunnen worden geïntroduceerd.
 
 >[!NOTE]
 >
@@ -63,10 +63,10 @@ Het corresponderende Java-object ondersteunt elk van de volgende objecten.
 
 ## Door JavaScript ondersteunde objecten {#javascript-backed-objects}
 
-Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de aangewezen of geadviseerde methode door [ het Schuiven Modellen ](https://sling.apache.org/documentation/bundles/models.html) te gebruiken.
+Het is mogelijk om HTML-logica te ondersteunen met JavaScript. Nochtans, is de aangewezen of geadviseerde methode door [&#x200B; het Schuiven Modellen &#x200B;](https://sling.apache.org/documentation/bundles/models.html) te gebruiken.
 
 >[!NOTE]
 >
->[ het Gebruik API van JavaScript ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is nu afgekeurd voor gebruik met AEM as a Cloud Service. In plaats daarvan, gebruik [ het Gebruik API van Java ](https://experienceleague.adobe.com/nl/docs/experience-manager-htl/content/java-use-api).
+>[&#x200B; het Gebruik API van JavaScript &#x200B;](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) is nu afgekeurd voor gebruik met AEM as a Cloud Service. In plaats daarvan, gebruik [&#x200B; het Gebruik API van Java &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-htl/content/java-use-api).
 >
->Voor meer informatie over afgekeurde en verwijderde eigenschappen, zie de [ de versienota&#39;s van AEM as a Cloud Service ](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).
+>Voor meer informatie over afgekeurde en verwijderde eigenschappen, zie de [&#x200B; de versienota&#39;s van AEM as a Cloud Service &#x200B;](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features).

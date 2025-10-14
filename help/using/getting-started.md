@@ -20,11 +20,11 @@ Dit document geeft een overzicht van het doel van HTML en een inleiding tot fund
 >
 >**hebt u Edge Delivery Services voor AEM overwogen?**
 >
->U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans, voor nieuwe projecten, adviseert Adobe leveraging [ Edge Delivery Services.](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/edge-delivery/overview)
+>U kunt de methoden die in dit document worden beschreven, blijven gebruiken voor bestaande projecten. Nochtans, voor nieuwe projecten, adviseert Adobe leveraging [&#x200B; Edge Delivery Services.](https://experienceleague.adobe.com/nl/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 >[!TIP]
 >
->In dit document wordt het doel van HTL uiteengezet en wordt een overzicht gegeven van de fundamentele structuur en concepten ervan. Als u vragen over specifieke syntaxis hebt, zie de [ specificatie van HTML ](specification.md).
+>In dit document wordt het doel van HTL uiteengezet en wordt een overzicht gegeven van de fundamentele structuur en concepten ervan. Als u vragen over specifieke syntaxis hebt, zie de [&#x200B; specificatie van HTML &#x200B;](specification.md).
 
 ## HTML-lagen {#layers}
 
@@ -42,7 +42,7 @@ De taal van het Malplaatje van HTML gebruikt een uitdrukkingstaal om stukken van
 
 >[!TIP]
 >
->Om de meeste die voorbeelden in werking te stellen op deze pagina worden verstrekt, kan een levende uitvoeringsmilieu [ Gelezen Lijn van de Druk van de Ovaal ](https://github.com/adobe/aem-htl-repl) worden gebruikt.
+>Om de meeste die voorbeelden in werking te stellen op deze pagina worden verstrekt, kan een levende uitvoeringsmilieu [&#x200B; Gelezen Lijn van de Druk van de Ovaal &#x200B;](https://github.com/adobe/aem-htl-repl) worden gebruikt.
 
 ### Blokken en expressies {#blocks-and-expressions}
 
@@ -59,7 +59,7 @@ Er kunnen twee verschillende soorten syntaxen worden onderscheiden:
 * **Verklaringen van het Blok** - als u het `<h1>` element voorwaardelijk wilt tonen, gebruik a `data-sly-test` HTML5 gegevensattribuut. HTML biedt meerdere van dergelijke kenmerken, waardoor gedrag aan elk HTML-element kan worden gekoppeld. Deze kenmerken worden allemaal voorafgegaan door `data-sly` .
 * **Taal van de Uitdrukking** - de `${` en `}` karakters scheiden de uitdrukkingen van HTML. Tijdens runtime worden deze expressies geëvalueerd en wordt de waarde ervan in de uitgaande HTML-stream geïnjecteerd.
 
-Zie de [ specificatie van HTML ](specification.md) voor details op beide syntaxis.
+Zie de [&#x200B; specificatie van HTML &#x200B;](specification.md) voor details op beide syntaxis.
 
 ### Het SLY-element {#the-sly-element}
 
@@ -124,7 +124,7 @@ HTML-opmerkingen kunnen geen HTML-opmerkingen bevatten en andersom.
 
 Om HTML optimaal te kunnen gebruiken, is het belangrijk om goed te begrijpen wat de gevolgen zijn van het feit dat het gebaseerd is op de syntaxis van HTML.
 
-Gelieve te verwijzen naar de [ sectie van de Context van de Vertoning ](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) van de specificatie HTML voor meer details.
+Gelieve te verwijzen naar de [&#x200B; sectie van de Context van de Vertoning &#x200B;](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) van de specificatie HTML voor meer details.
 
 ### Element- en kenmerknamen {#element-and-attribute-names}
 
@@ -144,7 +144,7 @@ Aangezien HTML gegevenskenmerken gebruikt voor het definiëren van blokinstructi
 
 De reden hiervoor is dat de inhoud van deze contexten tekst is en niet HTML, en HTML-elementen bevat, worden beschouwd als eenvoudige tekengegevens. Zonder echte HTML-elementen kunnen er dus ook geen `data-sly` -kenmerken worden uitgevoerd.
 
-Deze benadering kan als een significante beperking klinken. Deze optie heeft echter de voorkeur omdat de HTML Template Language alleen geldige HTML-uitvoer moet genereren. [ gebruik-API voor de Toegang tot van Logische ](#use-api-for-accessing-logic) sectie introduceert hieronder hoe de extra logica van het malplaatje kan worden geroepen, dat kan worden gebruikt als het nodig is om complexe output voor deze contexten voor te bereiden. Om gegevens van het achterste eind naar een front-end manuscript te verzenden, produceer een koord JSON met de logica van de component en plaats het in een gegevensattribuut gebruikend een eenvoudige uitdrukking van HTML.
+Deze benadering kan als een significante beperking klinken. Deze optie heeft echter de voorkeur omdat de HTML Template Language alleen geldige HTML-uitvoer moet genereren. [&#x200B; gebruik-API voor de Toegang tot van Logische &#x200B;](#use-api-for-accessing-logic) sectie introduceert hieronder hoe de extra logica van het malplaatje kan worden geroepen, dat kan worden gebruikt als het nodig is om complexe output voor deze contexten voor te bereiden. Om gegevens van het achterste eind naar een front-end manuscript te verzenden, produceer een koord JSON met de logica van de component en plaats het in een gegevensattribuut gebruikend een eenvoudige uitdrukking van HTML.
 
 In het volgende voorbeeld wordt het gedrag voor HTML-opmerkingen getoond, maar in script- of stijlelementen wordt hetzelfde gedrag waargenomen:
 
@@ -166,7 +166,7 @@ Voert iets als de volgende HTML uit:
 
 ### Expliciete vereiste contexten {#explicit-contexts-required}
 
-Zoals verklaard in de [ Automatische Context-bewust Escaping ](#automatic-context-aware-escaping) hieronder sectie, één doel van HTML is de risico&#39;s te verminderen om dwars-plaats scripting (XSS) kwetsbaarheid in te voeren door context-bewuste het ontsnapen aan alle uitdrukkingen automatisch toe te passen. HTML detecteert de context van expressies in HTML-opmaakcode maar analyseert inline JavaScript of CSS niet. Ontwikkelaars moeten daarom de exacte context voor deze expressies opgeven.
+Zoals verklaard in de [&#x200B; Automatische Context-bewust Escaping &#x200B;](#automatic-context-aware-escaping) hieronder sectie, één doel van HTML is de risico&#39;s te verminderen om dwars-plaats scripting (XSS) kwetsbaarheid in te voeren door context-bewuste het ontsnapen aan alle uitdrukkingen automatisch toe te passen. HTML detecteert de context van expressies in HTML-opmaakcode maar analyseert inline JavaScript of CSS niet. Ontwikkelaars moeten daarom de exacte context voor deze expressies opgeven.
 
 Aangezien het niet toepassen van de correcte escaping in XSS kwetsbaarheid resulteert, verwijdert HTL daarom de output van alle uitdrukkingen die in manuscript en stijlcontexten zijn wanneer de context niet is verklaard.
 
@@ -177,7 +177,7 @@ Hier volgt een voorbeeld van hoe u de context instelt voor expressies die in scr
 <style> a { font-family: "${myFont @ context='styleString'}"; } </style>
 ```
 
-Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [ sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) Uitdrukking van de Specificaties HTML.
+Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [&#x200B; sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de &#x200B;](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) Uitdrukking van de Specificaties HTML.
 
 ## Algemene mogelijkheden van HTL {#general-capabilities-of-htl}
 
@@ -187,7 +187,7 @@ Deze sectie doorloopt snel de algemene eigenschappen van de Taal van het Malplaa
 
 Met de Java Use-API (HTML-sjabloontaal) van HTML Template Language kan een HTML-bestand via `data-sly-use` toegang krijgen tot hulpmethoden in een aangepaste Java-klasse. Dit proces laat alle complexe bedrijfslogica toe om in de code van Java worden ingekapseld, terwijl de code HTML slechts op directe prijsverhogingsproductie behandelt.
 
-Zie het document [ HTML Java gebruiken-API ](java-use-api.md) voor meer details.
+Zie het document [&#x200B; HTML Java gebruiken-API &#x200B;](java-use-api.md) voor meer details.
 
 ### Automatisch contextgevoelig Escaping {#automatic-context-aware-escaping}
 
@@ -229,7 +229,7 @@ Het eerste voorbeeld resulteert in de volgende uitvoer:
 
 U ziet dat de twee kenmerken anders zijn beschermd, omdat HTML weet dat de kenmerken `href` en `src` moeten worden beschermd voor de URI-context. Ook, als URI met `javascript:` begon, zou het attribuut volledig verwijderd zijn, tenzij de context uitdrukkelijk in iets anders werd veranderd.
 
-Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [ sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de ](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) Uitdrukking van de Specificaties HTML.
+Voor meer details over hoe te om het ontsnappen te controleren, verwijs naar de [&#x200B; sectie van de Context van de Vertoning van de Taal van de Uitdrukking van de &#x200B;](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#121-display-context) Uitdrukking van de Specificaties HTML.
 
 ### Automatische verwijdering van lege kenmerken {#automatic-removal-of-empty-attributes}
 
@@ -304,7 +304,7 @@ Hieronder volgen twee korte voorbeelden.
 
 In dit voorbeeld geldt dat als de HTML `head` - en `body` -elementen zich in afzonderlijke bestanden bevinden, de `clientlib.html` -sjabloon moet worden geladen in elk bestand dat deze vereist.
 
-De sectie over het malplaatje &amp; vraagverklaringen in de [ specificatie HTML ](specification.md) verstrekt meer details over hoe het verklaren van en het roepen van dergelijke malplaatjes werken.
+De sectie over het malplaatje &amp; vraagverklaringen in de [&#x200B; specificatie HTML &#x200B;](specification.md) verstrekt meer details over hoe het verklaren van en het roepen van dergelijke malplaatjes werken.
 
 ### Gegevens doorgeven aan de client {#passing-data-to-the-client}
 
@@ -343,7 +343,7 @@ for (var i = 0; i < elements.length; i++) {
 
 ### Werken met clientsjablonen {#working-with-client-side-templates}
 
-Één speciaal geval, waar de techniek die in de sectie [ wordt verklaard die Beperkingen van Speciale contexten opheffen ](#lifting-limitations-of-special-contexts) kan rechtmatig worden gebruikt, is cliënt-zijmalplaatjes (zoals Handlebars bijvoorbeeld) te schrijven die binnen `scrip` elementen worden gevestigd. De reden dat deze techniek in dat geval veilig kan worden gebruikt, is omdat het `script` -element dan geen JavaScript bevat zoals wordt aangenomen, maar meer HTML-elementen. Hier is een voorbeeld van hoe dat zou werken:
+Één speciaal geval, waar de techniek die in de sectie [&#x200B; wordt verklaard die Beperkingen van Speciale contexten opheffen &#x200B;](#lifting-limitations-of-special-contexts) kan rechtmatig worden gebruikt, is cliënt-zijmalplaatjes (zoals Handlebars bijvoorbeeld) te schrijven die binnen `scrip` elementen worden gevestigd. De reden dat deze techniek in dat geval veilig kan worden gebruikt, is omdat het `script` -element dan geen JavaScript bevat zoals wordt aangenomen, maar meer HTML-elementen. Hier is een voorbeeld van hoe dat zou werken:
 
 ```xml
 <!--/* template.html file: */-->
@@ -367,7 +367,7 @@ Een modernere techniek zou echter het HTML `template` -element gebruiken, omdat 
 
 In de speciale gevallen waarin de beperkingen van het script, de stijl en de commentaarcontext moeten worden omzeild, is het mogelijk de inhoud ervan te isoleren in een afzonderlijk HTML-bestand. HTML interpreteert alles in zijn eigen bestand als een standaard HTML-fragment en negeert elke beperkende context vanwaar het werd opgenomen.
 
-Zie [ het Werken met cliënt-KantMalplaatjes ](#working-with-client-side-templates) sectie verder neer voor een voorbeeld.
+Zie [&#x200B; het Werken met cliënt-KantMalplaatjes &#x200B;](#working-with-client-side-templates) sectie verder neer voor een voorbeeld.
 
 >[!CAUTION]
 >

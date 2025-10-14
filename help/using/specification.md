@@ -19,8 +19,8 @@ De HTML Template Language (HTL) is het voorkeurssysteem en aanbevolen sjabloonsy
 
 U kunt HTML in AEM definiëren op basis van een aantal lagen.
 
-1. **[de Specificatie van HTML ](https://github.com/adobe/htl-spec)** - HTML is een open-bron, platform-agnostische specificatie, die iedereen vrij is uit te voeren. Zijn specificaties worden gehandhaafd in zijn repo GitHub.
-1. **[het Verzamelen HTML Scripting Engine ](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** - het `Sling` project heeft tot de verwijzingsimplementatie van HTML geleid, die door AEM wordt gebruikt. Het `Sling` -project bewaart de documentatie.
+1. **[de Specificatie van HTML &#x200B;](https://github.com/adobe/htl-spec)** - HTML is een open-bron, platform-agnostische specificatie, die iedereen vrij is uit te voeren. Zijn specificaties worden gehandhaafd in zijn repo GitHub.
+1. **[het Verzamelen HTML Scripting Engine &#x200B;](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)** - het `Sling` project heeft tot de verwijzingsimplementatie van HTML geleid, die door AEM wordt gebruikt. Het `Sling` -project bewaart de documentatie.
 1. **[de Uitbreidingen van AEM](aem-extensions.md)** - AEM bouwt bovenop de `Sling` HTML Scripting Motor voort om ontwikkelaars geschikte eigenschappen specifiek voor AEM aan te bieden. Deze extensies worden beschreven als onderdeel van deze documentatieset.
 
 Volg bovenstaande koppelingen naar de speciale documentatie voor alle lagen HTML die door AEM worden gebruikt.

@@ -47,5 +47,5 @@ Projectbeheerders die de gedragscode te goeder trouw niet naleven of handhaven, 
 
 ## Attributie
 
-Deze Gedragscode wordt aangepast van het [ Medewerkersconvenant ](https://www.contributor-covenant.org/), versie 1.4, beschikbaar bij [ Medewerkersconvenant ](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
+Deze Gedragscode wordt aangepast van het [&#x200B; Medewerkersconvenant &#x200B;](https://www.contributor-covenant.org/), versie 1.4, beschikbaar bij [&#x200B; Medewerkersconvenant &#x200B;](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
 

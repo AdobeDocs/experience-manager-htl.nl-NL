@@ -42,15 +42,15 @@ HTL heeft geen beperkingen ten opzichte van JSP in die zin dat wat met JSP kan w
 
 ### Biedt HTML ondersteuning voor JSP-tagbibliotheken? {#tag-libraries}
 
-Nee. Nochtans, zoals aangetoond in de [ Ladende sectie van de Bibliotheken van de Cliënt ](getting-started.md#loading-client-libraries) van het Begonnen krijgen document, bieden het malplaatje &amp; de vraagverklaringen een gelijkaardig patroon aan.
+Nee. Nochtans, zoals aangetoond in de [&#x200B; Ladende sectie van de Bibliotheken van de Cliënt &#x200B;](getting-started.md#loading-client-libraries) van het Begonnen krijgen document, bieden het malplaatje &amp; de vraagverklaringen een gelijkaardig patroon aan.
 
 ### Kunnen de HTML-functies worden uitgebreid op een AEM-project? {#extended}
 
-Nee. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica ([ gebruik-API ](#use-api-for-accessing-logic)) en van prijsverhoging (het malplaatje &amp; vraagverklaringen), die kunnen worden gebruikt om de code van projecten te modulariseren.
+Nee. HTML heeft krachtige uitbreidingsmechanismen voor hergebruik van logica ([&#x200B; gebruik-API &#x200B;](#use-api-for-accessing-logic)) en van prijsverhoging (het malplaatje &amp; vraagverklaringen), die kunnen worden gebruikt om de code van projecten te modulariseren.
 
 ### Wat zijn de belangrijkste voordelen van HTL ten opzichte van JSP? {#benefits}
 
-De veiligheid en de projectefficiency zijn de belangrijkste voordelen, die in het [ Overzicht ](overview.md) gedetailleerd zijn.
+De veiligheid en de projectefficiency zijn de belangrijkste voordelen, die in het [&#x200B; Overzicht &#x200B;](overview.md) gedetailleerd zijn.
 
 ### Gaan JavaServer Pages (JSP) weg? {#go-away}
 
@@ -64,4 +64,4 @@ In AEM 6.0 en 6.1, werd HTML geroepen **recht**. Adobe hernoemde het aan **Taal 
 >
 >Deze naamgevingswijziging heeft geen invloed op de code of de API. De compatibiliteit wordt daarom niet beïnvloed.
 
-Om meer over HTML te weten te komen, zie [ Begonnen het Worden met de Gids van de Templating van HTML Templating van de Taal (HTML) ](overview.md).
+Om meer over HTML te weten te komen, zie [&#x200B; Begonnen het Worden met de Gids van de Templating van HTML Templating van de Taal (HTML) &#x200B;](overview.md).
